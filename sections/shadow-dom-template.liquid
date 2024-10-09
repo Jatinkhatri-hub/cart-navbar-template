@@ -6,9 +6,9 @@
       <header part="header">
         <slot name="header"></slot>
 
-        <button type="button" is="dialog-close-button"  part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+        {% comment %} <button type="button" is="dialog-close-button"  part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
           {%- render 'icon' with 'close', width: 14 -%}
-        </button>
+        </button> {% endcomment %}
       </header>
 
       <div part="body">
