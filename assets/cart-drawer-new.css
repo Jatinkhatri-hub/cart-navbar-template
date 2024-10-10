@@ -74,7 +74,9 @@
   cursor: pointer;
 }
 
-
+.cart-close__btn:hover {
+  background-color: black;
+}
 
 .cart-close__btn svg {
   /* width: 8px;
