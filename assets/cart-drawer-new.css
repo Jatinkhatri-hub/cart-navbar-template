@@ -71,7 +71,10 @@
   align-items: center;
   width: 27px;
   height: 27px;
+  cursor: pointer;
 }
+
+
 
 .cart-close__btn svg {
   /* width: 8px;
