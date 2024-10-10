@@ -78,7 +78,7 @@
   background-color: black;
 }
 
-.cart-close__btn svg {
+.cart-close__btn:hover svg path {
   /* width: 8px;
   height: 8px; */
 }
