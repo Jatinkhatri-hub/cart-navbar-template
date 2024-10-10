@@ -251,7 +251,7 @@
 .cart-drawer__checkout-btn {
   background: black;
   border: 2px solid black;
-  padding: 14px;
+  padding: 16px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -259,7 +259,7 @@
   border-radius: 2px;
   font: 600 14px 'Inter';
   color: white;
-  gap: 
+  gap: 10px;
 }
 
 .
