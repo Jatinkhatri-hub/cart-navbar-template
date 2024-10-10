@@ -56,7 +56,7 @@
             <h3>Subtotal</h3>
             <span>{{ cart.total_price |  money_without_currency }}</span>
           </div>
-          <button type="submit" name="checkout" class="cart-drawer__checkout-btn">{{ 'icon-cart-new.svg' }} Checkout</button>
+          <button type="submit" name="checkout" class="cart-drawer__checkout-btn">{{ 'icon-cart-new.svg' | inline_asset_content }} Proceed to checkout</button>
         </footer>
       {% endif %}
     {% endform %}
