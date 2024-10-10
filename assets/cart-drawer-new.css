@@ -31,4 +31,7 @@
   flex-direction: column;
 }
 
-.cart-header
+.cart-header__b1 {
+  display: flex;
+  
+}
