@@ -57,14 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
    const openCart = document.querySelector('.nav-bar__cart-open-btn')
    //const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
-   
+   const cartDrawer = window.cartDrawer;
 
 
-  // openCart.addEventListener('click', () => {
-  //   // cartDrawer.classList.add('cart-drawer--active');
-  //   // cartDrawer.classList.remove('close');
-  //   console.log(cartDrawer);
-  // });
+  openCart.addEventListener('click', () => {
+    // cartDrawer.classList.add('cart-drawer--active');
+    // cartDrawer.classList.remove('close');
+    console.log(cartDrawer);
+  });
   
   navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
