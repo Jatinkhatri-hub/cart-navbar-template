@@ -7,7 +7,7 @@
       <div class="cart-header__b1">
         <h2>{{ section.settings.cart_title }}</h2>
         <span class="cart-items__count">{{ cart.item_count }}</span>
-        <button class="cart-close__btn">{{ 'icon-close.svg' | inline_asset_content }}</button>
+        <button class="cart-close__btn">{{ 'icon-close-new.svg' | inline_asset_content }}</button>
       </div>
       <div class="cart-header__b2">
         <p>{{ section.settings.user_signup }} <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Learn More</a>.</p>
