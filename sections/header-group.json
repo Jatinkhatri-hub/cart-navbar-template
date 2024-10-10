@@ -44,10 +44,17 @@
         "color_scheme": "scheme-1",
         "header_position": "always"
       }
+    },
+    "cart_drawer_new_kGghBM": {
+      "type": "cart-drawer-new",
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "cart_drawer_new_kGghBM"
   ]
 }
