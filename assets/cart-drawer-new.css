@@ -180,4 +180,7 @@
   color: black;
 }
 
-.line-item__cu-price
+.line-item__cap {
+  font: 600 13px 'Inter';
+  color:#404040
+}
