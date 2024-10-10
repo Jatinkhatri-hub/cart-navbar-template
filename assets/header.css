@@ -1,0 +1,161 @@
+
+.nav-bar__container {
+  font-family: 'Avenir Regular';
+  position: relative;
+  background-color: rgb(var(--color-background));
+  left: 0;
+  right: 0;
+  height: 62px;
+  padding: 0 25px;
+  width: 100%;
+  transition: top 0.3s;
+}
+
+.nav-bar__container.relative-position {
+  position: relative;
+}
+
+
+.nav-bar__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+}
+
+.nav-bar__menu-item {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.nav-bar__menu-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(var(--color-foreground));
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-bar__menu-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-drawer__open-btn svg rect {
+  fill: rgb(var(--color-foreground));
+}
+
+.nav-bar__brand-logo {
+  width: 150px;
+}
+
+.nav-bar__menu {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  width: 0;
+  background: rgb(var(--color-background));
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  transition: width .5s;
+  overflow: hidden;
+  display: flex;
+}
+
+.close {
+  padding: 0;
+}
+
+.open {
+  width: 80%;
+  padding-left: 40px;
+}
+
+.nav-drawer__close-btn {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.nav-drawer__close-btn svg path {
+  fill: rgb(var(--color-foreground));
+}
+
+.nav-bar__menu-item {
+  list-style-type: none;
+}
+
+.nav-bar__menu-item a {
+  text-decoration: none;
+  color: rgb(var(--color-foreground));
+  font-weight: 400;
+  font-size: 18px;
+}
+
+
+.nav-bar__cart-open-btn svg {
+  width: 18.7px;
+  height: 22px;
+}
+
+.nav-bar__cart-open-btn svg path {
+  fill: rgb(var(--color-foreground));
+}
+
+
+@media screen and (min-width: 789px) {
+  
+  .nav-bar__container {
+    height: 95px;
+    padding: 0;
+  }
+
+  .nav-bar__items {
+    height: 95px;
+    justify-content: space-around;
+
+  }
+
+  .nav-bar__brand-logo {
+    width: 235px;
+  }
+
+  .nav-drawer__open-btn {
+    display: none;
+  }
+
+  .nav-bar__menu {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 50px;
+    padding: 20px 45px;
+    background-color: #3e5f55;
+    height: 60px;
+  }
+
+  .close {
+    width: auto;
+  }
+
+  .nav-drawer__close-btn {
+    display: none;
+  }
+
+  .nav-bar__cart-open-btn svg {
+    width: 35px;
+    height: 40px;
+  }
+}
