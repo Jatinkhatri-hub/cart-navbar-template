@@ -195,6 +195,7 @@
   border: 1px solid #676666;
   border-radius: 35px;
   height: 20px;
+  overflow: hidden;
 }
 
 .line-item__quantity-selector button {
