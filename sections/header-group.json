@@ -39,24 +39,12 @@
     "header": {
       "type": "header",
       "settings": {
-        "brand_logo": "shopify://shop_images/jive_logo.png",
-        "navigation": "main-menu",
-        "color_scheme": "scheme-1",
-        "header_position": "always"
-      }
-    },
-    "cart_drawer_new_kGghBM": {
-      "type": "cart-drawer-new",
-      "settings": {
-        "color_scheme": "",
-        "cart_title": "YOUR CART",
-        "user_signup": "Sign up for Feed 1st and get FREE shipping"
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "cart_drawer_new_kGghBM"
+    "header"
   ]
 }
