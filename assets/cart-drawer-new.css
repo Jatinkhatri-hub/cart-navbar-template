@@ -232,7 +232,8 @@
 
 .cart-drawer__footer-row {
   display: flex;
-  fl
+  justify-content: space-between;
+  align-items: center;
 }
 
 
