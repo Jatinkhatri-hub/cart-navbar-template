@@ -120,6 +120,8 @@
 .line-item__img {
   width: 65px;
   height: 80px;
+  overflow: hidden;
+  border-radius: 2px;
 }
 
 .line-item__img img {
