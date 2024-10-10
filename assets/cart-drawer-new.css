@@ -211,8 +211,7 @@
   outline: none;
   width: 30px;
   text-align: center;
-  font-size: 12px;
-  
+  font: 600 12px 'Inter';
 }
 
 
