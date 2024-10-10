@@ -27,5 +27,6 @@
 
 .cart-drawer__header {
   display: flex;
-  align-items: base;
+  justify-content: center;
+  flex-direction: column;
 }
