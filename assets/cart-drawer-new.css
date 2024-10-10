@@ -147,4 +147,7 @@
   color: #676666;
 }
 
-.line-item__re
+.line-item__remove {
+  position: absolute;
+  top: 0
+}
