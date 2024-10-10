@@ -170,5 +170,9 @@
 
 .line-item__price-wrapper {
   display: flex;
-  gap: 5px
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
+
+.
