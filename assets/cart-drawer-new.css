@@ -111,5 +111,6 @@
 .line-item-wrapper {
   height: 80px;
   display: flex;
-  
+  flex-direction: row;
+  width: 100%;
 }
