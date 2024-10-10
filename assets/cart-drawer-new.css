@@ -108,7 +108,7 @@
   padding: 24px;
 }
 
-.line-item-wrapper {
+.line-item__wrapper {
   height: 80px;
   display: flex;
   flex-direction: row;
