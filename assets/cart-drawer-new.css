@@ -201,7 +201,8 @@
 .line-item__quantity-selector input {
   border: none;
   outline: none;
-  width: 20px;
+  width: 30px;
+  text-align: center;
 }
 
 
