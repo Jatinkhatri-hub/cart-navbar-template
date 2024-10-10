@@ -16,7 +16,8 @@
         <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20 in store credit!</p>
       </div> {% endcomment %}
     </header>
-    {% form 'cart', cart, class: 'cart-drawer-form' %} {% endform %}
+    {% form 'cart', cart, class: 'cart-drawer-form' %} 
+    {% endform %}
   </div>
 </div>
 
