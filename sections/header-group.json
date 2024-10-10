@@ -48,7 +48,9 @@
     "cart_drawer_new_kGghBM": {
       "type": "cart-drawer-new",
       "settings": {
-        "color_scheme": ""
+        "color_scheme": "",
+        "cart_title": "YOUR CART",
+        "user_signup": "Sign up for Feed 1st and get FREE shipping"
       }
     }
   },
