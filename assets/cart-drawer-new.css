@@ -10,9 +10,9 @@
   transition: width .5s;
   overflow: hidden;
   display: flex;
+  
 }
 
-.open {
+.cart-drawer__wrapper.open {
   width: 100%;
-  
 }
