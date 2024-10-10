@@ -190,6 +190,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 65px;
 }
 
 .line-item__quantity-selector button {
