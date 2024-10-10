@@ -38,7 +38,7 @@
                 </div>
                 <div class="line-item__mid">
                   <div class="line-item__price-wrapper">
-                    <span class="line-item__current-price">{{ item |  money_with_currency }}</span>
+                    <span class="line-item__current-price">{{ item.product.price |  money_with_currency }}</span>
                     <span class="line-item__cap">{{ item.product.compare_at_price |  money_with_currency }}</span>
                   </div>
                 </div>
