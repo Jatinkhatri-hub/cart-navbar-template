@@ -10,7 +10,8 @@
   transition: width .5s;
   overflow: hidden;
   display: flex;
-  
+  z-index: 999999;
+  bottom: 0;
 }
 
 .cart-drawer__wrapper.open {
