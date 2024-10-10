@@ -182,5 +182,8 @@
 
 .line-item__cap {
   font: 600 13px 'Inter';
-  color:#404040
+  color:#404040;
+  text-decoration: line-through;
 }
+
+
