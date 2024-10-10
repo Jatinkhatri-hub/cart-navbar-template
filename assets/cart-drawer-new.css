@@ -149,5 +149,8 @@
 
 .line-item__remove {
   position: absolute;
-  top: 0
+  top: 0;
+  right: 5px;
 }
+
+.lin
