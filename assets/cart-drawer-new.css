@@ -204,5 +204,6 @@
 
 
 .line-item__quantity-selector input:focus {
-  out
+  outline-offset: none;
+  box-shadow: none;
 }
