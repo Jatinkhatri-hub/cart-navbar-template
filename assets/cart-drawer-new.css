@@ -26,5 +26,6 @@
 }
 
 .cart-drawer__header {
-  di
+  display: flex;
+  align-items: ;
 }
