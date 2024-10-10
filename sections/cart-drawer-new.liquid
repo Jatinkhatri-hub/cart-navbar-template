@@ -24,7 +24,7 @@
           {% for item in cart.items %}
             <div class="line-items__wrapper">
               <div class="line-items__img">
-                <img src="{{  }}">
+                <img src="{{ item.image | imag }}">
               </div>
             </div>
           {% endfor %}
