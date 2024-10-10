@@ -13,7 +13,7 @@
         <p>{{ section.settings.user_signup }} <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Learn More</a>.</p>
       </div>
       <div class="cart-header__b3">
-        <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span></p>
+        <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20</p>
       </div>
     </header>
   </div>
