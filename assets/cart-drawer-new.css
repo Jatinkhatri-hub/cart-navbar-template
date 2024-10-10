@@ -150,7 +150,7 @@
 .line-item__remove {
   position: absolute;
   top: 0;
-  right: 5px;
+  right: 0;
 }
 
 .line-item__remove svg {
