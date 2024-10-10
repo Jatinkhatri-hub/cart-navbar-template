@@ -143,7 +143,5 @@
 
 .line-item__variant {
   margin: 0;
-  font-size: 10px;
-  font-weight: 500;
-  font-family: 'Inter';
+  font: 500 10px 'Inter';
 }
