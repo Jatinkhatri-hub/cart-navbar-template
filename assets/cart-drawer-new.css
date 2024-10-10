@@ -119,5 +119,7 @@
 .line-item__img {
   width: 65px;
   height: 80px;
-  
+  object-fit: cover;
 }
+
+.
