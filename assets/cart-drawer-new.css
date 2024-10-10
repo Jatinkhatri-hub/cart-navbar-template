@@ -153,4 +153,7 @@
   right: 5px;
 }
 
-.line-item__remove svg ]
+.line-item__remove svg {
+  width: 20px;
+  height: 20px;
+}
