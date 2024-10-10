@@ -54,7 +54,7 @@
         <footer class="cart-drawer__footer">
           <div class="cart-drawer__footer-row">
             <h3>Subtotal</h3>
-            <span>{{ cart.total_price |  money_without_currency }}</span>
+            <span>{{ cart.total_price |  money_with_currency }}</span>
           </div>
           <button type="submit" name="checkout" class="cart-drawer__checkout-btn">{{ 'icon-cart-new.svg' | inline_asset_content }} Proceed to checkout</button>
         </footer>
