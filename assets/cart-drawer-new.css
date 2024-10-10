@@ -107,7 +107,8 @@
 .cart-drawer__items {
   padding: 24px;
   display: flex;
-  flex
+  flex-direction: column;
+  gap: 20px;
 }
 
 .line-item__wrapper {
