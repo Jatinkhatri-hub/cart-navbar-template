@@ -7,7 +7,7 @@
         <slot name="header"></slot>
 
         <button type="button" is="dialog-close-button"  part="close-button tap-area" aria-label="{{ 'general.accessibility.close' | t | escape }}">
-          {%- render 'icon' with 'close', width: 14 -%}
+          {{ 'icon-close' : inline_asset_content }}
         </button>
       </header>
 
