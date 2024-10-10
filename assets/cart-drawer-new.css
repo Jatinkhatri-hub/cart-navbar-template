@@ -35,6 +35,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-inline-start: ;
 }
 
 .car-header__b1 h2 {
