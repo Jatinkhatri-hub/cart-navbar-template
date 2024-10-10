@@ -59,9 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   openCart.addEventListener('click', () => {
-    cartDrawer.classList.add('cart-drawer--active');
-    cartDrawer.classList.remove('close');
-    
+    // cartDrawer.classList.add('cart-drawer--active');
+    // cartDrawer.classList.remove('close');
+    console.log()
   });
   
   navCloseBtn.addEventListener('click', () => {
