@@ -54,15 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
   const navDrawer = document.querySelector('.nav-bar__menu');
-  const openCart = document.querySelector('.nav-bar__cart-open-btn')
-  const cartDrawer = document.querySelector('.cart-drawer__wrapper');
+  // const openCart = document.querySelector('.nav-bar__cart-open-btn')
+  // const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
 
-  openCart.addEventListener('click', () => {
-    // cartDrawer.classList.add('cart-drawer--active');
-    // cartDrawer.classList.remove('close');
-    console.log()
-  });
+  // openCart.addEventListener('click', () => {
+  //   // cartDrawer.classList.add('cart-drawer--active');
+  //   // cartDrawer.classList.remove('close');
+  //   console.log(cartDrawer);
+  // });
   
   navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
