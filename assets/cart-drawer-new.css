@@ -137,5 +137,6 @@
 .line-item__title {
   margin: 0;
   font-size: 14px;
-  font-
+  font-family: 'Inter';
+  font-weight: 600;
 }
