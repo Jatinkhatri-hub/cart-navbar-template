@@ -203,4 +203,6 @@
 }
 
 
-.line-item__quantity-selector in
+.line-item__quantity-selector input:focus {
+  of
+}
