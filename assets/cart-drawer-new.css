@@ -37,5 +37,8 @@
 }
 
 .car-header__b1 h2 {
-  ma
+  margin: 0;
+  font-size: 19px;
+  font-family: 'Inter';
+  
 }
