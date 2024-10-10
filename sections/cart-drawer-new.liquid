@@ -20,8 +20,10 @@
       {% if cart.item_count == 0 %} 
         <p class="cart-drawer__empty">Your cart is empty</p>  
       {% else %} 
-        <div class="cart-drawer">
-
+        <div class="cart-drawer-items">
+          {% for item in cart.items %}
+            <div></div>
+          {% endfor %}
         </div>
       {% endif %}
     {% endform %}
