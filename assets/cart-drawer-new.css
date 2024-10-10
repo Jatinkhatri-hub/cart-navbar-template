@@ -1,4 +1,7 @@
 .cart-drawer__wrapper {
   background-color: rgb(var(--color-background));
-  
+  position: fixed;
+  top: 0;
+  margin: 0;
+  wi
 }
