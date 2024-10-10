@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   openCart.addEventListener('click', () => {
-    cartDrawer.classList
+    cartDrawer.classList.add('cart-drawer')
     
   });
   
