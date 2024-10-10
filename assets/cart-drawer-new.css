@@ -168,4 +168,7 @@
   justify-content: space-between;
 }
 
-.line-item
+.line-item__price-wrapper {
+  display: flex;
+  gap: 5px
+}
