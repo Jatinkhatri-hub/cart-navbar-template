@@ -63,6 +63,8 @@
   position: absolute;
   right: 24px;
   border: none;
+  outline: none;
+  background: #F0F0F0;
   
 }
 
