@@ -251,6 +251,11 @@
 .cart-drawer__checkout-btn {
   background: black;
   border: 2px solid black;
-  padding: 14px
+  padding: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
