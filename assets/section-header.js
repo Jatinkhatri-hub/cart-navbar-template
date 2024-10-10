@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   openCart.addEventListener('click', () => {
     cartDrawer.classList.add('cart-drawer--active');
-    
+    cartDrawer.classList.remove('close');
     
   });
   
