@@ -27,7 +27,7 @@
 
     <a href="{{ routes.cart_url }}"
       class="nav-bar__cart-open-btn">
-      {%  render 'icon-shopping-bag' %} 
+      {{ 'icon-shopping-bag.svg' | inline_asset_content }} 
     </a>
   </div>
 </header>
