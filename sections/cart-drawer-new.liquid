@@ -29,7 +29,7 @@
               <div class="line-items__info">
                 <div class="line-item__header">
                   <h2 class="line-item__title">
-                    {{ item.title |  default }}
+                    {{ item.product.title | default: item.title }}
                   </h2>
                   <h4 class="line-item__variant">
                     {{ item.variant.title }}
