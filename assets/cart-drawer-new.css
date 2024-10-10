@@ -114,6 +114,7 @@
   flex-direction: row;
   width: 100%;
   position: relative;
+  gap: 13px;
 }
 
 .line-item__img {
@@ -132,3 +133,5 @@
   display: flex;
   justify-content: flex-start;
 }
+
+
