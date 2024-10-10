@@ -89,8 +89,9 @@
   background: #ccff66;
 }
 
-.cart-header__b2 {
-  
+.cart-header__b2 p {
+  margin: 0;
+  heig
 }
 
 
