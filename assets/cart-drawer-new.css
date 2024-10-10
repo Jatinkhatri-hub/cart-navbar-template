@@ -66,7 +66,10 @@
   outline: none;
   background: #F0F0F0;
   border-radius: 50%;
-  
+}
+
+.cart-close__btn svg {
+  width: ;
 }
 
 
