@@ -196,6 +196,7 @@
 .line-item__quantity-selector button {
   background-color: white;
   border: none;
+  border: 1px solid #;
 }
 
 .line-item__quantity-selector input {
