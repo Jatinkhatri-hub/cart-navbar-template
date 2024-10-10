@@ -119,9 +119,10 @@
 .line-item__img {
   width: 65px;
   height: 80px;
-  object-fit: cover;
 }
 
 .line-item__img img {
-  width: ;
+  width: 65px;
+  height: 80px;
+  object-fit: cover;
 }
