@@ -42,7 +42,7 @@
                     <span class="line-item__cap">{{ item.product.compare_at_price |  money_with_currency }}</span>
                   </div>
                   <div class="line-item__quantity-selector">
-                    <button class="line-item__quantity-selector-minus">{{  }}</button>
+                    <button class="line-item__quantity-selector-minus">{{ 'icon-minus.svg' | inline_asset_content }}</button>
                     <input type="text" readonly value="{{ item.quantity }}">
                     <button class="line-item__quantity-selector-plus">{{ 'icon-plus.svg' | inline_asset_content }}</button>
                   </div>
