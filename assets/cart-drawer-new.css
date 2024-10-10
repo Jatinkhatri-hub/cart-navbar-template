@@ -197,4 +197,7 @@
   border: none;
 }
 
-line-item
+.line-item__quantity-selector input {
+  border: none;
+  outline: none;
+}
