@@ -17,7 +17,11 @@
       </div> {% endcomment %}
     </header>
     {% form 'cart', cart, class: 'cart-drawer-form' %} 
-      {}
+      {% if cart.item_count == 0 %} 
+        <p class="cart-drawer__empty">Your cart is empty</p>  
+      {% else %} 
+        
+      {% endif %}
     {% endform %}
   </div>
 </div>
