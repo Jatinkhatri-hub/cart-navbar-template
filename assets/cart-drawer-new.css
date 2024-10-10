@@ -33,5 +33,6 @@
 
 .cart-header__b1 {
   display: flex;
+  justify-content: flex-start;
   
 }
