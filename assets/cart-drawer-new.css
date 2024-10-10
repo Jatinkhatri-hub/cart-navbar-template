@@ -194,6 +194,7 @@
   width: 65px;
   border: 1px solid #F0F0F0;
   border-radius: 35px;
+  height: 20px;
 }
 
 .line-item__quantity-selector button {
@@ -202,6 +203,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 20px;
 }
 
 .line-item__quantity-selector input {
