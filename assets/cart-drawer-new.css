@@ -199,7 +199,9 @@
 .line-item__quantity-selector button {
   background-color: white;
   border: none;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .line-item__quantity-selector input {
