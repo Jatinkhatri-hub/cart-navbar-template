@@ -1,15 +1,15 @@
 {{ 'card-drawer-new.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'cart-drawer-new.js' |  asset_url }}" defer></script>
 
-<div class="cart-drawer__wrapper open color-{{ section.settings.color_scheme }}">
+<div class="cart-drawer__wrapper open color-{{ section.settings.color_scheme }}"></div>
 
-
-</div>
-
-{%  schema  %} 
+{% schema %}
   {
     "name": "Cart Drawer",
     "tag": "section",
+    "enabled_on": {
+      "groups": ["header"]
+    },
     "settings": [
       {
         "type": "color_scheme",
