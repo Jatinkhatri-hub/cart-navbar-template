@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
   const navDrawer = document.querySelector('.nav-bar__menu');
-  const 
+  const openCart = document.querySelector('.')
   
   navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
