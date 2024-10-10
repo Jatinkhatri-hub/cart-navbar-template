@@ -17,7 +17,7 @@
       <img src="{{ section.settings.brand_logo |  img_url: 'medium'  }}" alt="{{ site.name }}" class="nav-bar__brand-logo">
     </a>
     <ul class="nav-bar__menu close">
-      <div class="nav-drawer__close-btn"> {% render 'icon-close' %} </div>
+      <div class="nav-drawer__close-btn"> {{ 'icon-close.svg' | inline_asset_content }} </div>
       {% for link in section.settings.navigation.links %}
         <li class="nav-bar__menu-item">
           <a href="{{ link.url }}">{{ link.title }}</a>
