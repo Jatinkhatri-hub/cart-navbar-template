@@ -19,5 +19,7 @@
 }
 
 .cart-drawer__box {
-  
+  display: flex;
+  flex-direction: column;
+  fle
 }
