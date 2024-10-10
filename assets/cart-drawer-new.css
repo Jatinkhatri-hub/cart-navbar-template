@@ -134,7 +134,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-star;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .line-item__title {
