@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
 
-    
+    document.querySelector("")
 
     document.
     
