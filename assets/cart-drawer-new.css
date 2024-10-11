@@ -264,5 +264,6 @@
 
 
 .cart-drawer__payment-options {
-  
+  display: flex;
+  justify-content: center;
 }
