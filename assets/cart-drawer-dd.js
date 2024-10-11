@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         body: new FormData(form),
       });
 
+      // Update
+
       cartDrawer.classList.add('cart-drawer--active');
       cartDrawer.classList.remove('close');
 
