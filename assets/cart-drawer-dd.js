@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-  d
+  window.cartDrawer = document.querySelector('.cart-drawer_')
 });
