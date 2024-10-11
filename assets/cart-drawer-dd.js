@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
+  addCartDrawerListners();
+
 
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
     form.addEventListener("submit", async (e) =>  {
