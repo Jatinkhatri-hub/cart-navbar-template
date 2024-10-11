@@ -283,9 +283,9 @@
   align-items: center;
 }
 
-.cart-drawer__payment-provider-img {
+.cart-drawer__payment-provider-img img {
   width: 170px;
   height: 17px;
-  object-fit: ;
+  object-fit: cover;
 }
 
