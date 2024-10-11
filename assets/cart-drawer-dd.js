@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(parentEl);
   });
 
-  function add
+  function addCartDrawerListners() {
+    
+  }
 
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
