@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeBtn.addEventListener('click', () => {
     cartDrawer.classList.remove('cart-drawer--active');
-    cartDrawer.c
+    cartDrawer.classList.add('close');
   });
 
 });
