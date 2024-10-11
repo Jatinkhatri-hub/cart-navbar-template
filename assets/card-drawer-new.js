@@ -1,12 +1,12 @@
 import { openCart } from './section-header.js'; // Adjust the path as per your file structure
+openCart.addEventListener('click', () => {
+  console.log('Nav drawer opened from cart drawer');
+});
 document.addEventListener('DOMContentLoaded', () => {
   // const openCart = document.querySelector('.nav-bar__cart-open-btn')
   // const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
 // Use the button functionality
-openCart.addEventListener('click', () => {
-  console.log('Nav drawer opened from cart drawer');
-});
 
 
   // openCart.addEventListener('click', () => {
