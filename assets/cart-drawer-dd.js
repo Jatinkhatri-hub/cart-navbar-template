@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = await res.text()
     
     const html = document.createElement('div');
-    div
+    html.innerHTML = text;
+    console.log(hem)
   }
 
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
