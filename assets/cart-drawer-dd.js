@@ -11,4 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cartDrawer.classList.add('close');
   });
 
+  document.querySelectorAll('')
+
 });
