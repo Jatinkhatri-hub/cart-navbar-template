@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cartDrawer.classList.add('close');
   });
 
-  document.querySelectorAll('.line-item__quantity-selector')
+  document.querySelectorAll('.line-item__quantity-selector button').forEach()
 
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
