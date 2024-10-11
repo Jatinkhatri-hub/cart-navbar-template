@@ -6,12 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeBtn = document.querySelector('.cart-close__btn');
 
-  function 
+  function closeCart() {
+    closeBtn.addEventListener('click', () => {
+      cartDrawer.classList.remove('cart-drawer--active');
+      cartDrawer.classList.add('close');
+    });
+  }
 
-  closeBtn.addEventListener('click', () => {
-    cartDrawer.classList.remove('cart-drawer--active');
-    cartDrawer.classList.add('close');
-  });
+  
 
   document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
     const parentEl  =  button.parentElement;
