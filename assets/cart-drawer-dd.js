@@ -4,6 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.cartDrawer = cartDrawer;
   console.log(cartDrawer);
 
-  const 
+  const closeBtn = document.querySelector('/')
 
 });
