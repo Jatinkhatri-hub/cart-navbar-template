@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       cartDrawer.classList.add('cart-drawer--active');
-      cartd
+      cartDrawer.classList.remove('close');
 
     });
   })
