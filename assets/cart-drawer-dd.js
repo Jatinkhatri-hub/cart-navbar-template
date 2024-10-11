@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener("submit", async (e) =>  {
       e.preventDefault();
 
-      //submit form with a
+      //submit form with a ajax
+      fetch("/cart/add", {
+        
+      })
     });
   })
 
