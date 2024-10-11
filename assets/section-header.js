@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
 
-  
+  const openCartBtn = do
   
   // Assign it to the global window object so it can be accessed in other files
   window.navOpenBtn = navOpenBtn;
