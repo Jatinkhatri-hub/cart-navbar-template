@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
   //   // cartDrawer.classList.remove('close');
   //   console.log(cartDrawer);
   // });
-  window.cartDrawer = document.querySelector('')
+  // window.cartDrawer = document.querySelector('.cart-drawer__wrapper')
 });
