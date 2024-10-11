@@ -286,6 +286,6 @@
 .cart-drawer__payment-provider-img img {
   width: 170px;
   height: 17px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
