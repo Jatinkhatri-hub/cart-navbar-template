@@ -45,8 +45,9 @@
 //   }
 
 // });
-
+export { navOpenBtn };
 document.addEventListener('DOMContentLoaded', () => {
+  
 
   var navBar = document.querySelector('.nav-bar__container');
   var lastScrollTop = 0;
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navDrawer = document.querySelector('.nav-bar__menu');
    const openCart = document.querySelector('.nav-bar__cart-open-btn')
 
-   export { navOpenBtn };
+   
    //const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
    const cartDrawer = window.cartDrawer;
