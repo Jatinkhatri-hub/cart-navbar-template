@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.cart-close__btn');
 
   closeBtn.addEventListener('click', () => {
-    
+    cartDrawer.a
   });
 
 });
