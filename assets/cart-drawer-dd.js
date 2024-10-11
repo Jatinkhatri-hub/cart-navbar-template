@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const html = document.createElement('div');
     html.innerHTML = text;
     
-    const newBox = html.querySelector(".cart-drawer")
+    const newBox = html.querySelector(".cart-drawer").innerHTML;
     
     console.log(html);
 
