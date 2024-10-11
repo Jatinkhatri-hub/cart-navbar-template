@@ -17,25 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function addCartDrawerListners() {
-    
+    async function updateCartDrawer() {
+      const res = await fetch('/?section_id=cart-drawer-new');
+      const text = await res.text()
+      
+      const html = document.createElement('div');
+      html.innerHTML = text;
+      
+      const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
+  
+      document.querySelector(".cart-drawer__box").innerHTML = newBox
+  
+      
+      
+      console.log(html);
+  
+    }
+
   }
 
-  async function updateCartDrawer() {
-    const res = await fetch('/?section_id=cart-drawer-new');
-    const text = await res.text()
-    
-    const html = document.createElement('div');
-    html.innerHTML = text;
-    
-    const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
-
-    document.querySelector(".cart-drawer__box").innerHTML = newBox
-
-    
-    
-    console.log(html);
-
-  }
 
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
     form.addEventListener("submit", async (e) =>  {
