@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       //submit form with a ajax
       fetch("/cart/add", {
-        
-      })
+        method
+      });
     });
   })
 
