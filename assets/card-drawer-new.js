@@ -1,1 +1,3 @@
-docuemt
+document.addEventListener('DOMContentLoaded', () => {
+  
+})
