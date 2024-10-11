@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         body: new FormData(form),
       });
 
-      cartDrawer.add
+      cartDrawer.classList.add('cart-drawer--active');
+      cartd
 
     });
   })
