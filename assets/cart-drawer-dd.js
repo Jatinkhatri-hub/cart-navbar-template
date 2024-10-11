@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })
 
-  function update
+  function updateCartDrawer() {
+    fetch('/')
+  }
 
 });
