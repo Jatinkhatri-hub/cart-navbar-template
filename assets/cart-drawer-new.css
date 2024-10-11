@@ -267,6 +267,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: ;
 }
 
 .cart-drawer__payment-options p {
@@ -281,6 +282,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .cart-drawer__payment-provider-img img {
