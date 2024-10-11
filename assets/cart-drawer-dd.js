@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       //submit form with a ajax
-      await fetch("/cart/add", {
+      fetch("/cart/add", {
         method: "post",
-        body: new FormData(form),
+        
       });
     });
   })
