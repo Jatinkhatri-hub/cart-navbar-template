@@ -1,5 +1,5 @@
 {{ 'cart-drawer-new.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'cart-drawer-dd.js' |  asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-drawer-dd.js' |  asset_url }}" defer></script>
 
 <div  class="cart-drawer__wrapper close color-{{ section.settings.color_scheme }}">
   <div class="cart-drawer__box">
@@ -60,7 +60,7 @@
           <div class="cart-drawer__payment-options">
             <p>Secure checkout with </p>
             <div class="cart-drawer__payment-provider-img">
-              <img src="{{ section.settings.payment_provider |  img_url: 'medium' }}">
+              <img src="{{  }}">
             </div>
           </div>
         </footer>
