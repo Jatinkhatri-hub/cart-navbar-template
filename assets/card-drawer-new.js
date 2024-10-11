@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
   //   // cartDrawer.classList.remove('close');
   //   console.log(cartDrawer);
   // });
-  // window.cartDrawer = document.querySelector('.cart-drawer__wrapper')
+  window.cartDrawer = document.querySelector('.cart-drawer__wrapper')
 });
