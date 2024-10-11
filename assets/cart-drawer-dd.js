@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
-    const keybutton.parentElement
+    const =  keybutton.parentElement
   });
 
   async function updateCartDrawer() {
