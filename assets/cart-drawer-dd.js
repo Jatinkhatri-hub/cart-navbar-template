@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
 
-    document.querySelector(".cart-drawer").innerHTML = newBox
+    document.querySelector(".cart-drawer__box").innerHTML = newBox
 
-    document.
+    
     
     console.log(html);
 
