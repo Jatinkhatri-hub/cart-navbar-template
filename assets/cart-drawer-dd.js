@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })
 
-  function updateCartDrawer() {
-    fetch('/?section_id=cart-drawer-new')
+  async function updateCartDrawer() {
+    const  fetch('/?section_id=cart-drawer-new')
   }
 
 });
