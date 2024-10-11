@@ -54,9 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
   const navDrawer = document.querySelector('.nav-bar__menu');
-  const openCart = document.querySelector('.nav-bar__cart-open-btn')
+  const openCart = document.querySelector('.nav-bar__cart-open-btn');
    //const cartDrawer = document.querySelector('.cart-drawer__wrapper');
   
+     
+  // Poll for the cartDrawer in window
+  const checkCartDrawer = setInterval(() => {
+    if (window.cartDrawer) {
+      // Now cartDrawer is available
+      const cartDrawer = window.cartDrawer;
+      console.log('Cart drawer found:', cartDrawer);
+
+      // Add event listener to open the cart
+      openCart.addEventListener('click', () => {
+        cartDrawer.classList.add('cart-drawer--active');
+        cartDrawer.classList.remove('close');
+        console.log('Cart drawer opened');
+      });
+
+      clearInterval(checkCartDrawer); // Stop polling once cartDrawer is found
+    } else {
+      console.log('Waiting for cart drawer...');
+    }
+  }, 100); // Check every 100ms
+
   
 
   // const cartDrawer = window.cartDrawer;
