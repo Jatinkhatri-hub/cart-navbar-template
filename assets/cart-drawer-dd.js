@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  window.cartDrawer =
   
-  const document.querySelector('.cart-drawer__wrapper');
+  const cartDrawer = document.querySelector('.cart-drawer__wrapper');
+  window.cartDrawer = cartDrawer;
   console.log(window.cartDrawer);
 });
