@@ -45,7 +45,7 @@
 //   }
 
 // });
-
+export { openCart }
 document.addEventListener('DOMContentLoaded', () => {
 
   var navBar = document.querySelector('.nav-bar__container');
@@ -53,16 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
+  const navDrawer = document.querySelector('.nav-bar__menu');
+   const openCart = document.querySelector('.nav-bar__cart-open-btn')
+   //const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
-  const openCartBtn = do
-  
-  // Assign it to the global window object so it can be accessed in other files
-  window.navOpenBtn = navOpenBtn;
+   const cartDrawer = window.cartDrawer;
 
-  navOpenBtn.addEventListener('click', () => {
-    console.log('Nav drawer opened from section-header.js');
+
+  openCart.addEventListener('click', () => {
+    // cartDrawer.classList.add('cart-drawer--active');
+    // cartDrawer.classList.remove('close');
+    console.log(cartDrawer);
   });
-
   
   navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
