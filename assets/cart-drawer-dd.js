@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cartDrawer.classList.add('close');
   });
 
-  document.querySelectorAll('')
+  document.querySelectorAll('form[action="]')
 
 });
