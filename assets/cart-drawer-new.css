@@ -278,6 +278,10 @@
 .cart-drawer__payment-provider-img {
   width: 170px;
   height: 17px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.cart-drawer
 
