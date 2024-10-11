@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(".cart-drawer__box").innerHTML = newBox
 
     
-    
+    addCartDrawerListners();
     console.log(html);
 
   }
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeCart();
 
-    
+  
 
   }
 
