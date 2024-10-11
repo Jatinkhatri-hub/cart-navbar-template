@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
     form.addEventListener("submit", (e) =>  {
       e.preventDefault();
-      
+
+      //submit form with a
     });
   })
 
