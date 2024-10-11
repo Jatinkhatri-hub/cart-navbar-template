@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     cartDrawer.classList.add('close');
   });
 
+  async function up
+
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
     const text = await res.text()
