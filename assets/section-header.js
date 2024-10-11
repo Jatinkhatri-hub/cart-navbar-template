@@ -53,7 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
+
   
+  
+  // Assign it to the global window object so it can be accessed in other files
+  window.navOpenBtn = navOpenBtn;
+
+  navOpenBtn.addEventListener('click', () => {
+    console.log('Nav drawer opened from section-header.js');
+  });
+
   
   navCloseBtn.addEventListener('click', () => {
     navDrawer.classList.remove('open');
