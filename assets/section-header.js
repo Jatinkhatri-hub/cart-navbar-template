@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
    //const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
   const cartDrawer = window.cartDrawer;
-
+  console.log(cartDrawer);
 
   openCart.addEventListener('click', () => {
     // cartDrawer.classList.add('cart-drawer--active');
