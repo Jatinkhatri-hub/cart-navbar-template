@@ -267,7 +267,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: ;
+  margin-top: 10px;
+  gap: 17px;
 }
 
 .cart-drawer__payment-options p {
