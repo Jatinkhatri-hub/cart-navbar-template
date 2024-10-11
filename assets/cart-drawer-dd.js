@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeBtn = document.querySelector('.cart-close__btn');
 
+  function 
+
   closeBtn.addEventListener('click', () => {
     cartDrawer.classList.remove('cart-drawer--active');
     cartDrawer.classList.add('close');
