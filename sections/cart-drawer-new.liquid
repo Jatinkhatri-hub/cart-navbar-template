@@ -1,8 +1,6 @@
 {{ 'cart-drawer-new.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'cart-drawer-new.js' |  asset_url }}" defer></script>
-
-<script src="{{ 'section-header.js' |  asset_url }}" defer></script>
-
+<script src="{{ 'section-header.js' |  asset_url }}" type="module"></script>
+<script src="{{ 'cart-drawer-new.js' |  asset_url }}" type="module"></script>
 
 <div  class="cart-drawer__wrapper close color-{{ section.settings.color_scheme }}">
   <div class="cart-drawer__box">
