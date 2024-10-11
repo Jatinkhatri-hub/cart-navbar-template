@@ -13,8 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
     const parentEl  =  button.parentElement;
-    console.log()
+    console.log(parentEl);
   });
+
+  function add
 
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
