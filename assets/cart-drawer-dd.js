@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const closeBtn = document.querySelector('.cart-close__btn');
 
-  c
+  closeBtn.addEventListener('click', ())
 
 });
