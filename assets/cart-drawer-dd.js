@@ -20,25 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(parentEl);
   });
 
+  async function updateCartDrawer() {
+    const res = await fetch('/?section_id=cart-drawer-new');
+    const text = await res.text()
+    
+    const html = document.createElement('div');
+    html.innerHTML = text;
+    
+    const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
+
+    document.querySelector(".cart-drawer__box").innerHTML = newBox
+
+    
+    
+    console.log(html);
+
+  }
   function addCartDrawerListners() {
-    async function updateCartDrawer() {
-      const res = await fetch('/?section_id=cart-drawer-new');
-      const text = await res.text()
-      
-      const html = document.createElement('div');
-      html.innerHTML = text;
-      
-      const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
-  
-      document.querySelector(".cart-drawer__box").innerHTML = newBox
-  
-      
-      
-      console.log(html);
-  
-    }
 
     closeCart();
+
+    
 
   }
 
@@ -61,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cartDrawer.classList.add('cart-drawer--active');
       cartDrawer.classList.remove('close');
       
-      add
+      addCartDrawerListners();
 
     });
   })
