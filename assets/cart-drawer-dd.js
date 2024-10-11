@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   async function updateCartDrawer() {
-    const  fetch('/?section_id=cart-drawer-new')
+    const res = await fetch('/?section_id=cart-drawer-new');
+    const text = await re
   }
 
 });
