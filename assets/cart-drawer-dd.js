@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cartDrawer.classList.add('close');
   });
 
+  async function updateCartDrawer() {
+    const res = await fetch('/?section_id=cart-drawer-new');
+    const text = await res.text()
+    console.log(text);
+  }
+
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
     form.addEventListener("submit", async (e) =>  {
       e.preventDefault();
@@ -27,10 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })
 
-  async function updateCartDrawer() {
-    const res = await fetch('/?section_id=cart-drawer-new');
-    const text = await res.text()
-    console.log(text);
-  }
+  
 
 });
