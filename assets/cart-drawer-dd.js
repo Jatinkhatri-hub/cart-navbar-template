@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
     const text = await res.text()
-    console.log(text);
+    
+    const html = document.createElement('div');
+    div
   }
 
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Update cart drawer
-      
+      await updateCartDrawer();
 
       cartDrawer.classList.add('cart-drawer--active');
       cartDrawer.classList.remove('close');
