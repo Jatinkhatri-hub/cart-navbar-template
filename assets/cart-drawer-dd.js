@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   function updateCartDrawer() {
-    fetch('/?section_id=cart')
+    fetch('/?section_id=cart-drawer-new')
   }
 
 });
