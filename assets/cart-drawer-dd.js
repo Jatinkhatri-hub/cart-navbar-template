@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
-    form.addEventListener()
+    form.addEventListener("submit", (e) =>  {
+      e.preventDefault();
+      
+    });
   })
 
 });
