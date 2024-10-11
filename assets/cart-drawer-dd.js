@@ -16,10 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       //submit form with a ajax
-      fetch("/cart/add", {
+      await fetch("/cart/add", {
         method: "post",
-        
+        body: new FormData(form),
       });
+
+      cartDrawer.add
+
     });
   })
 
