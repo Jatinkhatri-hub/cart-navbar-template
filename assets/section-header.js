@@ -46,6 +46,7 @@
 
 // });
 export { openCart }
+const openCart = document.querySelector('.nav-bar__cart-open-btn')
 document.addEventListener('DOMContentLoaded', () => {
 
   var navBar = document.querySelector('.nav-bar__container');
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCloseBtn = document.querySelector('.nav-drawer__close-btn');
   const navOpenBtn = document.querySelector('.nav-drawer__open-btn');
   const navDrawer = document.querySelector('.nav-bar__menu');
-   const openCart = document.querySelector('.nav-bar__cart-open-btn')
    //const cartDrawer = document.querySelector('.cart-drawer__wrapper');
 
   //  const cartDrawer = window.cartDrawer;
