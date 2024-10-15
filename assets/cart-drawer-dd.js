@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ [key] : newQuantity })
+          body: JSON.stringify({ updates: { [key] : newQuantity } })
         });
 
         const json = await res.json();
