@@ -15,10 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 
-  document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
-    const parentEl  =  button.parentElement;
-    console.log(parentEl);
-  });
 
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
@@ -37,6 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
   function addCartDrawerListners() {
+
+
+    document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
+      const parentEl  =  button.parentElement;
+      console.log(parentEl);
+    });
 
     closeCart();
 

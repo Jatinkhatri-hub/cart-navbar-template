@@ -39,25 +39,12 @@
     "header": {
       "type": "header",
       "settings": {
-        "brand_logo": "shopify://shop_images/jive_logo.png",
-        "navigation": "main-menu",
-        "color_scheme": "scheme-1",
-        "header_position": "always"
-      }
-    },
-    "cart_drawer_new_NwWKkc": {
-      "type": "cart-drawer-new",
-      "settings": {
-        "color_scheme": "",
-        "cart_title": "Cart Title",
-        "user_signup": "Short Description.",
-        "payment_provider": "shopify://shop_images/Group_1484580789.png"
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "cart_drawer_new_NwWKkc"
+    "header"
   ]
 }
