@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
-      
       const parentEl  =  button.parentElement;
       console.log(parentEl);
     });
