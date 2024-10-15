@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ajax update\
         fetch("/cart/update.js", {
+          method: "POST",
           
         })
 
