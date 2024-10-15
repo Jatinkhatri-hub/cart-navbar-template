@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Get new quantity
         const currentQuantity = button.parentElement.querySelector('input').value;
-        const isUp = button.classList.contains('line-item__quantity-selector-plus')
+        const isUp = button.classList.contains('line-item__quantity-selector-plus');
+
+        const newQuantity = isUp?
 
         // Ajax update\
         fetch("/cart/update.js", {
