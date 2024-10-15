@@ -37,10 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
 
-      button.addEventListener('click' , (e) =>)
+      button.addEventListener('click' , (e) =>{
+        e.preventDefault();
+        const parentEl  =  button.parentElement;
+        console.log(parentEl);
 
-      const parentEl  =  button.parentElement;
-      console.log(parentEl);
+      })
+
     });
 
     closeCart();
