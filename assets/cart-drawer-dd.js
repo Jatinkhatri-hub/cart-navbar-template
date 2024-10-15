@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const newQuantity = isUp ? currentQuantity + 1 : currentQuantity - 1;
 
-        console.log({})
+        console.log({key, newQuantity});
 
         // Ajax update\
         // fetch("/cart/update.js", {
