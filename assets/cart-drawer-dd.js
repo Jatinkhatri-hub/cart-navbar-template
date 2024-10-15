@@ -47,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const key = parentEl.getAttribute("data-line-item-key");
 
         // Ajax update\
-        fetch("")
+        fetch("/cart/update.js", {
+          
+        })
 
       })
 
