@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const parentEl  =  button.parentElement;
         console.log(parentEl);
 
-        //
+        // Get new key
+        const key = parentEl.getAttribute('')
 
       })
 
