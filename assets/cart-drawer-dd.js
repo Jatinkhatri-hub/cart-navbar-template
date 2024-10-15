@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const json = await res.json();
-        
+        console.log(json);
 
       })
 
