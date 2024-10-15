@@ -39,9 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       button.addEventListener('click' , (e) =>{
         e.preventDefault();
-        ge
+        // Get line item key
         const parentEl  =  button.parentElement;
         console.log(parentEl);
+
+        //
 
       })
 
