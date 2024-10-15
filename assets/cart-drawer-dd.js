@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-          body:
+          body: JSON.stringify({[]})
         })
 
       })
