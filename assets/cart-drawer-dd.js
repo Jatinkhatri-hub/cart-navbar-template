@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       button.addEventListener('click' , (e) =>{
         e.preventDefault();
+        ge
         const parentEl  =  button.parentElement;
         console.log(parentEl);
 
