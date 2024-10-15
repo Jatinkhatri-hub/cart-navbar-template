@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const key = parentEl.getAttribute("data-line-item-key");
 
         // Get new quantity
-        const currentQuantity = button
+        const currentQuantity = button.parentElement.querySelector('input').value;
+        const isUp = button.classList.contains('line-item__quantity-selector-plus')
 
         // Ajax update\
         fetch("/cart/update.js", {
