@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const key = parentEl.getAttribute("data-line-item-key");
 
         // Get new quantity
-        const currentQuantity = button.parentElement.querySelector('input').value;
+        const currentQuantity = Number(button.parentElement.querySelector('input').value);
         const isUp = button.classList.contains('line-item__quantity-selector-plus');
 
         const newQuantity = isUp ? currentQuantity + 1 : currentQuantity - 1;
