@@ -53,14 +53,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log({key, newQuantity});
 
         // Ajax update\
-        // fetch("/cart/update.js", {
-        //   method: "post",
-        //   headers: {
-        //     Accept: "application/json",
-        //     "Content-Type": "application/json",
-        //   },
-        //   body: JSON.stringify({ [key] : 1 })
-        // })
+        fetch("/cart/update.js", {
+          method: "post",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ [key] : newQuantity })
+        })
 
       })
 
