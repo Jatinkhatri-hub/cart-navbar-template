@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log({key, newQuantity});
 
         // Ajax update\
-        await fetch("/cart/update.js", {
+        const res = await fetch("/cart/update.js", {
           method: "post",
           headers: {
             Accept: "application/json",
