@@ -49,7 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ajax update\
         fetch("/cart/update.js", {
           method: "post",
-          
+          headers: {
+            Accept
+          }
         })
 
       })
