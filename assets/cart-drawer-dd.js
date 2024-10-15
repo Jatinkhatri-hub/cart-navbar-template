@@ -44,7 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(parentEl);
 
         // Get new key
-        const key = parentEl.getAttribute('')
+        const key = parentEl.getAttribute("data-line-item-key");
+
+        //Ajax
 
       })
 
