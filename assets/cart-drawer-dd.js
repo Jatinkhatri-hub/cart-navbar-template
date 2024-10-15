@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch("/cart/update.js", {
           method: "post",
           headers: {
-            Accept: "application/json"
+            Accept: "application/json",
+            "Content-Type": 
           }
         })
 
