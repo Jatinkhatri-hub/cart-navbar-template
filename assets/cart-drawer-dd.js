@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.line-item__quantity-selector button').forEach(button => {
 
-      button.addEventListener('click' , (e) =>{
+      button.addEventListener('click' , async (e) =>{
         e.preventDefault();
         // Get line item key
         const parentEl  =  button.parentElement;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log({key, newQuantity});
 
         // Ajax update\
-        fetch("/cart/update.js", {
+        await fetch("/cart/update.js", {
           method: "post",
           headers: {
             Accept: "application/json",
