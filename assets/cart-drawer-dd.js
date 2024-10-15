@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Get line item key
         const parentEl  =  button.parentElement;
         console.log(parentEl);
-
-        // Get new key
         const key = parentEl.getAttribute("data-line-item-key");
+
+        // Get new quantity
 
         // Ajax update\
         fetch("/cart/update.js", {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ [key]: 1 })
+          body: JSON.stringify({ [key] : 1 })
         })
 
       })
