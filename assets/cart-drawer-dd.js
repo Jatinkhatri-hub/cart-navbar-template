@@ -645,6 +645,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const parent = e.target.closest('.subscription-options');
         const checkbox = parent.querySelector('.subscription-checkbox');
         const lineIndex = checkbox.getAttribute('data-line');
+        const lineItem = e.target.closest('.cart-line-item');
 
         // Show the dropdown
         toggleSubscriptionDropdown(lineIndex, true);
