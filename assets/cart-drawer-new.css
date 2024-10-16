@@ -397,8 +397,10 @@
   background-color: black;
   border-radius: 2px;
   border: 2px solid black;
-  transition: 0.3 color ease-in-out, 0.3 b;
+  transition: 0.3 color ease-in-out, 0.3 background-color ease-in-out;
 }
+
+.cla
 
 .offer-product__img-wrapper {
   height: 80px;
