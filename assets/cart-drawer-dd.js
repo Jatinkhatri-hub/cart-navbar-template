@@ -813,6 +813,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    claimOfferBtn();
+
     closeCart();
     updateSellingPlan();
     addSubscriptionListeners(); // Reapply subscription listeners here
