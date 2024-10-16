@@ -32,8 +32,11 @@
                 {{ block.settings.product.featured_image | image_url: width: 500 | image_tag: sizes: sizes, widths: '200,300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', class: "offer-product__img" }}
               </div>
               <div class="offer-product__info">
-                <h2>{{ block.settings.product.title }}</h2>
-                <h3>{{ block.settings.offer_desc }}</h3>
+                <div>
+                  <h2>{{ block.settings.product.title }}</h2>
+                  <h3>{{ block.settings.offer_desc }}</h3>
+
+                </div>
                 <button class="claim-offer__btn">Claim Offer</button>
               </div>
             </div>
