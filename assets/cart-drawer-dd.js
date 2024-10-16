@@ -663,30 +663,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Claim Offer btn
 
-  function claimOfferBtn() {
-    document.addEventListener('click', function(e) {
-      if (e.target.classList.contains('claim-offer-btn')) {
-        const productId = e.target.dataset.productId;
-    
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            items: [{
-              id: productId,
-              quantity: 1
-            }]
-          })
-        })
-        .then(response => response.json())
-        .then(data => {
-          // Refresh cart drawer or update UI to show product has been claimed
-          alert('Product added for free!');
-        })
-        .catch(error => console.error('Error:', error));
-      }
-    });
-  }
+  
 
   // Update subscription status for all items in the cart
   function updateSubscriptionStatus() {
