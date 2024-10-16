@@ -844,8 +844,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify({
               items: [{
                 id: productId,
-                quantity: 1,
-                
+                quantity: 1
               }]
             }),
           });
