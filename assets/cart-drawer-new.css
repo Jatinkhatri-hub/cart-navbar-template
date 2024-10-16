@@ -359,7 +359,9 @@
 }
 
 .offer__product-card {
-  
+  display: flex;
+  justify-content: flex-start;
+  padding
 }
 
 .offer-product__img-wrapper {
