@@ -648,6 +648,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Show the dropdown
         toggleSubscriptionDropdown(lineIndex, true);
+
+        // Show spinner while updating (if needed)
+        showSpinner(lineItem);
+        setTimeout(() => {
+          hideSpinner(lineItem); // Remove after testing
+        }, 1000);
+
       });
     });
   }
