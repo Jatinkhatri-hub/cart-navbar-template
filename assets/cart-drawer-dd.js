@@ -743,7 +743,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", async (e) => {
         e.preventDefault();
 
-        const lineItem = e.target.closest('.cart-line-item');
+        const lineItem = e.target.closest('.line-item');
         const parentEl = button.closest("[data-line-item-key]");
         const key = parentEl.getAttribute("data-line-item-key");
         const currentQuantity = Number(button.parentElement.querySelector("input").value);
