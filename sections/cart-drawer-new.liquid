@@ -1,7 +1,7 @@
 {{ 'cart-drawer-new.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'cart-drawer-dd.js' |  asset_url }}" defer></script>
 
-<div  class="cart-drawer__wrapper close color-{{ section.settings.color_scheme }}">
+<div class="cart-drawer__wrapper close color-{{ section.settings.color_scheme }}">
   <div class="cart-drawer__box">
     <header class="cart-drawer__header">
       <div class="cart-header__b1">
@@ -10,16 +10,19 @@
         <button class="cart-close__btn">{{ 'icon-close-new.svg' | inline_asset_content }}</button>
       </div>
       <div class="cart-header__b2">
-        <p>{{ section.settings.user_signup }} <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Learn More</a>.</p>
+        <p>{{ section.settings.user_signup }}
+          <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Learn More</a>.</p>
       </div>
-      {% comment %} <div class="cart-header__b3">
-        <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20 in store credit!</p>
-      </div> {% endcomment %}
+    {% comment %} <div class="cart-header__b3">
+              <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20 in store credit!</p>
+          </div> {% endcomment %}
     </header>
-    {% form 'cart', cart, class: 'cart-drawer__form' %} 
-      {% if cart.item_count == 0 %} 
-        <p class="cart-drawer__empty">Your cart is empty</p>  
-      {% else %} 
+    {% form 'cart'
+      , cart
+      , class: 'cart-drawer__form' %}
+      {% if cart.item_count == 0 %}
+        <p class="cart-drawer__empty">Your cart is empty</p>
+      {% else %}
         <div class="cart-drawer__items">
           {% for item in cart.items %}
             <div>
@@ -39,29 +42,51 @@
                   </div>
                   <div class="line-item__mid">
                     <div class="line-item__price-wrapper">
-                      <span class="line-item__current-price">{{ item.final_line_price |  money_with_currency }}</span>
-                      <span class="line-item__cap">{{ item.product.compare_at_price |  money_with_currency }}</span>
+                      <span class="line-item__current-price">{{ item.final_line_price | money_with_currency }}</span>
+                      <span class="line-item__cap">{{ item.product.compare_at_price | money_with_currency }}</span>
                     </div>
                     <div class="line-item__quantity-selector" data-line-item-key="{{ item.key }}">
                       <button class="line-item__quantity-selector-minus">{{ 'icon-minus-new.svg' | inline_asset_content }}</button>
-                      <input type="text" readonly value="{{ item.quantity }}">
+                      <input
+                        type="text"
+                        readonly
+                        value="{{ item.quantity }}">
                       <button class="line-item__quantity-selector-plus">{{ 'icon-plus-new.svg' | inline_asset_content }}</button>
                     </div>
                   </div>
                 </div>
               </div>
+              <select
+                name="selling-plan"
+                data-line="{{ forloop.index }}"
+                data-quantity="{{ line_item.quantity }}">
+                <option value="">One-time purchase</option>
 
+                {% for selling_plan_allocation in line_item.variant.selling_plan_allocations %}
+                  <option
+                    value="{{ selling_plan_allocation.selling_plan.id }}"
+                    {% if line_item.selling_plan_allocation.selling_plan.id == selling_plan_allocation.selling_plan.id %}
+                    selected="selected"
+                    {% endif %}>
+                    {{ selling_plan_allocation.selling_plan.name }}
+                  </option>
+                {% endfor %}
+              </select>
             </div>
           {% endfor %}
         </div>
         <footer class="cart-drawer__footer">
           <div class="cart-drawer__footer-row">
             <h3>Subtotal</h3>
-            <span>{{ cart.total_price |  money_with_currency }}</span>
+            <span>{{ cart.total_price | money_with_currency }}</span>
           </div>
-          <button type="submit" name="checkout" class="cart-drawer__checkout-btn">{{ 'icon-cart-new.svg' | inline_asset_content }} Proceed to checkout</button>
+          <button
+            type="submit"
+            name="checkout"
+            class="cart-drawer__checkout-btn">{{ 'icon-cart-new.svg' | inline_asset_content }} Proceed to checkout</button>
           <div class="cart-drawer__payment-options">
-            <p>Secure checkout with </p>
+            <p>Secure checkout with
+            </p>
             <div class="cart-drawer__payment-provider-img">
               <img src="{{ section.settings.payment_provider |  image_url: width: section.settings.payment_provider.width }}" class="paymen-img">
             </div>
@@ -73,11 +98,11 @@
 </div>
 
 {% comment %} <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.line-item__remove').addEventListener('click', (e) => {
-      e.preventDefault();
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.line-item__remove').addEventListener('click', (e) => {
+        e.preventDefault();
+      })
     })
-  })
 </script> {% endcomment %}
 
 {% schema %}
@@ -93,21 +118,18 @@
         "id": "color_scheme",
         "label": "t:section.all.colors.label",
         "default": "scheme-1"
-      },
-      {
+      }, {
         "type": "inline_richtext",
         "id": "cart_title",
         "label": "Title",
         "default": "Cart Title"
-      },
-      {
+      }, {
         "type": "inline_richtext",
         "id": "user_signup",
         "label": "Membership Upsell",
         "info": "Short description to redirect to membership upsell.",
         "default": "Short Description."
-      },
-      {
+      }, {
         "type": "image_picker",
         "id": "payment_provider",
         "label": "Payment Provider"
