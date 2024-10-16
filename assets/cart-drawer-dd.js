@@ -749,6 +749,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const newQuantity = isUp ? currentQuantity + 1 : currentQuantity - 1;
         if (newQuantity < 1) return;
 
+        // Show spinner over the line item
+        showSpinner(parentEl);
+
         try {
           await fetch("/cart/update.js", {
             method: "post",
@@ -763,6 +766,9 @@ document.addEventListener("DOMContentLoaded", () => {
           await updateCartDrawer();
         } catch (error) {
           console.error("Error updating quantity:", error);
+        } finally {
+          // Hide spinner after the request completes
+          hideSpinner(parentEl);
         }
       });
     });
