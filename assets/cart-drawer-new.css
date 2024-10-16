@@ -358,7 +358,10 @@
   100% { transform: rotate(360deg); }
 }
 
-
+.offer__product-card {
+  height: 80px;
+  width: ;
+}
 
 .offer-product__img {
   height: 80px;
