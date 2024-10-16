@@ -553,6 +553,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeCart();
     updateSellingPlan();
+    updateSubscriptionStatus();
   }
 
   // AJAX form submission for adding to the cart
