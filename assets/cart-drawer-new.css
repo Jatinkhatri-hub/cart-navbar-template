@@ -378,8 +378,10 @@
 }
 
 .offer-product__info h3 {
-  font: 
+  font: 500 10px 'Inter';
 }
+
+.cla
 
 .offer-product__img-wrapper {
   height: 80px;
