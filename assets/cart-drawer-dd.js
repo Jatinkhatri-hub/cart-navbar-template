@@ -682,6 +682,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sellingPlanSelectors.forEach(function (element) {
       element.addEventListener("change", async (event) => {
         const lineItem = event.target.closest('.line-item');
+        const lineIndex = event.target.getAttribute('data-line');
         const data = {
           line: event.target.dataset.line,
           quantity: event.target.dataset.quantity,
