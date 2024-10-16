@@ -669,6 +669,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const checkbox = document.querySelector(`.subscription-checkbox[data-line="${lineIndex}"]`);
 
       
+      toggleSubscriptionDropdown(lineIndex, false);
 
       checkbox.checked = hasSubscription;
 
