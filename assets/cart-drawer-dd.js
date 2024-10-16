@@ -845,9 +845,7 @@ document.addEventListener("DOMContentLoaded", () => {
               items: [{
                 id: productId,
                 quantity: 1,
-                properties: {
-                  'Offer': 'Claimed for Free' // Custom property to indicate offer
-                }
+                
               }]
             }),
           });
