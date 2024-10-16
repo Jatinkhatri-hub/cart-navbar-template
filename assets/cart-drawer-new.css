@@ -364,6 +364,8 @@
   padding: 18px 14px;
   height: 115px;
   width: 250px;
+  gap: 10px;
+  border: 1px solid #;
 }
 
 .offer-product__info {
@@ -375,10 +377,12 @@
 
 .offer-product__info h2 {
   font: 600 13px 'Inter';
+  margin: 0;
 }
 
 .offer-product__info h3 {
   font: 500 10px 'Inter';
+  margin: 0;
 }
 
 .claim-offer__btn {
