@@ -367,7 +367,11 @@
 }
 
 .offer-product__info {
-  dis
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  
 }
 
 .offer-product__img-wrapper {
