@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
           .then((response) => {
             // Refresh page, or re-render cart
+            updateCartDrawer()
             console.log(response);
           })
           .catch((error) => {
