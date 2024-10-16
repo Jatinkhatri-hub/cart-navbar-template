@@ -119,6 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function update
+
   async function updateCartDrawer() {
     const res = await fetch('/?section_id=cart-drawer-new');
     const text = await res.text();
