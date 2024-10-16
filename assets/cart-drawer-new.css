@@ -361,7 +361,8 @@
 .offer__product-card {
   display: flex;
   justify-content: flex-start;
-  padding: 
+  padding: 18px 14px;
+  
 }
 
 .offer-product__img-wrapper {
