@@ -153,6 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Update the cart drawer
   async function updateCartDrawer() {
+
+    const productOffersWrapper = document.querySelector(".product-offers__wrapper");
+    const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
+  
+  
+
     const res = await fetch("/?section_id=cart-drawer-new");
     const text = await res.text();
 
@@ -241,45 +247,45 @@ document.addEventListener("DOMContentLoaded", () => {
   addCartDrawerListeners();
   updateSubscriptionStatus();
 
-  // const claimOfferButtons = document.querySelectorAll(".claim-offer__btn");
+  const claimOfferButtons = document.querySelectorAll(".claim-offer__btn");
 
-  // claimOfferButtons.forEach(button => {
-  //   button.addEventListener("click", async (event) => {
-  //     event.preventDefault();
+  claimOfferButtons.forEach(button => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
       
-  //     const productId = button.getAttribute('data-product-id');
+      const productId = button.getAttribute('data-product-id');
       
-  //     if (!button.disabled) {
-  //       try {
-  //         // Add the product to cart for free
-  //         const response = await fetch("/cart/add.js", {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify({
-  //             items: [{
-  //               id: productId,
-  //               quantity: 1
-  //             }]
-  //           }),
-  //         });
+      if (!button.disabled) {
+        try {
+          // Add the product to cart for free
+          const response = await fetch("/cart/add.js", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              items: [{
+                id: productId,
+                quantity: 1
+              }]
+            }),
+          });
 
-  //         if (response.ok) {
-  //           // Disable button after claiming the offer
-  //           button.disabled = true;
-  //           button.textContent = "Offer Claimed";
+          if (response.ok) {
+            // Disable button after claiming the offer
+            button.disabled = true;
+            button.textContent = "Offer Claimed";
 
-  //           // Optionally update the cart drawer after the offer is claimed
-  //           await updateCartDrawer();
-  //         } else {
-  //           throw new Error("Failed to add offer product to cart");
-  //         }
-  //       } catch (error) {
-  //         console.error("Error claiming offer:", error);
-  //       }
-  //     }
-  //   });
-  // });
+            // Optionally update the cart drawer after the offer is claimed
+            await updateCartDrawer();
+          } else {
+            throw new Error("Failed to add offer product to cart");
+          }
+        } catch (error) {
+          console.error("Error claiming offer:", error);
+        }
+      }
+    });
+  });
   
 });
