@@ -196,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     closeCart();
+    upd
   }
 
   addCartDrawerListeners();
