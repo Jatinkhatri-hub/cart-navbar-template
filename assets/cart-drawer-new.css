@@ -396,7 +396,8 @@
   color: white;
   background-color: black;
   border-radius: 2px;
-  border: 2px solid 
+  border: 2px solid black;
+  transition: 0.;
 }
 
 .offer-product__img-wrapper {
