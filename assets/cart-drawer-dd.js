@@ -404,4 +404,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial attachment of event listeners
   addCartDrawerListeners();
+  updateSubscriptionStatus();
+
 });
