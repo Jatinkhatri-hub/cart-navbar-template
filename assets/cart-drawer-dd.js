@@ -169,6 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".cart-drawer__box").innerHTML = newBox;
 
+    if (document.querySelector(".product-offers__wrapper")) {
+      document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
+    }
+
     // Reapply event listeners
     addCartDrawerListeners();
   }
