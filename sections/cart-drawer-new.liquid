@@ -59,13 +59,13 @@
               <select
                 name="selling-plan"
                 data-line="{{ forloop.index }}"
-                data-quantity="{{ line_item.quantity }}">
+                data-quantity="{{ item.quantity }}">
                 <option value="">One-time purchase</option>
 
                 {% for selling_plan_allocation in line_item.variant.selling_plan_allocations %}
                   <option
                     value="{{ selling_plan_allocation.selling_plan.id }}"
-                    {% if line_item.selling_plan_allocation.selling_plan.id == selling_plan_allocation.selling_plan.id %}
+                    {% if item.selling_plan_allocation.selling_plan.id == selling_plan_allocation.selling_plan.id %}
                     selected="selected"
                     {% endif %}>
                     {{ selling_plan_allocation.selling_plan.name }}
