@@ -807,4 +807,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize listeners
   addCartDrawerListeners();
   updateSubscriptionStatus();
+  toggleSubscriptionDropdown(lineIndex, false);
 });
