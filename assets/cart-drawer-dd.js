@@ -791,6 +791,8 @@ document.addEventListener("DOMContentLoaded", () => {
     addSubscriptionListeners(); // Reapply subscription listeners here
   }
 
+  
+
   // AJAX form submission for adding to the cart
   document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     form.addEventListener("submit", async (e) => {
