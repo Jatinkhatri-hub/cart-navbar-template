@@ -400,7 +400,9 @@
   transition: 0.3 color ease-in-out, 0.3 background-color ease-in-out;
 }
 
-.cla
+.claim-offer__btn {
+  
+}
 
 .offer-product__img-wrapper {
   height: 80px;
