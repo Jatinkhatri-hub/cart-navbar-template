@@ -365,7 +365,7 @@
   height: 115px;
   width: 250px;
   gap: 10px;
-  border: 1px solid #787878;
+  border: 1px dotted #787878;
   border
 }
 
