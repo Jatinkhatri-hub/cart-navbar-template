@@ -753,7 +753,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (newQuantity < 1) return;
 
         // Show spinner over the line item
-        showSpinner(parentEl);
+        showSpinner(lineItem);
 
         try {
           await fetch("/cart/update.js", {
