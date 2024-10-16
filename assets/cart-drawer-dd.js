@@ -686,6 +686,10 @@ document.addEventListener("DOMContentLoaded", () => {
           id: event.target.value,
         };
 
+        // Show loading spinner
+        showSpinner(lineItem);
+
+
         try {
           const response = await fetch("/cart/change.js", {
             method: "POST",
