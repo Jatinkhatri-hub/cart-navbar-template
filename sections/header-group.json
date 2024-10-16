@@ -39,12 +39,23 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "scheme-1"
+        "navigation": "main-menu",
+        "color_scheme": "scheme-1",
+        "header_position": "always"
+      }
+    },
+    "cart_drawer_new_PH8zAQ": {
+      "type": "cart-drawer-new",
+      "settings": {
+        "color_scheme": "",
+        "cart_title": "Cart Title",
+        "user_signup": "Short Description."
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "cart_drawer_new_PH8zAQ"
   ]
 }
