@@ -677,8 +677,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       // Show or hide dropdown based on subscription
-      if ()
-      toggleSubscriptionDropdown(lineIndex, hasSubscription);
+      if (hasSubscription) {
+        toggleSubscriptionDropdown(lineIndex, hasSubscription);
+      }
     });
   }
 
