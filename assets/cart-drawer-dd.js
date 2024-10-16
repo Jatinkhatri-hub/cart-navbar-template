@@ -626,7 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
       checkbox.addEventListener('change', (e) => {
         const lineIndex = e.target.getAttribute('data-line');
         const isChecked = e.target.checked;
-        
+        const lineItem = e.target.closest('.cart-line-item'); 
 
         showSpinner(lineItem);
 
@@ -681,6 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sellingPlanSelectors.forEach(function (element) {
       element.addEventListener("change", async (event) => {
+        const lineItem = event.target.closest('.cart-line-item');
         const data = {
           line: event.target.dataset.line,
           quantity: event.target.dataset.quantity,
