@@ -302,3 +302,26 @@
   object-fit: contain;
 }
 
+
+
+.subscription-options {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-options .info-circle {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.subscription-dropdown {
+  margin-top: 10px;
+}
