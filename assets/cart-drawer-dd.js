@@ -661,7 +661,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Claim Offer btn
+  
 
   
 
