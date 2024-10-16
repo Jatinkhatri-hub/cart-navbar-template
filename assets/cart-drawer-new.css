@@ -388,7 +388,8 @@
   justify-content: center;
   align-items: center;
   font: 500 10px 'Inter';
-  
+  color: white;
+  background-color: ;
 }
 
 .offer-product__img-wrapper {
