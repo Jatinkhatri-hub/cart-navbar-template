@@ -580,5 +580,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize listeners
   addCartDrawerListeners();
-  updateSubscriptionStatus();
+ // updateSubscriptionStatus();
 });
