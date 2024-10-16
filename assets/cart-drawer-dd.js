@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeCart();
     updateSellingPlan();
-    updateSubscriptionStatus();
+   // updateSubscriptionStatus();
   }
 
   // AJAX form submission for adding to the cart
@@ -580,5 +580,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize listeners
   addCartDrawerListeners();
- // updateSubscriptionStatus();
+  updateSubscriptionStatus();
 });
