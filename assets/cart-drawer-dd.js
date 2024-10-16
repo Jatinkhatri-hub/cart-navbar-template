@@ -626,6 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
       checkbox.addEventListener('change', (e) => {
         const lineIndex = e.target.getAttribute('data-line');
         const isChecked = e.target.checked;
+        
 
         showSpinner(lineItem);
 
