@@ -397,7 +397,7 @@
   background-color: black;
   border-radius: 2px;
   border: 2px solid black;
-  transition: 0.3 color ease-in;
+  transition: 0.3 color ease-in-out, 0.3 b;
 }
 
 .offer-product__img-wrapper {
