@@ -626,7 +626,7 @@ document.addEventListener("DOMContentLoaded", () => {
       checkbox.addEventListener('change', (e) => {
         const lineIndex = e.target.getAttribute('data-line');
         const isChecked = e.target.checked;
-        const lineItem = e.target.closest('.cart-line-item'); 
+        const lineItem = e.target.closest('.line-item'); 
 
         showSpinner(lineItem);
 
