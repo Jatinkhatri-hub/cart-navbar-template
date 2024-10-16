@@ -397,11 +397,13 @@
   background-color: black;
   border-radius: 2px;
   border: 2px solid black;
-  transition: 0.3 color ease-in-out, 0.3 background-color ease-in-out;
+  transition: 0.3s color ease-in-out, 0.3s background-color ease-in-out;
 }
 
-.claim-offer__btn {
-  color: white;
+.claim-offer__btn:hover {
+  color: black;
+  background-color: white;
+  
 }
 
 .offer-product__img-wrapper {
