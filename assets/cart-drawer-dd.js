@@ -711,6 +711,9 @@ document.addEventListener("DOMContentLoaded", () => {
           await updateCartDrawer();
         } catch (error) {
           console.error("Error updating selling plan:", error);
+        } finally {
+          // Hide spinner after request is completed
+          hideSpinner(lineItem);
         }
       });
     });
