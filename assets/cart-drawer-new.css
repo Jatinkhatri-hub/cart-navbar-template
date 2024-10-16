@@ -111,6 +111,12 @@
   gap: 20px;
 }
 
+.line-item {
+  display: flex;
+  flex-direction: column;
+  a
+}
+
 .line-item__wrapper {
   height: 80px;
   display: flex;
