@@ -25,7 +25,7 @@
       {% else %}
         <div class="cart-drawer__items">
           {% for item in cart.items %}
-            <div>
+            <div class="line-item">
               <div class="line-item__wrapper">
                 <div class="line-item__img">
                   <img src="{{ item.image |  image_url: width: item.image.width }}" alt="{{ item.title }}">
