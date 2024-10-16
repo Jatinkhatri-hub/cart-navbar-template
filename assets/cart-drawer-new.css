@@ -349,6 +349,7 @@
   border-top: 4px solid #000;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  display: block !important;
 }
 
 @keyframes spin {
