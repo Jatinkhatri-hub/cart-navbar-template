@@ -362,8 +362,11 @@
   display: flex;
   justify-content: flex-start;
   padding: 18px 14px;
-  height: ;
+  height: 115px;
+  width: 250px;
 }
+
+
 
 .offer-product__img-wrapper {
   height: 80px;
