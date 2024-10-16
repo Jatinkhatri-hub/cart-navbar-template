@@ -35,7 +35,7 @@
                     <h2 class="line-item__title">
                       {{ item.product.title | default: item.title }}
                     </h2>
-                    
+          {% for option in item.product.options %} {% endfor %}
                     <h4 class="line-item__variant">
                       {{ item.variant.title }}
                     </h4>
