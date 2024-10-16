@@ -374,7 +374,11 @@
 }
 
 .offer-product__info h2 {
-  font: 600 13px 
+  font: 600 13px 'Inter';
+}
+
+.offer-product__info h3 {
+  offer
 }
 
 .offer-product__img-wrapper {
