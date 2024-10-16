@@ -366,6 +366,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  const cartDrawer = document.querySelector(".cart-drawer__wrapper");
+//   window.cartDrawer = cartDrawer;
+//   console.log(cartDrawer);
+
+//   function closeCart() {
+//     const closeBtn = document.querySelector(".cart-close__btn");
+//     closeBtn.addEventListener("click", () => {
+//       cartDrawer.classList.remove("cart-drawer--active");
+//       cartDrawer.classList.add("close");
+//     });
+//   }
+
+
   // Function to toggle dropdown visibility
   function toggleSubscriptionDropdown(lineIndex, showDropdown) {
     const dropdown = document.querySelector(`.subscription-dropdown[data-line="${lineIndex}"]`);
