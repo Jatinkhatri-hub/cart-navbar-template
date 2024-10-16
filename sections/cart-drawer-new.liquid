@@ -25,7 +25,9 @@
       {% else %}
         <div class="cart-drawer__items">
           <div class="product-offers__wrapper"> 
-            {}
+          {% for block in section.blocks %} 
+          
+          {% endfor %}
           </div>
           {% for item in cart.items %}
             <div class="line-item">
