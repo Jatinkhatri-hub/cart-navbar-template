@@ -47,6 +47,18 @@
     },
     "cart_drawer_new_PH8zAQ": {
       "type": "cart-drawer-new",
+      "blocks": {
+        "product_offer_hmEhVq": {
+          "type": "product_offer",
+          "settings": {
+            "product": "beast",
+            "offer_desc": "Subheading With Info"
+          }
+        }
+      },
+      "block_order": [
+        "product_offer_hmEhVq"
+      ],
       "settings": {
         "color_scheme": "",
         "cart_title": "Cart Title",
