@@ -234,6 +234,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function toggleSubscriptionDropdown(lineIndex, showDropdown) {
+    const dropdown = document.querySelector(`.subscription-dropdown[data-line="${lineIndex}"]`);
+    dropdown.style.display = showDropdown ? 'block' : 'none';
+  }
+
+  // Checkbox logic for subscription
+  document.querySelectorAll('.subscription-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', (e) => {
+      const lineIndex = e.target.getAttribute('data-line');
+      const isChecked = e.target.checked;
+
+      // Show dropdown when checkbox is checked
+      toggleSubscriptionDropdown(lineIndex, isChecked);
+    });
+  });
+
+  // Info circle to toggle dropdown on click
+  document.querySelectorAll('.info-circle').forEach(infoCircle => {
+    infoCircle.addEventListener('click', (e) => {
+      const parent = e.target.closest('.subscription-options');
+      const checkbox = parent.querySelector('.subscription-checkbox');
+      const lineIndex = checkbox.getAttribute('data-line');
+
+      // Show the dropdown
+      toggleSubscriptionDropdown(lineIndex, true);
+    });
+  });
+
+  // Add event listeners to handle when product is added without subscription
+  function updateSubscriptionStatus() {
+    document.querySelectorAll('.selling-plan-selector').forEach(selector => {
+      const lineIndex = selector.getAttribute('data-line');
+      const hasSubscription = selector.value !== '';
+      const checkbox = document.querySelector(`.subscription-checkbox[data-line="${lineIndex}"]`);
+      
+      checkbox.checked = hasSubscription;
+
+      // Show or hide dropdown based on subscription
+      toggleSubscriptionDropdown(lineIndex, hasSubscription);
+    });
+  }
+
   // Function to handle selling plan changes
   function updateSellingPlan() {
     const sellingPlanSelectors = document.querySelectorAll(
