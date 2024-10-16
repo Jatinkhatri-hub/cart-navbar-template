@@ -771,7 +771,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Error updating quantity:", error);
         } finally {
           // Hide spinner after the request completes
-          hideSpinner(parentEl);
+          hideSpinner(lineItem);
         }
       });
     });
