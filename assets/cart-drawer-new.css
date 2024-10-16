@@ -395,6 +395,8 @@
   font: 500 10px 'Inter';
   color: white;
   background-color: black;
+  border-radius: 2px;
+  border: 
 }
 
 .offer-product__img-wrapper {
