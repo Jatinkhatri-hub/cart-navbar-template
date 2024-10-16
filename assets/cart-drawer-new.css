@@ -387,7 +387,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 
+  font: 500 10px 'Inter';
+  
 }
 
 .offer-product__img-wrapper {
