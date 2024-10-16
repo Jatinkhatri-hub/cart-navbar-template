@@ -14,8 +14,8 @@
           <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Learn More</a>.</p>
       </div>
     {% comment %} <div class="cart-header__b3">
-              <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20 in store credit!</p>
-          </div> {% endcomment %}
+                    <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20 in store credit!</p>
+              </div> {% endcomment %}
     </header>
     {% form 'cart'
       , cart
@@ -35,11 +35,11 @@
                     <h2 class="line-item__title">
                       {{ item.product.title | default: item.title }}
                     </h2>
-                    {% for option in item.product.options %} 
+                    {% for option in item.product.options %}
                       <h4 class="line-item__variant">
                         {{ option }} : {{ item.variant.title }}
                       </h4>
-                    
+
                     {% endfor %}
 
                     <a href="{{ item.url_to_remove }}" class="line-item__remove">{{ 'icon-dustbin.svg' | inline_asset_content }}</a>
@@ -60,22 +60,56 @@
                   </div>
                 </div>
               </div>
-              <select
-                name="selling-plan"
-                data-line="{{ forloop.index }}"
-                data-quantity="{{ item.quantity }}">
-                <option value="">One-time purchase</option>
+              {% comment %} <select
+                                name="selling-plan"
+                                data-line="{{ forloop.index }}"
+                                data-quantity="{{ item.quantity }}">
+                                <option value="">One-time purchase</option>
 
-                {% for selling_plan_allocation in item.variant.selling_plan_allocations %}
-                  <option
-                    value="{{ selling_plan_allocation.selling_plan.id }}"
-                    {% if item.selling_plan_allocation.selling_plan.id == selling_plan_allocation.selling_plan.id %}
-                    selected="selected"
+                                {% for selling_plan_allocation in item.variant.selling_plan_allocations %}
+                                  <option
+                                    value="{{ selling_plan_allocation.selling_plan.id }}"
+                                    {% if item.selling_plan_allocation.selling_plan.id == selling_plan_allocation.selling_plan.id %}
+                                    selected="selected"
+                                    {% endif %}>
+                                    {{ selling_plan_allocation.selling_plan.name }}
+                                  </option>
+                                {% endfor %}
+                            </select> {% endcomment %}
+              <div class="subscription-options">
+                <label>
+                  <input
+                    type="checkbox"
+                    class="subscription-checkbox"
+                    data-line="{{ forloop.index }}"
+                    {% if item.selling_plan_allocation %}
+                    checked
                     {% endif %}>
-                    {{ selling_plan_allocation.selling_plan.name }}
-                  </option>
-                {% endfor %}
-              </select>
+                  Subscribe and Save
+                </label>
+                <span class="info-circle" tabindex="0">i</span>
+
+                <div class="subscription-dropdown" style="display: none;">
+                  <select
+                    name="selling-plan"
+                    class="selling-plan-selector"
+                    data-line="{{ forloop.index }}"
+                    data-quantity="{{ item.quantity }}">
+                    <option value="">One-time purchase</option>
+
+                    {% for selling_plan_allocation in item.variant.selling_plan_allocations %}
+                      <option
+                        value="{{ selling_plan_allocation.selling_plan.id }}"
+                        {% if item.selling_plan_allocation and item.selling_plan_allocation.selling_plan.id == selling_plan_allocation.selling_plan.id %}
+                        selected="selected"
+                        {% endif %}>
+                        {{ selling_plan_allocation.selling_plan.name }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
             </div>
           {% endfor %}
         </div>
@@ -102,11 +136,11 @@
 </div>
 
 {% comment %} <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('.line-item__remove').addEventListener('click', (e) => {
-        e.preventDefault();
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('.line-item__remove').addEventListener('click', (e) => {
+          e.preventDefault();
+        })
       })
-    })
 </script> {% endcomment %}
 
 {% schema %}
