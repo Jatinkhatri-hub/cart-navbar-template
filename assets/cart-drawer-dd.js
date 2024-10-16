@@ -661,6 +661,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Claim Offer btn
+
+  function cl
+
   // Update subscription status for all items in the cart
   function updateSubscriptionStatus() {
     document.querySelectorAll('.selling-plan-selector').forEach(selector => {
