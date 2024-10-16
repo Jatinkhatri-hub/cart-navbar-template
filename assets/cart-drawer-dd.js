@@ -668,6 +668,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const hasSubscription = selector.value !== '';
       const checkbox = document.querySelector(`.subscription-checkbox[data-line="${lineIndex}"]`);
 
+      
+
       checkbox.checked = hasSubscription;
 
       // Show or hide dropdown based on subscription
