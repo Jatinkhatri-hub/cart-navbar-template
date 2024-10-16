@@ -22,32 +22,35 @@
       {% else %} 
         <div class="cart-drawer__items">
           {% for item in cart.items %}
-            <div class="line-item__wrapper">
-              <div class="line-item__img">
-                <img src="{{ item.image |  image_url: width: item.image.width }}" alt="{{ item.title }}">
-              </div>
-              <div class="line-item__info">
-                <div class="line-item__header">
-                  <h2 class="line-item__title">
-                    {{ item.product.title | default: item.title }}
-                  </h2>
-                  <h4 class="line-item__variant">
-                    {{ item.variant.title }}
-                  </h4>
-                  <a href="{{ item.url_to_remove }}" class="line-item__remove">{{ 'icon-dustbin.svg' | inline_asset_content }}</a>
+            <div>
+              <div class="line-item__wrapper">
+                <div class="line-item__img">
+                  <img src="{{ item.image |  image_url: width: item.image.width }}" alt="{{ item.title }}">
                 </div>
-                <div class="line-item__mid">
-                  <div class="line-item__price-wrapper">
-                    <span class="line-item__current-price">{{ item.final_line_price |  money_with_currency }}</span>
-                    <span class="line-item__cap">{{ item.product.compare_at_price |  money_with_currency }}</span>
+                <div class="line-item__info">
+                  <div class="line-item__header">
+                    <h2 class="line-item__title">
+                      {{ item.product.title | default: item.title }}
+                    </h2>
+                    <h4 class="line-item__variant">
+                      {{ item.variant.title }}
+                    </h4>
+                    <a href="{{ item.url_to_remove }}" class="line-item__remove">{{ 'icon-dustbin.svg' | inline_asset_content }}</a>
                   </div>
-                  <div class="line-item__quantity-selector" data-line-item-key="{{ item.key }}">
-                    <button class="line-item__quantity-selector-minus">{{ 'icon-minus-new.svg' | inline_asset_content }}</button>
-                    <input type="text" readonly value="{{ item.quantity }}">
-                    <button class="line-item__quantity-selector-plus">{{ 'icon-plus-new.svg' | inline_asset_content }}</button>
+                  <div class="line-item__mid">
+                    <div class="line-item__price-wrapper">
+                      <span class="line-item__current-price">{{ item.final_line_price |  money_with_currency }}</span>
+                      <span class="line-item__cap">{{ item.product.compare_at_price |  money_with_currency }}</span>
+                    </div>
+                    <div class="line-item__quantity-selector" data-line-item-key="{{ item.key }}">
+                      <button class="line-item__quantity-selector-minus">{{ 'icon-minus-new.svg' | inline_asset_content }}</button>
+                      <input type="text" readonly value="{{ item.quantity }}">
+                      <button class="line-item__quantity-selector-plus">{{ 'icon-plus-new.svg' | inline_asset_content }}</button>
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
           {% endfor %}
         </div>
