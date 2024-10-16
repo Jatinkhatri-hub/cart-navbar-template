@@ -378,7 +378,7 @@
 
 .offer-product__info h2 {
   font: 600 13px 'Inter';
-  margin-bottom: 5px;
+  margin-block: 0 5px;
 }
 
 .offer-product__info h3 {
@@ -395,7 +395,7 @@
   font: 500 10px 'Inter';
   color: white;
   background-color: blue;
-  a
+  align-self: flex-end;
 }
 
 .offer-product__img-wrapper {
