@@ -603,6 +603,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Show spinner over a line item
+  function showSpinner(lineItem) {
+    const spinner = document.createElement("div");
+    spinner.classList.add("line-item-spinner");
+    spinner.innerHTML = `<div class="spinner"></div>`; // Customize your spinner HTML
+    lineItem.style.position = "relative";
+    lineItem.appendChild(spinner);
+  }
+
+  // Hide spinner from a line item
+  function hideSpinner(lineItem) {
+    const spinner = lineItem.querySelector(".line-item-spinner");
+    if (spinner) {
+      spinner.remove();
+    }
+  }
+
   // Checkbox logic for subscription
   function addSubscriptionListeners() {
     document.querySelectorAll('.subscription-checkbox').forEach(checkbox => {
