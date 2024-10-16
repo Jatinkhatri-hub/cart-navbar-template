@@ -394,8 +394,7 @@
   align-items: center;
   font: 500 10px 'Inter';
   color: white;
-  background-color: blue;
-  align-self: flex-end;
+  background-color: black;
 }
 
 .offer-product__img-wrapper {
