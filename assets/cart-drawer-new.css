@@ -350,7 +350,7 @@
   border-radius: 50%;
   animation: spin 1s linear infinite;
   display: block !important;
-  background: blue;
+  background: black;
 }
 
 @keyframes spin {
