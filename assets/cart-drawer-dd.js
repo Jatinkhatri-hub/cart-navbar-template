@@ -627,8 +627,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const lineIndex = e.target.getAttribute('data-line');
         const isChecked = e.target.checked;
 
+        showSpinner(lineItem);
+
         // Show dropdown when checkbox is checked
         toggleSubscriptionDropdown(lineIndex, isChecked);
+
+        // Simulate fetch delay for spinner (you should remove this in actual implementation)
+        setTimeout(() => {
+          hideSpinner(lineItem); // Hide the spinner after the operation
+        }, 1000); // Remove after testing
       });
     });
 
