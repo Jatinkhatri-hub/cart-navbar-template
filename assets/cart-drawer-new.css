@@ -362,7 +362,7 @@
   height: 80px;
   width: 65px;
   overflow: hidden;
-  
+  border-radius: 2px;
 }
 
 .offer-product__img {
