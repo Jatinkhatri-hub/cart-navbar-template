@@ -646,7 +646,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const parent = e.target.closest('.subscription-options');
         const checkbox = parent.querySelector('.subscription-checkbox');
         const lineIndex = checkbox.getAttribute('data-line');
-        const lineItem = e.target.closest('.cart-line-item');
+        const lineItem = e.target.closest('.line-item');
 
         // Show the dropdown
         toggleSubscriptionDropdown(lineIndex, true);
@@ -681,7 +681,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sellingPlanSelectors.forEach(function (element) {
       element.addEventListener("change", async (event) => {
-        const lineItem = event.target.closest('.cart-line-item');
+        const lineItem = event.target.closest('.line-item');
         const data = {
           line: event.target.dataset.line,
           quantity: event.target.dataset.quantity,
