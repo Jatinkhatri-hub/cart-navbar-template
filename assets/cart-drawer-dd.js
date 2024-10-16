@@ -790,7 +790,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    claimOfferBtn();
+    
 
     closeCart();
     updateSellingPlan();
