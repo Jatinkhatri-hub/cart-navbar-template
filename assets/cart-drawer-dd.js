@@ -711,6 +711,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Refresh cart drawer
           await updateCartDrawer();
+          toggleSubscriptionDropdown(lineIndex, false);
         } catch (error) {
           console.error("Error updating selling plan:", error);
         } finally {
