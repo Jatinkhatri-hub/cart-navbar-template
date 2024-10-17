@@ -470,3 +470,7 @@
   pointer-events: none; /* Disable clicking */
   color: black;
 }
+
+@media screen and() {
+  
+}
