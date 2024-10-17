@@ -27,10 +27,11 @@ initializeSwiper();
   // Function to close the cart drawer
   function closeCart() {
     const closeBtn = document.querySelector(".cart-close__btn");
-    
+
     closeBtn?.addEventListener("click", () => {
       cartDrawer.classList.remove("cart-drawer--active");
       cartDrawer.classList.add("close");
+      cart
     });
   }
 
