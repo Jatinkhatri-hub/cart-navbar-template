@@ -250,6 +250,7 @@
 
 .subscription-dropdown {
   width: 100%;
+  position: relative;
 }
 
 .subscription-dropdown::before,
