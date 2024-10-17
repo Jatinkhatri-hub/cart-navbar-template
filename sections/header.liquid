@@ -24,10 +24,10 @@
         </li>
       {% endfor %}
     </ul>
-    <div>
+    <div class="">
 
       <a href="{{ routes.account_url }}" class="nav-bar__userAccount">
-        {{ 'icon-user.svg' }}
+        {{ 'icon-user.svg' | inline_asset_content }}
       </a>
       
       <a 
