@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
   });
 
-  let mySwiper = document.querySelector('.swiper')
+  let mySwiper;
 
 function initializeSwiper() {
-  mySwiper = new Swiper('.swiper-container', {
+  mySwiper = new Swiper('.swiper', {
     // your Swiper configuration
     slidesPerView: 1,
     spaceBetween: 10,
