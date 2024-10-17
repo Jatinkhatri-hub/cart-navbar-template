@@ -397,6 +397,40 @@ async function updateCartDrawer() {
           hideSpinner(lineItem);
         }
       });
+
+      document.querySelectorAll('.claim-offer__btn').forEach(button => {
+        button.addEventListener('click', async function (event) {
+          event.preventDefault(); // Prevent the default button behavior
+      
+          const productId = this.getAttribute('data-product-id');
+      
+          try {
+            const response = await fetch('/cart/add.js', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+              },
+              body: JSON.stringify({
+                id: productId,
+                quantity: 1
+              })
+            });
+      
+            if (!response.ok) throw new Error("Failed to add offer product to cart");
+      
+            this.disabled = true; // Disable the button after claiming the offer
+            this.textContent = 'Offer Claimed';
+      
+            // Update the cart drawer and offer buttons
+            await updateCartDrawer();
+      
+          } catch (error) {
+            console.error('Error adding product to cart:', error);
+          }
+        });
+      });
+
     });
 
     
