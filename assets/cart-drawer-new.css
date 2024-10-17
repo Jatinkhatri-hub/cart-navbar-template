@@ -360,7 +360,8 @@
 
 .product-offers__wrapper {
   display: flex;
-  gap:
+  gap: 10px;
+  justify-content: fle;
 }
 
 .offer__product-card {
