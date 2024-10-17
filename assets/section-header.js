@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add event listener to open the cart
       openCart.addEventListener('click', () => {
         cartDrawer.classList.add('cart-drawer--active');
-        cartOverlay.classList.add('is')
+        cartOverlay.classList.add('is-visible');
         cartDrawer.classList.remove('close');
         console.log('Cart drawer opened');
       });
