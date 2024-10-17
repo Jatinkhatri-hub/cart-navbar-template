@@ -361,6 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch('/cart.js')
     .then(response => response.json())
     .then(cart => {
+      console.log('Cart object:', cart);  // Add this line for debugging
       updateOfferButtons(cart);
     })
     .catch(error => console.error('Error fetching cart data:', error));
