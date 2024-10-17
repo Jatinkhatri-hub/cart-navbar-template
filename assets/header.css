@@ -160,6 +160,11 @@
     width: auto;
   }
 
+  .nav-bar__user-account svg {
+    width: 30px;
+    height: 30px;
+  }
+
   .nav-drawer__close-btn {
     display: none;
   }
