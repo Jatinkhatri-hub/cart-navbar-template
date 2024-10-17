@@ -63,7 +63,7 @@
   background: rgb(var(--color-background));
   left: 0;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   transition: width .5s;
   overflow: hidden;
   display: flex;
