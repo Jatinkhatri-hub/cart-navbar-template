@@ -109,11 +109,10 @@
   gap: 15px;
 }
 
-.nav-bar__user-account svg {
-  width: 30px;
-}
 
-.nav
+.nav-bar__user-account svg path {
+  fill: rgb(var(--color-foreground));
+}
 
 
 .nav-bar__cart-open-btn svg {
