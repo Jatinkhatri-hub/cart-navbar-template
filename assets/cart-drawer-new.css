@@ -297,7 +297,8 @@
   max-width: 375px;
   margin-inline: 24px;
   display: flex;
-  
+  flex-direction: column;
+  gap: 14px;
 }
 
 .cart-drawer__footer-row {
