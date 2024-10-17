@@ -437,10 +437,10 @@ async function updateCartDrawer() {
           const lineItem = event.target.closest('.line-item');
           console.log(lineItem)
           const parentEl = lineItem.closest("[data-line-item-key]");
-          const key = parentEl.getAttribute("data-line-item-key");
+          const key = lineItem.getAttribute("data-line-item-key");
     
           // Show spinner over the line item
-          showSpinner(parentEl);
+          showSpinner(lineItem);
     
           try {
             // Remove the item by setting its quantity to 0
