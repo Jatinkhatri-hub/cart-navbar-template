@@ -292,7 +292,7 @@
 
 .cart-drawer__footer {
   padding: 24px 0;
-  margin-top: 0;
+  margin-top: auto;
   border-top: 1px solid #676666;
   max-width: 375px;
   margin-inline: 24px;
@@ -306,6 +306,7 @@
   justify-content: space-between;
   align-items: center;
   color: black;
+  margin-top: 0;
 }
 
 .cart-drawer__footer-row h3 {
