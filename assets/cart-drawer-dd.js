@@ -329,35 +329,68 @@ async function updateCartDrawer() {
         });
       });
 
-      document.querySelectorAll('.line-item__remove').forEach(button => {
-        button.addEventListener('click', async function (event) {
-          event.preventDefault(); // Prevent redirect to cart page
-          const lineItem = event.target.closest('.line-item');
-          const key = lineItem.getAttribute("data-line-item-key");
+      // document.querySelectorAll('.line-item__remove').forEach(button => {
+      //   button.addEventListener('click', async function (event) {
+      //     event.preventDefault(); // Prevent redirect to cart page
+      //     const lineItem = event.target.closest('.line-item');
+      //     const key = lineItem.getAttribute("data-line-item-key");
     
-          // Show spinner over the line item
-          showSpinner(lineItem);
+      //     // Show spinner over the line item
+      //     showSpinner(lineItem);
     
-          try {
-            // Remove the item by setting its quantity to 0
-            await fetch("/cart/update.js", {
-              method: "post",
-              headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ updates: { [key]: 0 } }),
-            });
+      //     try {
+      //       // Remove the item by setting its quantity to 0
+      //       await fetch("/cart/update.js", {
+      //         method: "post",
+      //         headers: {
+      //           Accept: "application/json",
+      //           "Content-Type": "application/json",
+      //         },
+      //         body: JSON.stringify({ updates: { [key]: 0 } }),
+      //       });
     
-            // Update cart drawer after removal
-            await updateCartDrawer();
-          } catch (error) {
-            console.error("Error removing item:", error);
-          } finally {
-            hideSpinner(lineItem);
-          }
-        });
+      //       // Update cart drawer after removal
+      //       await updateCartDrawer();
+      //     } catch (error) {
+      //       console.error("Error removing item:", error);
+      //     } finally {
+      //       hideSpinner(lineItem);
+      //     }
+      //   });
+      // });
+      const cartItemsContainer = document.querySelector('.cart-drawer__items');
+
+// Add a single event listener to the container
+cartItemsContainer.addEventListener('click', async function(event) {
+  if (event.target.matches('.line-item__remove')) {
+    event.preventDefault(); // Prevent redirect to cart page
+    
+    const lineItem = event.target.closest('.line-item');
+    const key = lineItem.getAttribute("data-line-item-key");
+
+    // Show spinner over the line item
+    showSpinner(lineItem);
+
+    try {
+      // Remove the item by setting its quantity to 0
+      await fetch("/cart/update.js", {
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ updates: { [key]: 0 } }),
       });
+
+      // Update cart drawer after removal
+      await updateCartDrawer();
+    } catch (error) {
+      console.error("Error removing item:", error);
+    } finally {
+      hideSpinner(lineItem);
+    }
+  }
+});
 
     });
 
