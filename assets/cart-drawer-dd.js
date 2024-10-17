@@ -368,31 +368,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listener for claiming offers (optional, based on your logic)
   document.querySelectorAll('.claim-offer__btn').forEach(button => {
-    button.addEventListener('click', (event) => {
-      event.preventDefault();
-      const productId = button.getAttribute('data-product-id');
-      
-      // Check if the button is not disabled and the product can be claimed
-      if (!button.disabled) {
-        // Add the product to the cart (Shopify API POST request)
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            id: productId,
-            quantity: 1
-          })
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default button behavior
+  
+      const productId = this.getAttribute('data-product-id'); // Get the product ID
+      const offerProductCard = this.closest('.offer__product-card');
+  
+      // Add product to the cart via AJAX
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify({
+          id: productId,
+          quantity: 1
         })
-        .then(response => response.json())
-        .then(cart => {
-          // Re-fetch the cart data to update the buttons
-          updateOfferButtons(cart);
-          updateCartDrawer();
-        })
-        .catch(error => console.error('Error adding product to cart:', error));
-      }
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Product added to cart:', data);
+        this.disabled = true; // Disable the button after claiming the offer
+        this.textContent = 'Offer Already Claimed';
+        updateCart(); // Optionally update the cart drawer if you have one
+      })
+      .catch(error => {
+        console.error('Error adding product to cart:', error);
+      });
     });
   });
   
