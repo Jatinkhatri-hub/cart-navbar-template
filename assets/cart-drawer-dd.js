@@ -255,39 +255,70 @@ initializeSwiper();
   }
 
   // Update the cart drawer
-  async function updateCartDrawer() {
+  // async function updateCartDrawer() {
 
-    const productOffersWrapper = document.querySelector(".product-offers__wrapper");
-    const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
+  //   const productOffersWrapper = document.querySelector(".product-offers__wrapper");
+  //   const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
   
   
 
-    const res = await fetch("/?section_id=cart-drawer-new");
-    const text = await res.text();
+  //   const res = await fetch("/?section_id=cart-drawer-new");
+  //   const text = await res.text();
 
-    const html = document.createElement("div");
-    html.innerHTML = text;
+  //   const html = document.createElement("div");
+  //   html.innerHTML = text;
 
-    const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
+  //   const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
 
-    document.querySelector(".cart-drawer__box").innerHTML = newBox;
+  //   document.querySelector(".cart-drawer__box").innerHTML = newBox;
 
-    if (document.querySelector(".product-offers__wrapper")) {
-      document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
-    }
+  //   if (document.querySelector(".product-offers__wrapper")) {
+  //     document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
+  //   }
 
-    try {
-      const cartResponse = await fetch('/cart.js');
-      const cartData = await cartResponse.json();
-      updateOfferButtons(cartData); // Update offer buttons with the latest cart data
-    } catch (error) {
-      console.error('Error fetching cart data:', error);
-    }
+  //   try {
+  //     const cartResponse = await fetch('/cart.js');
+  //     const cartData = await cartResponse.json();
+  //     updateOfferButtons(cartData); // Update offer buttons with the latest cart data
+  //   } catch (error) {
+  //     console.error('Error fetching cart data:', error);
+  //   }
 
-    // Reapply event listeners
-    addCartDrawerListeners();
-    initializeSwiper();
+  //   // Reapply event listeners
+  //   addCartDrawerListeners();
+  //   initializeSwiper();
+  // }
+
+  // Update the cart drawer
+async function updateCartDrawer() {
+  const productOffersWrapper = document.querySelector(".product-offers__wrapper");
+  const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
+  
+  const res = await fetch("/?section_id=cart-drawer-new");
+  const text = await res.text();
+
+  const html = document.createElement("div");
+  html.innerHTML = text;
+
+  const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
+  document.querySelector(".cart-drawer__box").innerHTML = newBox;
+
+  if (document.querySelector(".product-offers__wrapper")) {
+    document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
   }
+
+  try {
+    const cartResponse = await fetch('/cart.js');
+    const cartData = await cartResponse.json();
+    updateOfferButtons(cartData); // Update offer buttons with the latest cart data
+  } catch (error) {
+    console.error('Error fetching cart data:', error);
+  }
+
+  // Reapply event listeners
+  addCartDrawerListeners();
+  initializeSwiper();
+}
 
   // Quantity change event listener
   function addCartDrawerListeners() {
