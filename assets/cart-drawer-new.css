@@ -268,7 +268,7 @@
   top: 40%;
 }
 
-.subscription-drop::after {
+.subscription-dropdown::after {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-top: var(--size) solid black;
