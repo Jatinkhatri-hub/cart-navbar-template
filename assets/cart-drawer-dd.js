@@ -458,7 +458,7 @@ async function updateCartDrawer() {
           } catch (error) {
             console.error("Error removing item:", error);
           } finally {
-            hideSpinner(parentEl);
+            hideSpinner(lineItem);
           }
         });
       });
