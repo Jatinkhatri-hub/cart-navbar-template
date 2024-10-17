@@ -473,7 +473,7 @@
 
 @media screen and (min-width: 786px) { 
   
-  .cart-drawer__items, cart{
+  .cart-drawer__items, .cart-drawer__footer {
     max-width: 480px;
   }
 
