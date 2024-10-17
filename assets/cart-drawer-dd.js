@@ -446,6 +446,9 @@ async function updateCartDrawer() {
   document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      const productOffersWrapper = document.querySelector(".product-offers__wrapper");
+      const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
+
 
       try {
         const response = await fetch("/cart/add", {
