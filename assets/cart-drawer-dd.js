@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.cartDrawer = cartDrawer;
 
   const cartOverlay = document.querySelector('.cart-overlay');
-  window.
+  window.cartOverlay = cartOverlay;
 
   document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -27,6 +27,7 @@ initializeSwiper();
   // Function to close the cart drawer
   function closeCart() {
     const closeBtn = document.querySelector(".cart-close__btn");
+    
     closeBtn?.addEventListener("click", () => {
       cartDrawer.classList.remove("cart-drawer--active");
       cartDrawer.classList.add("close");
