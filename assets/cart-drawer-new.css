@@ -49,6 +49,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  z-index: 1;
+  flex
 }
 
 .cart-header__b1 {
