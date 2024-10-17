@@ -16,6 +16,7 @@
 
 .cart-drawer__wrapper.cart-drawer--active {
   width: 100%;
+  max-width: 480px;
 }
 
 .cart-drawer__box {
@@ -430,4 +431,5 @@
 
 .swiper {
   width: 100%;
+  overflow: hidden;
 }
