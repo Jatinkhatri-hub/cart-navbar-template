@@ -25,7 +25,7 @@
 .nav-bar__menu-item {
   display: inline-block;
   position: relative;
-  
+  border-block: 1px solid #EDEDED;
 }
 
 .nav-bar__menu-item::after {
