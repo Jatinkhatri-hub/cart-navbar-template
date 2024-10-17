@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartDrawer.classList.add('cart-drawer--active');
         cartOverlay.classList.add('is-visible');
         cartDrawer.classList.remove('close');
+        document.body.style.overflow = 'hidden'; 
         console.log('Cart drawer opened');
       });
 
