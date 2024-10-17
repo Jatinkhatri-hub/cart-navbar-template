@@ -522,6 +522,10 @@
   }
 
 
+  .cart-drawer__payment-options {
+    justify-content: flex-start;
+  }
+
   .cart-drawer__payment-options p {
     font-size: 15px;
   }
