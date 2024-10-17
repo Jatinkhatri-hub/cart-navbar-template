@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartDrawer = document.querySelector(".cart-drawer__wrapper");
   window.cartDrawer = cartDrawer;
 
+  const 
+
   document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
   });
@@ -435,7 +437,6 @@ async function updateCartDrawer() {
         button.addEventListener('click', async function (event) {
           event.preventDefault(); // Prevent redirect to cart page
           const lineItem = event.target.closest('.line-item');
-          const parentEl = lineItem.closest("[data-line-item-key]");
           const key = lineItem.getAttribute("data-line-item-key");
     
           // Show spinner over the line item
