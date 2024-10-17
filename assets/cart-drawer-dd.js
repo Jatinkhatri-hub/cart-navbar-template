@@ -231,33 +231,6 @@ initializeSwiper();
   }
   
 
-  // function updateOfferButtons(cart) {
-  //   const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
-  //   const offerProducts = document.querySelectorAll('.offer__product-card');
-
-  //   offerProducts.forEach(offer => {
-  //     const productId = offer.getAttribute('data-product-id');
-  //     const minTotal = parseFloat(offer.getAttribute('data-min-value'));
-  //     const claimButton = offer.querySelector('.claim-offer__btn');
-
-  //     // Check if the product is already in the cart
-  //     const isProductInCart = cart.items.some(item => item.id == productId);
-
-  //     if (isProductInCart) {
-  //       // If the product is already in the cart, disable the button
-  //       claimButton.disabled = true;
-  //       claimButton.textContent = 'Offer Already Claimed';
-  //     } else if (cartTotal >= minTotal) {
-  //       // If cart total meets or exceeds the min_total, enable the button
-  //       claimButton.disabled = false;
-  //       claimButton.textContent = 'Claim Offer';
-  //     } else {
-  //       // Otherwise, disable the button because the cart total is too low
-  //       claimButton.disabled = true;
-  //       claimButton.textContent = `Add ${minTotal - cartTotal} more to claim`;
-  //     }
-  //   });
-  // }
 
   // Handle changes in selling plan
   function updateSellingPlan() {
@@ -307,40 +280,6 @@ initializeSwiper();
     });
   }
 
-  // Update the cart drawer
-  // async function updateCartDrawer() {
-
-  //   const productOffersWrapper = document.querySelector(".product-offers__wrapper");
-  //   const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
-  
-  
-
-  //   const res = await fetch("/?section_id=cart-drawer-new");
-  //   const text = await res.text();
-
-  //   const html = document.createElement("div");
-  //   html.innerHTML = text;
-
-  //   const newBox = html.querySelector(".cart-drawer__wrapper").innerHTML;
-
-  //   document.querySelector(".cart-drawer__box").innerHTML = newBox;
-
-  //   if (document.querySelector(".product-offers__wrapper")) {
-  //     document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
-  //   }
-
-  //   try {
-  //     const cartResponse = await fetch('/cart.js');
-  //     const cartData = await cartResponse.json();
-  //     updateOfferButtons(cartData); // Update offer buttons with the latest cart data
-  //   } catch (error) {
-  //     console.error('Error fetching cart data:', error);
-  //   }
-
-  //   // Reapply event listeners
-  //   addCartDrawerListeners();
-  //   initializeSwiper();
-  // }
 
   // Update the cart drawer
 async function updateCartDrawer() {
