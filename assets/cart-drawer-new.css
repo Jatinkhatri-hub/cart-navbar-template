@@ -317,16 +317,20 @@
 }
 
 .subscription-options .info-circle {
-  display: inline-block;
+  display: flex;
   margin-left: 10px;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 18px;
-  font-size: 12px;
+  width: 15px;
+  height: 15px;
+  
+  font-size: 10px;
+  color: black;
+  font-weight: 600;
+  font-family: 'Inter';
+  align-items: center;
+  justify-content: center;
 }
 
 .subscription-dropdown {
