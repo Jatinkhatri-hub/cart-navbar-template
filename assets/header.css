@@ -111,7 +111,7 @@
 .navBar__routes a {
   display: flex;
   align-items: center;
-  position: ;
+  cursor: pointer !important;
 }
 
 .nav-bar__user-account svg path {
