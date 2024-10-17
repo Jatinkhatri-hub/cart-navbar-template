@@ -508,7 +508,7 @@ async function updateCartDrawer() {
         await updateCartDrawer();
         cartDrawer.classList.add("cart-drawer--active");
         cartDrawer.classList.remove("close");
-        
+        cartOverlay.classList.add('is-visible');
       } catch (error) {
         console.error("Error adding to cart:", error);
       }
@@ -521,44 +521,6 @@ async function updateCartDrawer() {
 
   const claimOfferButtons = document.querySelectorAll(".claim-offer__btn");
 
-  // claimOfferButtons.forEach(button => {
-  //   button.addEventListener("click", async (event) => {
-  //     event.preventDefault();
-      
-  //     const productId = button.getAttribute('data-product-id');
-      
-  //     if (!button.disabled) {
-  //       try {
-  //         // Add the product to cart for free
-  //         const response = await fetch("/cart/add.js", {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify({
-  //             items: [{
-  //               id: productId,
-  //               quantity: 1
-  //             }]
-  //           }),
-  //         });
-
-  //         if (response.ok) {
-  //           // Disable button after claiming the offer
-  //           button.disabled = true;
-  //           button.textContent = "Offer Claimed";
-
-  //           // Optionally update the cart drawer after the offer is claimed
-  //           await updateCartDrawer();
-  //         } else {
-  //           throw new Error("Failed to add offer product to cart");
-  //         }
-  //       } catch (error) {
-  //         console.error("Error claiming offer:", error);
-  //       }
-  //     }
-  //   });
-  // });
 
   fetch('/cart.js')
     .then(response => response.json())
@@ -568,79 +530,7 @@ async function updateCartDrawer() {
     })
     .catch(error => console.error('Error fetching cart data:', error));
 
-  // Event listener for claiming offers (optional, based on your logic)
-  // document.querySelectorAll('.claim-offer__btn').forEach(button => {
-  //   button.addEventListener('click', function (event) {
-  //     event.preventDefault(); // Prevent the default button behavior
   
-  //     const productId = this.getAttribute('data-product-id'); // Get the product ID
-  //     const offerProductCard = this.closest('.offer__product-card');
-  
-  //     // Add product to the cart via AJAX
-  //     fetch('/cart/add.js', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         'X-Requested-With': 'XMLHttpRequest'
-  //       },
-  //       body: JSON.stringify({
-  //         id: productId,
-  //         quantity: 1
-  //       })
-  //     })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log('Product added to cart:', data);
-  //       this.disabled = true; // Disable the button after claiming the offer
-
-  //       // if (mySwiper) {
-  //       //   mySwiper.destroy(true, true); // Destroy the current Swiper instance
-  //       // }
-        
-  //       // initializeSwiper();
-
-  //       this.textContent = 'Offer Already Claimed';
-  //       updateCartDrawer(); // Optionally update the cart drawer if you have one
-  //     })
-  //     .catch(error => {
-  //       console.error('Error adding product to cart:', error);
-  //     });
-  //   });
-  // });
-
-  // Event listener for claiming offers
-// document.querySelectorAll('.claim-offer__btn').forEach(button => {
-//   button.addEventListener('click', async function (event) {
-//     event.preventDefault(); // Prevent the default button behavior
-
-//     const productId = this.getAttribute('data-product-id');
-
-//     try {
-//       const response = await fetch('/cart/add.js', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//           'X-Requested-With': 'XMLHttpRequest'
-//         },
-//         body: JSON.stringify({
-//           id: productId,
-//           quantity: 1
-//         })
-//       });
-
-//       if (!response.ok) throw new Error("Failed to add offer product to cart");
-
-//       this.disabled = true; // Disable the button after claiming the offer
-//       this.textContent = 'Offer Claimed';
-
-//       // Update the cart drawer and offer buttons
-//       await updateCartDrawer();
-
-//     } catch (error) {
-//       console.error('Error adding product to cart:', error);
-//     }
-//   });
-// });
 
   
 });
