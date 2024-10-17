@@ -76,6 +76,7 @@
 .open {
   width: 90%;
   padding-inline: 30px;
+  padding-top: 60px;
 }
 
 .nav-drawer__close-btn {
