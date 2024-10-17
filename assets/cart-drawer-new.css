@@ -242,6 +242,7 @@
   padding: 24px;
   margin-top: auto;
   border-top: 1px solid #676666;
+  max-width: 375px;
 }
 
 .cart-drawer__footer-row {
