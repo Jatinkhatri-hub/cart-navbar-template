@@ -25,7 +25,7 @@
       {% else %}
         <div class="cart-drawer__items">
           <div class="swiper">
-            <div class="product-offers__wrapper"> 
+            <div class="product-offers__wrapper swiper-wrapper"> 
             {% for block in section.blocks %} 
               <div class="offer__product-card" data-product-id="{{ block.settings.product.variants.first.id }}">
                 <div class="offer-product__img-wrapper">
