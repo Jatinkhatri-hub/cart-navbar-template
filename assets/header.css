@@ -105,6 +105,8 @@
 .navBar__routes {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: ;
 }
 
 
