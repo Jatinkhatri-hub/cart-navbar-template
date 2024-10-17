@@ -107,6 +107,8 @@
   flex-direction: column;
 }
 
+.cart-drawer__em
+
 .cart-drawer__items {
   padding: 24px;
   display: flex;
