@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
   });
 
-  let mySwiper = doe
+  let mySwiper = document.querySelector('.swiper')
 
 function initializeSwiper() {
   mySwiper = new Swiper('.swiper-container', {
