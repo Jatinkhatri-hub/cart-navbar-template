@@ -378,6 +378,7 @@
   width: 250px;
   gap: 10px;
   border: 1px dashed #787878;
+  box-sizing: border-box;
 
 }
 
@@ -435,5 +436,4 @@
 .swiper {
   width: 100%;
   overflow: hidden;
-  box
 }
