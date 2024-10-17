@@ -527,7 +527,8 @@
   }
 
   .cart-drawer__payment-provider-img {
-    
+    width: 200px;
+    height: 20px;
   }
   
 }
