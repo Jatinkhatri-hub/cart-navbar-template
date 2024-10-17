@@ -458,6 +458,10 @@ async function updateCartDrawer() {
 
         if (!response.ok) throw new Error("Failed to add item to cart");
 
+        if (productOffersWrapper) {
+          productOffersWrapper.innerHTML = savedOffersContent;
+        }
+
         await updateCartDrawer();
         cartDrawer.classList.add("cart-drawer--active");
         cartDrawer.classList.remove("close");
