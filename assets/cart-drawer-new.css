@@ -15,6 +15,24 @@
   border-left: 1.5px solid #D3D3D3;
 }
 
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 9998; /* Just behind the cart drawer */
+  display: none; /* Hidden by default */
+  opacity: 0; /* Fully transparent */
+  transition: opacity 0.3s ease;
+}
+
+.cart-overlay.is-visible {
+  display: block; /* Show the overlay */
+  opacity: 1; /* Fully opaque */
+}
+
 .cart-drawer__wrapper.cart-drawer--active {
   width: 100%;
   max-width: 480px;
