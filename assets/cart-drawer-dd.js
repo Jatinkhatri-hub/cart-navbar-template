@@ -106,15 +106,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateOfferButtons(cart) {
     const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
     const offerProducts = document.querySelectorAll('.offer__product-card');
-
+  
     offerProducts.forEach(offer => {
       const productId = offer.getAttribute('data-product-id');
       const minTotal = parseFloat(offer.getAttribute('data-min-value'));
       const claimButton = offer.querySelector('.claim-offer__btn');
-
-      // Check if the product is already in the cart
-      const isProductInCart = cart.items.some(item => item.id == productId);
-
+  
+      // Check if cart.items exists and is an array
+      const isProductInCart = cart.items && Array.isArray(cart.items)
+        ? cart.items.some(item => item.id == productId)
+        : false;
+  
       if (isProductInCart) {
         // If the product is already in the cart, disable the button
         claimButton.disabled = true;
@@ -130,6 +132,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // function updateOfferButtons(cart) {
+  //   const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
+  //   const offerProducts = document.querySelectorAll('.offer__product-card');
+
+  //   offerProducts.forEach(offer => {
+  //     const productId = offer.getAttribute('data-product-id');
+  //     const minTotal = parseFloat(offer.getAttribute('data-min-value'));
+  //     const claimButton = offer.querySelector('.claim-offer__btn');
+
+  //     // Check if the product is already in the cart
+  //     const isProductInCart = cart.items.some(item => item.id == productId);
+
+  //     if (isProductInCart) {
+  //       // If the product is already in the cart, disable the button
+  //       claimButton.disabled = true;
+  //       claimButton.textContent = 'Offer Already Claimed';
+  //     } else if (cartTotal >= minTotal) {
+  //       // If cart total meets or exceeds the min_total, enable the button
+  //       claimButton.disabled = false;
+  //       claimButton.textContent = 'Claim Offer';
+  //     } else {
+  //       // Otherwise, disable the button because the cart total is too low
+  //       claimButton.disabled = true;
+  //       claimButton.textContent = `Add ${minTotal - cartTotal} more to claim`;
+  //     }
+  //   });
+  // }
 
   // Handle changes in selling plan
   function updateSellingPlan() {
