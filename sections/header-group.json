@@ -81,8 +81,8 @@
       ],
       "settings": {
         "color_scheme": "",
-        "cart_title": "Cart Title",
-        "user_signup": "Short Description.",
+        "cart_title": "YOUR CART",
+        "user_signup": "Sign up for Feed 1st and get FREE shipping",
         "payment_provider": "shopify://shop_images/Group_1484580789.png"
       }
     }
