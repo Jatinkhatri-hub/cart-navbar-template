@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartDrawer = document.querySelector(".cart-drawer__wrapper");
   window.cartDrawer = cartDrawer;
 
+  document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+  });
+
   // Function to close the cart drawer
   function closeCart() {
     const closeBtn = document.querySelector(".cart-close__btn");
