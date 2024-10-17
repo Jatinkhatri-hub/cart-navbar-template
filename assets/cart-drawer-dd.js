@@ -349,6 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(cart => {
           // Re-fetch the cart data to update the buttons
           updateOfferButtons(cart);
+          updateCartDrawer();
         })
         .catch(error => console.error('Error adding product to cart:', error));
       }
