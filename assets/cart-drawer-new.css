@@ -525,5 +525,9 @@
   .cart-drawer__payment-options p {
     font-size: 15px;
   }
+
+  .cart-drawer__payment-provider-img {
+    
+  }
   
 }
