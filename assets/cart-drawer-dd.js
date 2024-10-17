@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartDrawer = document.querySelector(".cart-drawer__wrapper");
   window.cartDrawer = cartDrawer;
 
-  const 
+  const cartOverlay = document.querySelector('.cart-overlay');
+  window.
 
   document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
