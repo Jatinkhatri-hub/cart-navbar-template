@@ -106,8 +106,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: ;
+  gap: 15px;
 }
+
+.nav-bar__user-account
 
 
 .nav-bar__cart-open-btn svg {
