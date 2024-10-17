@@ -51,7 +51,7 @@
 }
 
 .nav-bar__brand-logo {
-  width: 150px;
+  width: 90px;
 }
 
 .nav-bar__menu {
@@ -110,7 +110,8 @@
 }
 
 .navBar__routes a {
-  display: ;
+  display: flex;
+  align-items: center;
 }
 
 
