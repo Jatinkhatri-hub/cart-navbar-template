@@ -338,6 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Event listener for claiming offers (optional, based on your logic)
   document.querySelectorAll('.claim-offer__btn').forEach(button => {
     button.addEventListener('click', (event) => {
+      event.preventDefault();
       const productId = button.getAttribute('data-product-id');
       
       // Check if the button is not disabled and the product can be claimed
