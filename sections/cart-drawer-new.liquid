@@ -156,16 +156,30 @@
   </div>
 </div>
 
-<script>
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   // let swiper = document.querySelector('.mySwiper-{{ section.id }}');
+{% comment %} <script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-  //   let swiper = new Swiper('.mySwiper-{{ section.id }}', {
-  //     slidesPerView: 'auto',
-  //     spaceBetween: 10,
+
+    // let swiper = new Swiper('.mySwiper-{{ section.id }}', {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 10,
       
-  //   });
+    // });
 
+    
+
+  });
+</script> {% endcomment %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Ensure Swiper initializes after content is loaded
+    setTimeout(() => {
+      let swiper = new Swiper('.mySwiper-{{ section.id }}', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+      });
+    }, 100);  // Delay to ensure the DOM is fully loaded
   });
 </script>
 
