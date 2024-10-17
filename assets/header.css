@@ -109,6 +109,7 @@
   gap: 15px;
 }
 
+
 .nav-bar__user-account svg path {
   fill: rgb(var(--color-foreground));
 }
