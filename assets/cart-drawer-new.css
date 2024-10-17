@@ -314,6 +314,7 @@
 .subscription-options {
   display: flex;
   align-items: center;
+  margin-top: 15px;
 }
 
 .subscription-options label {
