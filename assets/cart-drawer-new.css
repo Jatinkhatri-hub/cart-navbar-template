@@ -322,7 +322,11 @@
     font: 600 12px 'Inter';
     display: flex;
     gap: 10px;
+    align-items: center;
 }
+
+
+
 
 .subscription-options .info-circle {
   display: flex;
