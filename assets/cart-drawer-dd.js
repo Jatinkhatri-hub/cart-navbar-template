@@ -259,6 +259,7 @@ initializeSwiper();
 
     // Reapply event listeners
     addCartDrawerListeners();
+    initializeSwiper();
   }
 
   // Quantity change event listener
