@@ -98,17 +98,20 @@
                                 {% endfor %}
                             </select> {% endcomment %}
               <div class="subscription-options">
-                <label>
-                  <input
-                    type="checkbox"
-                    class="subscription-checkbox"
-                    data-line="{{ forloop.index }}"
-                    {% if item.selling_plan_allocation %}
-                    checked
-                    {% endif %}>
-                  Subscribe and Save
-                </label>
-                <span class="info-circle" tabindex="0">i</span>
+                <div>
+                  <label>
+                    <input
+                      type="checkbox"
+                      class="subscription-checkbox"
+                      data-line="{{ forloop.index }}"
+                      {% if item.selling_plan_allocation %}
+                      checked
+                      {% endif %}>
+                    Subscribe and Save
+                  </label>
+                  <span class="info-circle" tabindex="0">i</span>
+
+                </div>
 
                 <div class="subscription-dropdown" data-line="{{ forloop.index }}"  style="display: none;">
                   <select
