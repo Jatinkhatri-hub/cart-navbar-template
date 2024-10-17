@@ -19,6 +19,13 @@
   max-width: 480px;
 }
 
+.swiper {
+  .mySwiper-{{ section.id }} {
+    flex-shrink: 0; /* Prevent the Swiper from shrinking */
+    flex-grow: 0; /* Prevent the Swiper from growing */  }
+  
+}
+
 .cart-drawer__box {
   display: flex;
   flex-direction: column;
