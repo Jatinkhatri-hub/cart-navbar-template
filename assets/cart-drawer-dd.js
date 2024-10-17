@@ -31,14 +31,14 @@ initializeSwiper();
     closeBtn?.addEventListener("click", () => {
       cartDrawer.classList.remove("cart-drawer--active");
       cartDrawer.classList.add("close");
-      cartOverlay.classList.remove('.is-visible');
+      cartOverlay.classList.remove('is-visible');
       document.body.style.overflow = '';  // Enable page scroll
     });
 
     cartOverlay.addEventListener("click", () => {
       cartDrawer.classList.remove("cart-drawer--active");
       cartDrawer.classList.add("close");
-      cartOverlay.classList.remove('.is-visible');
+      cartOverlay.classList.remove('is-visible');
       document.body.style.overflow = '';  // Enable page scroll
     })
   }
