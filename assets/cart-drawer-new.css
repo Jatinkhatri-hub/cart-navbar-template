@@ -216,7 +216,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 105px;
+  width: 90px;
   border: 1px solid #676666;
   border-radius: 35px;
   height: 30px;
@@ -236,7 +236,7 @@
 .line-item__quantity-selector input {
   border: none;
   outline: none;
-  width: 45px;
+  width: 40px;
   height: 30px;
   text-align: center;
   font: 600 12px "Inter";
