@@ -281,41 +281,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const claimOfferButtons = document.querySelectorAll(".claim-offer__btn");
 
-  claimOfferButtons.forEach(button => {
-    button.addEventListener("click", async (event) => {
-      event.preventDefault();
+  // claimOfferButtons.forEach(button => {
+  //   button.addEventListener("click", async (event) => {
+  //     event.preventDefault();
       
+  //     const productId = button.getAttribute('data-product-id');
+      
+  //     if (!button.disabled) {
+  //       try {
+  //         // Add the product to cart for free
+  //         const response = await fetch("/cart/add.js", {
+  //           method: "POST",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify({
+  //             items: [{
+  //               id: productId,
+  //               quantity: 1
+  //             }]
+  //           }),
+  //         });
+
+  //         if (response.ok) {
+  //           // Disable button after claiming the offer
+  //           button.disabled = true;
+  //           button.textContent = "Offer Claimed";
+
+  //           // Optionally update the cart drawer after the offer is claimed
+  //           await updateCartDrawer();
+  //         } else {
+  //           throw new Error("Failed to add offer product to cart");
+  //         }
+  //       } catch (error) {
+  //         console.error("Error claiming offer:", error);
+  //       }
+  //     }
+  //   });
+  // });
+
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      updateOfferButtons(cart);
+    })
+    .catch(error => console.error('Error fetching cart data:', error));
+
+  // Event listener for claiming offers (optional, based on your logic)
+  document.querySelectorAll('.claim-offer__btn').forEach(button => {
+    button.addEventListener('click', (event) => {
       const productId = button.getAttribute('data-product-id');
       
+      // Check if the button is not disabled and the product can be claimed
       if (!button.disabled) {
-        try {
-          // Add the product to cart for free
-          const response = await fetch("/cart/add.js", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              items: [{
-                id: productId,
-                quantity: 1
-              }]
-            }),
-          });
-
-          if (response.ok) {
-            // Disable button after claiming the offer
-            button.disabled = true;
-            button.textContent = "Offer Claimed";
-
-            // Optionally update the cart drawer after the offer is claimed
-            await updateCartDrawer();
-          } else {
-            throw new Error("Failed to add offer product to cart");
-          }
-        } catch (error) {
-          console.error("Error claiming offer:", error);
-        }
+        // Add the product to the cart (Shopify API POST request)
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: productId,
+            quantity: 1
+          })
+        })
+        .then(response => response.json())
+        .then(cart => {
+          // Re-fetch the cart data to update the buttons
+          updateOfferButtons(cart);
+        })
+        .catch(error => console.error('Error adding product to cart:', error));
       }
     });
   });
