@@ -361,7 +361,9 @@
 .product-offers__wrapper {
   display: flex;
   gap: 10px;
-  justify-content: fle;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
 }
 
 .offer__product-card {
