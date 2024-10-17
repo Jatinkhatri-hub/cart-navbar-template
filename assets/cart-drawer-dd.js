@@ -7,6 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
   });
 
+  let mySwiper = doe
+
+function initializeSwiper() {
+  mySwiper = new Swiper('.swiper-container', {
+    // your Swiper configuration
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // other Swiper settings
+  });
+}
+
+// Call this function when the page loads initially
+initializeSwiper();
+
   // Function to close the cart drawer
   function closeCart() {
     const closeBtn = document.querySelector(".cart-close__btn");
