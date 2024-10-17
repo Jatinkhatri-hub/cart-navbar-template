@@ -39,12 +39,44 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "scheme-1"
+        "brand_logo": "shopify://shop_images/LabifyHealth.png",
+        "navigation": "main-menu",
+        "color_scheme": "scheme-1",
+        "header_position": "always"
+      }
+    },
+    "cart_drawer_new_GRYkhH": {
+      "type": "cart-drawer-new",
+      "blocks": {
+        "product_offer_NPVNYG": {
+          "type": "product_offer",
+          "settings": {
+            "product": "anti-magic",
+            "offer_desc": "Subheading With Info"
+          }
+        },
+        "product_offer_ciGzkp": {
+          "type": "product_offer",
+          "settings": {
+            "product": "beast",
+            "offer_desc": "Subheading With Info"
+          }
+        }
+      },
+      "block_order": [
+        "product_offer_NPVNYG",
+        "product_offer_ciGzkp"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "cart_title": "Cart Title",
+        "user_signup": "Short Description."
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "cart_drawer_new_GRYkhH"
   ]
 }
