@@ -326,7 +326,9 @@
 }
 
 
-.subscription-
+.subscription-checkbox {
+  margin: 0;
+}
 
 
 .subscription-options .info-circle {
