@@ -54,10 +54,18 @@
             "product": "beast",
             "offer_desc": "Subheading With Info"
           }
+        },
+        "product_offer_iUEYpm": {
+          "type": "product_offer",
+          "settings": {
+            "product": "anti-magic",
+            "offer_desc": "Subheading With Info"
+          }
         }
       },
       "block_order": [
-        "product_offer_hmEhVq"
+        "product_offer_hmEhVq",
+        "product_offer_iUEYpm"
       ],
       "settings": {
         "color_scheme": "",
