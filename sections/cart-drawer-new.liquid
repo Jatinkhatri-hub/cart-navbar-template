@@ -68,7 +68,9 @@
                   <div class="line-item__mid">
                     <div class="line-item__price-wrapper">
                       <span class="line-item__current-price">{{ item.final_line_price | money_with_currency }}</span>
-                      <span class="line-item__cap">{{ item.product.compare_at_price | money_with_currency }} {{ item.selling_plan_allocation.compare_at_price | times: item.quantity | money_with_currency }} </span>
+                      <span class="line-item__cap">{{ item.product.compare_at_price | money_with_currency }} 
+                        
+                      {{ item.selling_plan_allocation.compare_at_price | times: item.quantity | money_with_currency }} </span>
                     </div>
                     <div class="line-item__quantity-selector" data-line-item-key="{{ item.key }}">
                       <button class="line-item__quantity-selector-minus">{{ 'icon-minus-new.svg' | inline_asset_content }}</button>
