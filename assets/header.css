@@ -102,6 +102,11 @@
   font-size: 18px;
 }
 
+.navBar__routes {
+  display: flex;
+  align-items: center;
+}
+
 
 .nav-bar__cart-open-btn svg {
   width: 18.7px;
