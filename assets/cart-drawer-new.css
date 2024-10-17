@@ -444,4 +444,5 @@
   cursor: not-allowed; /* Change cursor to 'not-allowed' */
   opacity: 0.6; /* Dim the button */
   pointer-events: none; /* Disable clicking */
+  color: black;
 }
