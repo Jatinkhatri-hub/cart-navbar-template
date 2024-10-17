@@ -151,31 +151,31 @@ initializeSwiper();
   //   });
   // }
 
-  function updateOfferButtons(cart) {
-    const offerProductIds = [...document.querySelectorAll('.claim-offer__btn')].map(btn => btn.getAttribute('data-product-id'));
+  // function updateOfferButtons(cart) {
+  //   const offerProductIds = [...document.querySelectorAll('.claim-offer__btn')].map(btn => btn.getAttribute('data-product-id'));
     
-    // Check if any offer product is in the cart
-    const claimedOffer = cart.items.find(item => offerProductIds.includes(item.id.toString()));
+  //   // Check if any offer product is in the cart
+  //   const claimedOffer = cart.items.find(item => offerProductIds.includes(item.id.toString()));
   
-    // Update button states based on claimed offer status
-    document.querySelectorAll('.claim-offer__btn').forEach(button => {
-      const productId = button.getAttribute('data-product-id');
+  //   // Update button states based on claimed offer status
+  //   document.querySelectorAll('.claim-offer__btn').forEach(button => {
+  //     const productId = button.getAttribute('data-product-id');
   
-      if (claimedOffer && claimedOffer.id.toString() !== productId) {
-        // Disable other buttons if an offer has been claimed
-        button.disabled = true;
-        button.textContent = "Offer Already Claimed";
-      } else if (!claimedOffer) {
-        // Enable all buttons if no offer has been claimed
-        button.disabled = false;
-        button.textContent = "Claim Offer";
-      } else if (claimedOffer.id.toString() === productId) {
-        // Mark the claimed button as "Offer Claimed"
-        button.disabled = true;
-        button.textContent = "Offer Claimed";
-      }
-    });
-  }
+  //     if (claimedOffer && claimedOffer.id.toString() !== productId) {
+  //       // Disable other buttons if an offer has been claimed
+  //       button.disabled = true;
+  //       button.textContent = "Offer Already Claimed";
+  //     } else if (!claimedOffer) {
+  //       // Enable all buttons if no offer has been claimed
+  //       button.disabled = false;
+  //       button.textContent = "Claim Offer";
+  //     } else if (claimedOffer.id.toString() === productId) {
+  //       // Mark the claimed button as "Offer Claimed"
+  //       button.disabled = true;
+  //       button.textContent = "Offer Claimed";
+  //     }
+  //   });
+  // }
   
 
   // function updateOfferButtons(cart) {
