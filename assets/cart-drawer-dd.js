@@ -508,6 +508,7 @@ async function updateCartDrawer() {
         await updateCartDrawer();
         cartDrawer.classList.add("cart-drawer--active");
         cartDrawer.classList.remove("close");
+        
       } catch (error) {
         console.error("Error adding to cart:", error);
       }
