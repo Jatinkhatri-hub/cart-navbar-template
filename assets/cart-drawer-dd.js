@@ -34,7 +34,7 @@ initializeSwiper();
       cartOverlay.classList.remove('.is-visible');
     });
 
-    
+    cartOverlay.addEventListener()
   }
 
   function toggleSubscriptionDropdown(lineIndex, showDropdown) {
