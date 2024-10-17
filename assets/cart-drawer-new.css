@@ -51,7 +51,7 @@
   flex-direction: column;
   z-index: 1;
   flex-shrink: 0;
-  
+
 }
 
 .cart-header__b1 {
@@ -145,6 +145,8 @@
   flex-direction: column;
   gap: 20px;
   max-width: 375px;
+  flex-grow: 1;
+  
 }
 
 .line-item {
