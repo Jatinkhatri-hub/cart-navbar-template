@@ -201,6 +201,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
     }
 
+    try {
+      const cartResponse = await fetch('/cart.js');
+      const cartData = await cartResponse.json();
+      updateOfferButtons(cartData); // Update offer buttons with the latest cart data
+    } catch (error) {
+      console.error('Error fetching cart data:', error);
+    }
+
     // Reapply event listeners
     addCartDrawerListeners();
   }
