@@ -307,6 +307,7 @@
 
 .cart-drawer__footer-row h3 {
   font: 600 12px "Inter";
+  margin: 0;
 }
 
 .cart-drawer__footer-row span {
@@ -526,7 +527,9 @@
     font-size: 15px;
   }
 
-  .cart-drawer__footer-row span {{}}
+  .cart-drawer__footer-row span {
+    font-size: 16px;
+  }
 
 
   .cart-drawer__payment-options {
