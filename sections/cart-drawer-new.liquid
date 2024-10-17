@@ -46,7 +46,7 @@
             
           </div>
           {% for item in cart.items %}
-            <div class="line-item">
+            <div class="line-item" data-line-item-key="{{ item.key }}">
               <div class="line-item__wrapper">
                 <div class="line-item__img">
                   <img src="{{ item.image |  image_url: width: item.image.width }}" alt="{{ item.title }}">
@@ -171,7 +171,7 @@
   });
 </script> {% endcomment %}
 
-<script>
+{% comment %} <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Ensure Swiper initializes after content is loaded
     setTimeout(() => {
@@ -183,7 +183,7 @@
       });
     }, 100);  // Delay to ensure the DOM is fully loaded
   });
-</script>
+</script> {% endcomment %}
 
 {% comment %} <script>
       document.addEventListener('DOMContentLoaded', () => {
