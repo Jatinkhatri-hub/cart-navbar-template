@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('Product added to cart:', data);
         this.disabled = true; // Disable the button after claiming the offer
         this.textContent = 'Offer Already Claimed';
-        updateCart(); // Optionally update the cart drawer if you have one
+        updateCartDrawer(); // Optionally update the cart drawer if you have one
       })
       .catch(error => {
         console.error('Error adding product to cart:', error);
