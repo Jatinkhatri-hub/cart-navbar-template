@@ -24,8 +24,7 @@
         <p class="cart-drawer__empty">Your cart is empty</p>
       {% else %}
         <div class="cart-drawer__items">
-          <div>
-            
+          <div class="swiper">
             <div class="product-offers__wrapper"> 
             {% for block in section.blocks %} 
               <div class="offer__product-card" data-product-id="{{ block.settings.product.variants.first.id }}">
@@ -44,6 +43,7 @@
               </div>
             {% endfor %}
             </div>
+            
           </div>
           {% for item in cart.items %}
             <div class="line-item">
