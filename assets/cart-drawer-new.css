@@ -253,7 +253,7 @@
 }
 
 .subscription-dropdown::before,
-.custom-select::after {
+.subscription-dropdown::after {
   --size: 0.3rem;
   position: absolute;
   content: "";
@@ -261,7 +261,7 @@
   pointer-events: none;
 }
 
-.custom-select::before {
+.subscription-dropdown::before {
   border-left: var(--size) solid transparent;
   border-right: var(--size) solid transparent;
   border-bottom: var(--size) solid black;
