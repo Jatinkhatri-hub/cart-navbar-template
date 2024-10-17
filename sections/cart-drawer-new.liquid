@@ -140,7 +140,10 @@
         <footer class="cart-drawer__footer">
           <div class="cart-drawer__footer-row">
             <h3>Subtotal</h3>
-            <span>{{ cart.total_price | money_with_currency }}</span>
+            <div>
+              <span>{{ cart.total_price | money_with_currency }}</span>
+              <span></span>
+            </div>
           </div>
           <button
             type="submit"
