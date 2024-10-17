@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.cartDrawer) {
       // Now cartDrawer is available
       const cartDrawer = window.cartDrawer;
+      const cartO
       console.log('Cart drawer found:', cartDrawer);
 
       // Add event listener to open the cart
