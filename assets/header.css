@@ -109,7 +109,9 @@
   gap: 15px;
 }
 
-.nav-bar__user-account
+.nav-bar__user-account {
+  nav
+}
 
 
 .nav-bar__cart-open-btn svg {
