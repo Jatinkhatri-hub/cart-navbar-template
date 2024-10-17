@@ -249,11 +249,11 @@
 }
 
 .cart-drawer__footer {
-  padding: 24p 0;
+  padding: 24px 0;
   margin-top: auto;
   border-top: 1px solid #676666;
   max-width: 375px;
-  margin-inlin
+  margin-inline: 24px;
 }
 
 .cart-drawer__footer-row {
