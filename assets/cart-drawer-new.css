@@ -438,3 +438,10 @@
   width: 100%;
   overflow: hidden;
 }
+
+.claim-offer__btn--disabled {
+  background-color: #cccccc; /* Gray background */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' */
+  opacity: 0.6; /* Dim the button */
+  pointer-events: none; /* Disable clicking */
+}
