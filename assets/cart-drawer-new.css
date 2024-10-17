@@ -129,6 +129,8 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  border-bottom: 1.5px solid #D3D3D3;
+  padding-bottom: 10px;
 }
 
 .line-item__wrapper {
