@@ -176,6 +176,46 @@ initializeSwiper();
   //     }
   //   });
   // }
+
+  function updateOfferButtons(cart) {
+    const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
+    const offerProductIds = [...document.querySelectorAll('.claim-offer__btn')].map(btn => btn.getAttribute('data-product-id'));
+  
+    // Check if any offer product is in the cart
+    const claimedOffer = cart.items.find(item => offerProductIds.includes(item.id.toString()));
+  
+    // Update button states based on claimed offer status and min-value comparison
+    document.querySelectorAll('.claim-offer__btn').forEach(button => {
+      const productId = button.getAttribute('data-product-id');
+      const offerProductCard = button.closest('.offer__product-card'); // Assuming each button is inside a product card element
+      const minTotal = parseFloat(offerProductCard.getAttribute('data-min-value')); // Get min value from the product card
+  
+      if (claimedOffer && claimedOffer.id.toString() !== productId) {
+        // Disable other buttons if an offer has been claimed
+        button.disabled = true;
+        button.classList.add('claim-offer__btn--disabled');
+        button.textContent = "Offer Already Claimed";
+      } else if (!claimedOffer) {
+        // If no offer has been claimed, check if the cart total meets the required minimum value
+        if (cartTotal >= minTotal) {
+          // Enable the button if cart total is sufficient
+          button.disabled = false;
+          button.classList.remove('claim-offer__btn--disabled');
+          button.textContent = "Claim Offer";
+        } else {
+          // Disable the button if the cart total is less than the required minimum value
+          button.disabled = true;
+          button.classList.add('claim-offer__btn--disabled');
+          button.textContent = `Add $${(minTotal - cartTotal).toFixed(2)} more to claim`;
+        }
+      } else if (claimedOffer.id.toString() === productId) {
+        // Mark the claimed button as "Offer Claimed"
+        button.disabled = true;
+        button.classList.add('claim-offer__btn--disabled');
+        button.textContent = "Offer Claimed";
+      }
+    });
+  }
   
 
   // function updateOfferButtons(cart) {
@@ -484,38 +524,38 @@ async function updateCartDrawer() {
   // });
 
   // Event listener for claiming offers
-document.querySelectorAll('.claim-offer__btn').forEach(button => {
-  button.addEventListener('click', async function (event) {
-    event.preventDefault(); // Prevent the default button behavior
+// document.querySelectorAll('.claim-offer__btn').forEach(button => {
+//   button.addEventListener('click', async function (event) {
+//     event.preventDefault(); // Prevent the default button behavior
 
-    const productId = this.getAttribute('data-product-id');
+//     const productId = this.getAttribute('data-product-id');
 
-    try {
-      const response = await fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: JSON.stringify({
-          id: productId,
-          quantity: 1
-        })
-      });
+//     try {
+//       const response = await fetch('/cart/add.js', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//           'X-Requested-With': 'XMLHttpRequest'
+//         },
+//         body: JSON.stringify({
+//           id: productId,
+//           quantity: 1
+//         })
+//       });
 
-      if (!response.ok) throw new Error("Failed to add offer product to cart");
+//       if (!response.ok) throw new Error("Failed to add offer product to cart");
 
-      this.disabled = true; // Disable the button after claiming the offer
-      this.textContent = 'Offer Claimed';
+//       this.disabled = true; // Disable the button after claiming the offer
+//       this.textContent = 'Offer Claimed';
 
-      // Update the cart drawer and offer buttons
-      await updateCartDrawer();
+//       // Update the cart drawer and offer buttons
+//       await updateCartDrawer();
 
-    } catch (error) {
-      console.error('Error adding product to cart:', error);
-    }
-  });
-});
+//     } catch (error) {
+//       console.error('Error adding product to cart:', error);
+//     }
+//   });
+// });
 
   
 });
