@@ -31,8 +31,10 @@ initializeSwiper();
     closeBtn?.addEventListener("click", () => {
       cartDrawer.classList.remove("cart-drawer--active");
       cartDrawer.classList.add("close");
-      cart
+      cartOverlay.classList.remove('.is-visible');
     });
+
+    
   }
 
   function toggleSubscriptionDropdown(lineIndex, showDropdown) {
