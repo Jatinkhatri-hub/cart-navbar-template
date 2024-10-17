@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function initializeSwiper() {
   mySwiper = new Swiper('.swiper', {
     // your Swiper configuration
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 10,
     // other Swiper settings
   });
