@@ -248,7 +248,9 @@
   box-shadow: none;
 }
 
-.subscription
+.subscription-dropdown {
+  
+}
 
 .selling-plan-selector {
   appearance: none;
