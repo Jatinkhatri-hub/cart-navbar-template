@@ -472,5 +472,7 @@
 }
 
 @media screen and(min-width: 786px) { 
-  .cart-drawer__items
+  .cart-drawer__items{
+    max-width: 480px;
+  }
 }
