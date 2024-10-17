@@ -121,35 +121,62 @@ initializeSwiper();
     });
   }
 
+  // function updateOfferButtons(cart) {
+  //   const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
+  //   const offerProducts = document.querySelectorAll('.offer__product-card');
+  
+  //   offerProducts.forEach(offer => {
+  //     const productId = offer.getAttribute('data-product-id');
+  //     const minTotal = parseFloat(offer.getAttribute('data-min-value'));
+  //     const claimButton = offer.querySelector('.claim-offer__btn');
+  
+  //     // Check if cart.items exists and is an array
+  //     const isProductInCart = cart.items && Array.isArray(cart.items)
+  //       ? cart.items.some(item => item.id == productId)
+  //       : false;
+  
+  //     if (isProductInCart) {
+  //       // If the product is already in the cart, disable the button
+  //       claimButton.disabled = true;
+  //       claimButton.textContent = 'Offer Already Claimed';
+  //     } else if (cartTotal >= minTotal) {
+  //       // If cart total meets or exceeds the min_total, enable the button
+  //       claimButton.disabled = false;
+  //       claimButton.textContent = 'Claim Offer';
+  //     } else {
+  //       // Otherwise, disable the button because the cart total is too low
+  //       claimButton.disabled = true;
+  //       claimButton.textContent = `Add ${minTotal - cartTotal} more to claim`;
+  //     }
+  //   });
+  // }
+
   function updateOfferButtons(cart) {
-    const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
-    const offerProducts = document.querySelectorAll('.offer__product-card');
+    const offerProductIds = [...document.querySelectorAll('.claim-offer__btn')].map(btn => btn.getAttribute('data-product-id'));
+    
+    // Check if any offer product is in the cart
+    const claimedOffer = cart.items.find(item => offerProductIds.includes(item.id.toString()));
   
-    offerProducts.forEach(offer => {
-      const productId = offer.getAttribute('data-product-id');
-      const minTotal = parseFloat(offer.getAttribute('data-min-value'));
-      const claimButton = offer.querySelector('.claim-offer__btn');
+    // Update button states based on claimed offer status
+    document.querySelectorAll('.claim-offer__btn').forEach(button => {
+      const productId = button.getAttribute('data-product-id');
   
-      // Check if cart.items exists and is an array
-      const isProductInCart = cart.items && Array.isArray(cart.items)
-        ? cart.items.some(item => item.id == productId)
-        : false;
-  
-      if (isProductInCart) {
-        // If the product is already in the cart, disable the button
-        claimButton.disabled = true;
-        claimButton.textContent = 'Offer Already Claimed';
-      } else if (cartTotal >= minTotal) {
-        // If cart total meets or exceeds the min_total, enable the button
-        claimButton.disabled = false;
-        claimButton.textContent = 'Claim Offer';
-      } else {
-        // Otherwise, disable the button because the cart total is too low
-        claimButton.disabled = true;
-        claimButton.textContent = `Add ${minTotal - cartTotal} more to claim`;
+      if (claimedOffer && claimedOffer.id.toString() !== productId) {
+        // Disable other buttons if an offer has been claimed
+        button.disabled = true;
+        button.textContent = "Offer Already Claimed";
+      } else if (!claimedOffer) {
+        // Enable all buttons if no offer has been claimed
+        button.disabled = false;
+        button.textContent = "Claim Offer";
+      } else if (claimedOffer.id.toString() === productId) {
+        // Mark the claimed button as "Offer Claimed"
+        button.disabled = true;
+        button.textContent = "Offer Claimed";
       }
     });
   }
+  
 
   // function updateOfferButtons(cart) {
   //   const cartTotal = cart.total_price / 100; // Shopify returns total_price in cents
