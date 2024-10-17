@@ -34,7 +34,9 @@ initializeSwiper();
       cartOverlay.classList.remove('.is-visible');
     });
 
-    cartOverlay.addEventListener()
+    cartOverlay.addEventListener("click", () => {
+      
+    })
   }
 
   function toggleSubscriptionDropdown(lineIndex, showDropdown) {
