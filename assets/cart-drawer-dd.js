@@ -434,7 +434,7 @@ async function updateCartDrawer() {
       document.querySelectorAll('.line-item__remove').forEach(button => {
         button.addEventListener('click', async function (event) {
           event.preventDefault(); // Prevent redirect to cart page
-          const lineItem = e.target.closest('.line-item');
+          const lineItem = event.target.closest('.line-item');
           const parentEl = lineItem.closest("[data-line-item-key]");
           const key = parentEl.getAttribute("data-line-item-key");
     
