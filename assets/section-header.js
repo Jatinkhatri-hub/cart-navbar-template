@@ -63,12 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.cartDrawer) {
       // Now cartDrawer is available
       const cartDrawer = window.cartDrawer;
-      const cartO
+      const cartOverlay = window.cartOverlay;
       console.log('Cart drawer found:', cartDrawer);
 
       // Add event listener to open the cart
       openCart.addEventListener('click', () => {
         cartDrawer.classList.add('cart-drawer--active');
+        
         cartDrawer.classList.remove('close');
         console.log('Cart drawer opened');
       });
