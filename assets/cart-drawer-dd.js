@@ -410,11 +410,11 @@ initializeSwiper();
         console.log('Product added to cart:', data);
         this.disabled = true; // Disable the button after claiming the offer
 
-        if (mySwiper) {
-          mySwiper.destroy(true, true); // Destroy the current Swiper instance
-        }
+        // if (mySwiper) {
+        //   mySwiper.destroy(true, true); // Destroy the current Swiper instance
+        // }
         
-        initializeSwiper();
+        // initializeSwiper();
 
         this.textContent = 'Offer Already Claimed';
         updateCartDrawer(); // Optionally update the cart drawer if you have one
