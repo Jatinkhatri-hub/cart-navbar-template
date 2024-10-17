@@ -296,6 +296,8 @@
   border-top: 1px solid #676666;
   max-width: 375px;
   margin-inline: 24px;
+  display: flex;
+  
 }
 
 .cart-drawer__footer-row {
