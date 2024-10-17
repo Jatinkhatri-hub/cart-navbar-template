@@ -6,7 +6,7 @@
   width: 0;
   right: 0;
   flex-direction: column;
-  transition: width .5s;
+  transition: width 0.5s;
   overflow: hidden;
   display: flex;
   z-index: 999999;
@@ -18,8 +18,6 @@
   width: 100%;
   max-width: 480px;
 }
-
-
 
 .cart-drawer__box {
   display: flex;
@@ -41,13 +39,12 @@
   padding: 10px 24px;
   position: relative;
   gap: 7px;
-
 }
 
 .cart-header__b1 h2 {
   margin: 0;
   font-size: 19px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 900;
   font-style: italic;
 }
@@ -56,9 +53,9 @@
   font-size: 10px;
   padding: 2px 5px;
   color: #404040;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   border-radius: 1px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 700;
 }
 
@@ -67,7 +64,7 @@
   right: 24px;
   border: none;
   outline: none;
-  background: #F0F0F0;
+  background: #f0f0f0;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -97,7 +94,7 @@
 .cart-header__b2 p {
   margin: 0;
   font-size: 10px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 400;
 }
 
@@ -107,7 +104,18 @@
   flex-direction: column;
 }
 
-.cart-drawer__em
+.cart-drawer__empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+}
 
 .cart-drawer__items {
   padding: 24px;
@@ -156,13 +164,13 @@
 .line-item__title {
   margin: 0;
   font-size: 14px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 600;
 }
 
 .line-item__variant {
   margin: 0;
-  font: 500 10px 'Inter';
+  font: 500 10px "Inter";
   color: #676666;
 }
 
@@ -192,13 +200,13 @@
 }
 
 .line-item__current-price {
-  font: 600 13px 'Inter';
+  font: 600 13px "Inter";
   color: black;
 }
 
 .line-item__cap {
-  font: 600 13px 'Inter';
-  color:#404040;
+  font: 600 13px "Inter";
+  color: #404040;
   text-decoration: line-through;
 }
 
@@ -221,7 +229,6 @@
   justify-content: center;
   height: 30px;
   width: 30px;
-
 }
 
 .line-item__quantity-selector input {
@@ -230,10 +237,9 @@
   width: 45px;
   height: 30px;
   text-align: center;
-  font: 600 12px 'Inter';
+  font: 600 12px "Inter";
   border-inline: 1px solid gray;
 }
-
 
 .line-item__quantity-selector input:focus {
   outline-offset: none;
@@ -255,15 +261,13 @@
 }
 
 .cart-drawer__footer-row h3 {
-  font: 600 12px 'Inter';
-
+  font: 600 12px "Inter";
 }
 
 .cart-drawer__footer-row span {
-  font: 600 14px 'Inter';
+  font: 600 14px "Inter";
   color: black;
 }
-
 
 .cart-drawer__checkout-btn {
   background: black;
@@ -274,11 +278,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 2px;
-  font: 600 14px 'Inter';
+  font: 600 14px "Inter";
   color: white;
   gap: 10px;
 }
-
 
 .cart-drawer__payment-options {
   display: flex;
@@ -290,7 +293,7 @@
 
 .cart-drawer__payment-options p {
   margin: 0;
-  font: 400 12px 'Inter';
+  font: 400 12px "Inter";
   color: black;
 }
 
@@ -300,7 +303,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .cart-drawer__payment-provider-img img {
@@ -308,8 +310,6 @@
   height: 17px;
   object-fit: contain;
 }
-
-
 
 .subscription-options {
   display: flex;
@@ -340,7 +340,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.5);
-  
+
   /* background: black; */
   display: flex;
   justify-content: center;
@@ -351,18 +351,21 @@
 .spinner {
   width: 30px;
   height: 30px;
-  border: 4px solid rgba(0, 0, 0, 0.2); 
-  
+  border: 4px solid rgba(0, 0, 0, 0.2);
+
   border-top: 4px solid black;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   display: block !important;
-  
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* .product-offers__wrapper {
@@ -382,7 +385,6 @@
   gap: 10px;
   border: 1px dashed #787878;
   box-sizing: border-box;
-
 }
 
 .offer-product__info {
@@ -393,22 +395,22 @@
 }
 
 .offer-product__info h2 {
-  font: 600 13px 'Inter';
+  font: 600 13px "Inter";
   margin-block: 0 5px;
 }
 
 .offer-product__info h3 {
-  font: 500 10px 'Inter';
+  font: 500 10px "Inter";
   margin: 0;
 }
 
 .claim-offer__btn {
   height: 25px;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 500 10px 'Inter';
+  font: 500 10px "Inter";
   color: white;
   background-color: black;
   border-radius: 2px;
@@ -420,7 +422,6 @@
 .claim-offer__btn:hover {
   color: black;
   background-color: white;
-  
 }
 
 .offer-product__img-wrapper {
