@@ -431,6 +431,37 @@ async function updateCartDrawer() {
         });
       });
 
+      document.querySelectorAll('.line-item__remove').forEach(button => {
+        button.addEventListener('click', async function (event) {
+          event.preventDefault(); // Prevent redirect to cart page
+    
+          const parentEl = button.closest("[data-line-item-key]");
+          const key = parentEl.getAttribute("data-line-item-key");
+    
+          // Show spinner over the line item
+          showSpinner(parentEl);
+    
+          try {
+            // Remove the item by setting its quantity to 0
+            await fetch("/cart/update.js", {
+              method: "post",
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ updates: { [key]: 0 } }),
+            });
+    
+            // Update cart drawer after removal
+            await updateCartDrawer();
+          } catch (error) {
+            console.error("Error removing item:", error);
+          } finally {
+            hideSpinner(parentEl);
+          }
+        });
+      });
+
     });
 
     
