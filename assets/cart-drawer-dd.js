@@ -435,6 +435,7 @@ async function updateCartDrawer() {
         button.addEventListener('click', async function (event) {
           event.preventDefault(); // Prevent redirect to cart page
           const lineItem = event.target.closest('.line-item');
+          console.log(lineItem)
           const parentEl = lineItem.closest("[data-line-item-key]");
           const key = parentEl.getAttribute("data-line-item-key");
     
