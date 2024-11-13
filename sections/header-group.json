@@ -39,57 +39,12 @@
     "header": {
       "type": "header",
       "settings": {
-        "brand_logo": "shopify://shop_images/jive_logo.png",
-        "navigation": "main-menu",
-        "color_scheme": "scheme-1",
-        "header_position": "always"
-      }
-    },
-    "cart_drawer_new_GRYkhH": {
-      "type": "cart-drawer-new",
-      "blocks": {
-        "product_offer_NPVNYG": {
-          "type": "product_offer",
-          "disabled": true,
-          "settings": {
-            "product": "anti-magic",
-            "offer_desc": "Subheading With Info",
-            "min_total": "100"
-          }
-        },
-        "product_offer_ciGzkp": {
-          "type": "product_offer",
-          "settings": {
-            "product": "beast",
-            "offer_desc": "Subheading With Info",
-            "min_total": "75"
-          }
-        },
-        "product_offer_MUgfCM": {
-          "type": "product_offer",
-          "settings": {
-            "product": "crimson-lion",
-            "offer_desc": "Subheading With Info",
-            "min_total": "100"
-          }
-        }
-      },
-      "block_order": [
-        "product_offer_NPVNYG",
-        "product_offer_ciGzkp",
-        "product_offer_MUgfCM"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "cart_title": "YOUR CART",
-        "user_signup": "Sign up for Feed 1st and get FREE shipping",
-        "payment_provider": "shopify://shop_images/Group_1484580789.png"
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "cart_drawer_new_GRYkhH"
+    "header"
   ]
 }

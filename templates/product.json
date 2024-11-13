@@ -21,13 +21,11 @@
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -38,8 +36,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -50,42 +47,12 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
-          }
-        },
-        "subify_subscriptions_app_app_block_UUdhhK": {
-          "type": "shopify://apps/subify-subscriptions-app/blocks/app-block/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
-          "settings": {
-            "product": "{{product}}",
-            "use_app_block_wording": false,
-            "widget_label": "Purchase options",
-            "one_time_purchase_text": "One-Time Purchase",
-            "subscription_text": "Subscribe and save",
-            "delivery_frequency_text": "Delivery frequency",
-            "prepaid_subscription_text": "Subscription with prepaid",
-            "skin1_priceSuffix": "each",
-            "skin1_save": "Save(skin1)",
-            "skin1_prepaid_payment_title": "prepaid",
-            "skin1_normal_payment_title": "pay as you go",
-            "skin2_discountSuffix": "Save",
-            "skin3_fullPrice": "Full price",
-            "skin3_priceSuffix": "each",
-            "skin3_discountSuffix": "Off",
-            "skin4_justOnce": "Just once",
-            "skin4_discountSuffix": "Off",
-            "skin4_priceSuffix": "each",
-            "skin4_fullPrice": "(Full price)",
-            "skin4_sellingPlansTitle": "Renews every:",
-            "from": "from",
-            "max_discount_badge_title": "UP To",
-            "pay": "Pay",
-            "price_save_up_to": "save up to"
           }
         }
       },
@@ -97,8 +64,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "subify_subscriptions_app_app_block_UUdhhK"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
