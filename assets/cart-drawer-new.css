@@ -482,7 +482,7 @@
   gap: 10px;
   border: 1px dashed #787878;
   box-sizing: border-box;
-  grid: ;
+  grid-template-columns: 70px 1fr ;
 }
 
 .offer-product__info {
