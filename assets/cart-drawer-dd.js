@@ -73,8 +73,8 @@ initializeSwiper();
   }
 
   function updateShippingProgress() {
-    const progressBar = document.querySelector('.shipping-progress-bar');
-    const progressText = document.querySelector('.shipping-progress-text');
+    const progressBar = document.querySelector('.cart-shipping__progress-bar');
+    const progressText = document.querySelector('.cart-shipping__progress-text');
     
     // Get cart total from Shopify
     fetch('/cart.js')
