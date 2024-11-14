@@ -88,8 +88,8 @@ initializeSwiper();
         const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
 
         if(cart.item_count > 0) {
-          cardDrawer.style.display = "flex";
-          car
+          cartDrawer.style.display = "flex";
+          emptyCart.style.dis
         }
         
         // Update progress bar width
