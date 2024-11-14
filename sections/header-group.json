@@ -51,16 +51,16 @@
         "product_offer_F4jU89": {
           "type": "product_offer",
           "settings": {
-            "product": "crimson-lion",
-            "offer_desc": "Subheading With Info",
+            "product": "dr-dave-s-natural-deodorant",
+            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
             "min_total": "100"
           }
         },
         "product_offer_VzJFUV": {
           "type": "product_offer",
           "settings": {
-            "product": "anti-magic",
-            "offer_desc": "Subheading With Info",
+            "product": "grass-fed-tallow-lip-balm-3-pk",
+            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
             "min_total": "150"
           }
         }
