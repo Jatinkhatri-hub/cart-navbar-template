@@ -296,7 +296,9 @@ async function updateCartDrawer() {
     document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
   }
 
-  if(document.querySelector('.cart-drawer__payment-provider-img'))
+  if(document.querySelector('.cart-drawer__payment-provider-img')) {
+    document.querySelector('.cart-drawer__payment-provider-img').innerHTML = savePaymentProvider;
+  }
 
   try {
     const cartResponse = await fetch('/cart.js');
