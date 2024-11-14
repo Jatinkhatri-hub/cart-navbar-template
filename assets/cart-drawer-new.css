@@ -363,7 +363,7 @@
   font: 600 14px "Inter";
   color: white;
   gap: 10px;
-  border-radius: ;
+  border-radius: 40px;
 }
 
 .cart-drawer__payment-options {
@@ -571,6 +571,36 @@
   pointer-events: none; /* Disable clicking */
   color: black;
 }
+
+.shipping-progress-container {
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.shipping-progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.shipping-progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #4CAF50, #8BC34A);
+  transition: width 0.3s ease;
+}
+
+.shipping-progress-text {
+  text-align: center;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+
 
 @media screen and (min-width: 786px) { 
   
