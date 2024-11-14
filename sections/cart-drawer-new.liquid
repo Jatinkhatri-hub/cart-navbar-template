@@ -118,7 +118,7 @@
                                   </option>
                                 {% endfor %}
                             </select> {% endcomment %}
-                            {}
+                            {% if item.selling_plan_allocation %}
               <div class="subscription-options">
                 <div style="display: flex;">
                   <label>
@@ -155,6 +155,7 @@
                   </select>
                 </div>
               </div>
+                  {% endif %}
 
             </div>
           {% endfor %}
