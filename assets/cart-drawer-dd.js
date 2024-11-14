@@ -89,7 +89,7 @@ initializeSwiper();
 
         if(cart.item_count > 0) {
           cartDrawer.style.display = "flex";
-          emptyCart.style.dis
+          emptyCart.style.display = "none";
         }
         
         // Update progress bar width
