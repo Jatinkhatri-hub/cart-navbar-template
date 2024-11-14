@@ -550,6 +550,10 @@
   bottom: 0 !important;
 }
 
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: .swiper-pagination-progressbar .swiper-pagination-progressbar-fill;
+}
+
 
 
 .claim-offer__btn--disabled {
