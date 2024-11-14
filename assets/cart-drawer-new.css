@@ -542,7 +542,11 @@
 .swiper {
   width: 100%;
   overflow: hidden;
-  padding-
+  padding-bottom: 25px;
+}
+
+.swiper-pagination {
+  
 }
 
 
