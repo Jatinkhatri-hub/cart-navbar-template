@@ -66,6 +66,7 @@
   margin: 0;
   font-size: 26px;
   font-family: "Sofia Pro Bold";
+  line-height: initial;
   /* font-style: italic; */
 }
 
