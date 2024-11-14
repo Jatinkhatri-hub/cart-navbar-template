@@ -75,7 +75,7 @@ initializeSwiper();
   function updateShippingProgress() {
     const progressBar = document.querySelector('.cart-shipping__progress-bar');
     const progressText = document.querySelector('.cart-shipping__progress-text');
-    const freeShipping = document.querySelector('.cart-drawer__footer-')
+    const freeShipping = document.querySelector('.cart-drawer__footer-row.shipping')
     
     // Get cart total from Shopify
     fetch('/cart.js')
