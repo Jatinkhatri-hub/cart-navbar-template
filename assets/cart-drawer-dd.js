@@ -296,7 +296,7 @@ async function updateCartDrawer() {
     document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
   }
 
-  paymentProvider.innerHTML = savePaymentProvider;
+  if(document.querySelector('.'))
 
   try {
     const cartResponse = await fetch('/cart.js');
