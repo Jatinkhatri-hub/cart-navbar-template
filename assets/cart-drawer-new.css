@@ -364,7 +364,7 @@
   color: white;
   gap: 10px;
   border-radius: 40px;
-  transition: ;
+  transition: 0.3s ;
 }
 
 .cart-drawer__checkout-btn:hover {
