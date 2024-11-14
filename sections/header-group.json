@@ -39,47 +39,12 @@
     "header": {
       "type": "header",
       "settings": {
-        "brand_logo": "shopify://shop_images/Untitled_Email_Header_1_1.png",
-        "navigation": "main-menu",
-        "color_scheme": "scheme-1",
-        "header_position": "always"
-      }
-    },
-    "cart_drawer_new_ET8X6G": {
-      "type": "cart-drawer-new",
-      "blocks": {
-        "product_offer_F4jU89": {
-          "type": "product_offer",
-          "settings": {
-            "product": "dr-dave-s-natural-deodorant",
-            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
-            "min_total": "100"
-          }
-        },
-        "product_offer_VzJFUV": {
-          "type": "product_offer",
-          "settings": {
-            "product": "grass-fed-tallow-lip-balm-3-pk",
-            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
-            "min_total": "150"
-          }
-        }
-      },
-      "block_order": [
-        "product_offer_F4jU89",
-        "product_offer_VzJFUV"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "cart_title": "SHOPPING CART",
-        "user_signup": "Short Description.",
-        "payment_provider": "shopify://shop_images/Group_1484580789.png"
+        "color_scheme": "scheme-1"
       }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "cart_drawer_new_ET8X6G"
+    "header"
   ]
 }
