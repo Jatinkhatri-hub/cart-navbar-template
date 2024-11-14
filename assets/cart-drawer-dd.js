@@ -86,6 +86,8 @@ initializeSwiper();
         const cartTotal = cart.total_price / 100; // Convert cents to dollars
         const remaining = Math.max(0, freeShippingThreshold - cartTotal);
         const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
+
+        if(cart.item_count)
         
         // Update progress bar width
         progressBar.style.width = `${progress}%`;
