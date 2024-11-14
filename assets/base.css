@@ -18,6 +18,11 @@
   src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/FuturaCyrillicMedium.woff?v=1729828394');
 }
 
+@font-face {
+  font-family: 'Futura PT SemiBold';
+  src: url('https://cdn.shopify.com/s/files/1/0852/8553/6031/files/FuturaCyrillicDemi.woff?v=1730279641');
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
