@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cartOverlay = document.querySelector('.cart-overlay');
   window.cartOverlay = cartOverlay;
+  const freeShippingThreshold = 75.00;
 
   document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
