@@ -602,6 +602,8 @@
   margin: 0;
   font-size: 0.9rem;
   color: #333;
+  position: absolute;
+  
 }
 
 @media screen and (min-width: 786px) { 
