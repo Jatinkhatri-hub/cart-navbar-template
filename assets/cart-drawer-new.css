@@ -64,9 +64,9 @@
 
 .cart-header__b1 h2 {
   margin: 0;
-  font-size: 19px;
-  font-family: "";
-  font-style: italic;
+  font-size: 69px;
+  font-family: "Sofia Pro Bold";
+  /* font-style: italic; */
 }
 
 .cart-items__count {
