@@ -75,7 +75,7 @@ initializeSwiper();
   function updateShippingProgress() {
     const progressBar = document.querySelector('.cart-shipping__progress-bar');
     const progressText = document.querySelector('.cart-shipping__progress-text');
-    const freeShipping = document.querySelector('.cart-drawer__footer-row.shipping')
+    const freeShipping = document.querySelector('.cart-drawer__footer-row.shipping');
     
     // Get cart total from Shopify
     fetch('/cart.js')
@@ -94,7 +94,10 @@ initializeSwiper();
           progressText.innerHTML = `Add <strong> $${remaining.toFixed(2)} </strong> more to get Free Shipping!`;
         } else {
           progressText.textContent = "You've got Free Shipping! 🎉";
-
+          freeShipping.innerHTML = `
+            <h3>Shipping</h3>
+            <span>FREE</span>
+          `
         }
       })
       .catch(error => console.error('Error fetching cart:', error));
