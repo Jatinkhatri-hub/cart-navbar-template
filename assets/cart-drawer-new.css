@@ -587,6 +587,8 @@
   overflow: hidden;
   margin-bottom: 0.5rem;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .cart-shipping__progress-bar {
