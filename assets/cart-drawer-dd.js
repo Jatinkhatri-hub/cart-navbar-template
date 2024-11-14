@@ -87,7 +87,9 @@ initializeSwiper();
         const remaining = Math.max(0, freeShippingThreshold - cartTotal);
         const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
 
-        if(cart.item_count)
+        if(cart.item_count > 0) {
+          
+        }
         
         // Update progress bar width
         progressBar.style.width = `${progress}%`;
