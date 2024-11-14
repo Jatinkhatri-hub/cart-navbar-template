@@ -366,6 +366,13 @@
   border-radius: 40px;
 }
 
+.cart-drawer__checkout-btn:hover {
+  background: white;
+  color: #155F64;
+}
+
+.cart
+
 .cart-drawer__payment-options {
   display: flex;
   justify-content: center;
@@ -606,8 +613,6 @@
   font-size: 0.9rem;
   color: white;
   position: absolute;
-  top: 2px;
-  bottom: 0;
   left: 0;
   right: 0;
   font: 17px 'Futura PT Medium';
