@@ -478,11 +478,12 @@
   justify-content: flex-start;
   padding: 18px 14px;
   height: 115px;
-  width: 250px;
+  width: 280px;
   gap: 10px;
   border: 1px dashed #787878;
   box-sizing: border-box;
   grid-template-columns: 70px 1fr ;
+  border-radius: ;
 }
 
 .offer-product__info {
