@@ -525,9 +525,9 @@
 
 .offer-product__img-wrapper {
   height: 80px;
-  width: 65px;
+  width: 70px;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .offer-product__img {
