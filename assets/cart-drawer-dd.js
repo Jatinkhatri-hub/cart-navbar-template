@@ -72,6 +72,31 @@ initializeSwiper();
     }
   }
 
+  function updateShippingProgress() {
+    const progressBar = document.querySelector('.shipping-progress-bar');
+    const progressText = document.querySelector('.shipping-progress-text');
+    
+    // Get cart total from Shopify
+    fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        const cartTotal = cart.total_price / 100; // Convert cents to dollars
+        const remaining = Math.max(0, freeShippingThreshold - cartTotal);
+        const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
+        
+        // Update progress bar width
+        progressBar.style.width = `${progress}%`;
+        
+        // Update text message
+        if (remaining > 0) {
+          progressText.textContent = `Add $${remaining.toFixed(2)} more to get Free Shipping!`;
+        } else {
+          progressText.textContent = 'You've got Free Shipping! 🎉';
+        }
+      })
+      .catch(error => console.error('Error fetching cart:', error));
+  }
+
   // Checkbox logic for subscription
   function addSubscriptionListeners() {
     document.querySelectorAll('.subscription-checkbox').forEach(checkbox => {
