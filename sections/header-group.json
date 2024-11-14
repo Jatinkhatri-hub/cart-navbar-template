@@ -44,10 +44,41 @@
         "color_scheme": "scheme-1",
         "header_position": "always"
       }
+    },
+    "cart_drawer_new_Jm3cx4": {
+      "type": "cart-drawer-new",
+      "blocks": {
+        "product_offer_UGBWca": {
+          "type": "product_offer",
+          "settings": {
+            "product": "natural-tallow-deodorant",
+            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
+            "min_total": "100"
+          }
+        },
+        "product_offer_pxpYxD": {
+          "type": "product_offer",
+          "settings": {
+            "product": "grass-fed-tallow-lip-balm-3-pk",
+            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
+            "min_total": "150"
+          }
+        }
+      },
+      "block_order": [
+        "product_offer_UGBWca",
+        "product_offer_pxpYxD"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "cart_title": "Cart Title",
+        "user_signup": "Short Description."
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "cart_drawer_new_Jm3cx4"
   ]
 }
