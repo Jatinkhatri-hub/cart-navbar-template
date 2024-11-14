@@ -279,6 +279,7 @@ async function updateCartDrawer() {
     const cartResponse = await fetch('/cart.js');
     const cartData = await cartResponse.json();
     updateOfferButtons(cartData); // Update offer buttons with the latest cart data
+    up
   } catch (error) {
     console.error('Error fetching cart data:', error);
   }
