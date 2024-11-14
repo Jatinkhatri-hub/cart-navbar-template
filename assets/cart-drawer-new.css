@@ -542,7 +542,10 @@
 .swiper {
   width: 100%;
   overflow: hidden;
+  padding-
 }
+
+
 
 .claim-offer__btn--disabled {
   background-color: #cccccc; /* Gray background */
