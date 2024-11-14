@@ -546,7 +546,8 @@
 }
 
 .swiper-pagination {
-  
+  top: auto;
+  bottom: 0 !important;
 }
 
 
