@@ -272,6 +272,7 @@
   text-align: center;
   font: 600 12px "Inter";
   /* border-inline: 1px solid gray; */
+  background: #155F64;
 }
 
 .line-item__quantity-selector input:focus {
