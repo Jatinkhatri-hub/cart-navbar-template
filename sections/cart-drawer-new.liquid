@@ -9,10 +9,10 @@
         <span class="cart-items__count">{{ cart.item_count }}</span>
         <button class="cart-close__btn">{{ 'icon-close-new.svg' | inline_asset_content }}</button>
       </div>
-      <div class="cart-header__b2">
+      {% comment %} <div class="cart-header__b2">
         <p>{{ section.settings.user_signup }}
           <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">Learn More</a>.</p>
-      </div>
+      </div> {% endcomment %}
     {% comment %} <div class="cart-header__b3">
                     <p>Add <span>{{ cart.items_subtotal_price |  money_with_currency }}</span> more to get $20 in store credit!</p>
               </div> {% endcomment %}
