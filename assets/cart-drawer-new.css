@@ -595,12 +595,12 @@
   transition: width 0.3s ease;
 }
 
-.shipping-progress-text {
+.cart-shipping__progress-text {
   text-align: center;
   margin: 0;
   font-size: 0.9rem;
   color: #333;
-
+}
 
 @media screen and (min-width: 786px) { 
   
