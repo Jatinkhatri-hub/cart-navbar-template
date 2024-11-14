@@ -364,6 +364,7 @@
   color: white;
   gap: 10px;
   border-radius: 40px;
+  transition: ;
 }
 
 .cart-drawer__checkout-btn:hover {
@@ -371,7 +372,9 @@
   color: #155F64;
 }
 
-.cart
+.cart-drawer__checkout-btn:hover svg path {
+  fill: white;
+}
 
 .cart-drawer__payment-options {
   display: flex;
