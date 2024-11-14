@@ -528,7 +528,7 @@
   width: 70px;
   overflow: hidden;
   border-radius: 5px;
-  
+  border: 1px solid #A2C4C5;
 }
 
 .offer-product__img {
