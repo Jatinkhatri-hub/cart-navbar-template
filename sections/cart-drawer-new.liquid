@@ -28,9 +28,9 @@
     {% form 'cart'
       , cart
       , class: 'cart-drawer__form' %}
-      {% if cart.item_count == 0 %}
+      
         <p class="cart-drawer__empty">Your cart is empty</p>
-      {% else %}
+      
         <div class="cart-drawer__items">
           <div class="swiper mySwiper-{{ section.id }}">
             <div class="product-offers__wrapper swiper-wrapper"> 
@@ -184,7 +184,7 @@
             </div>
           </div>
         </footer>
-      {% endif %}
+      
     {% endform %}
   </div>
 </div>
