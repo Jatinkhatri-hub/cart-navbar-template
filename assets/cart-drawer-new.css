@@ -494,8 +494,8 @@
 }
 
 .offer-product__info h2 {
-  font: 600 13px "Futura PT SemiBold";
-  margin-block: 0 5px;
+  font: 600 15px "Futura PT SemiBold";
+  margin-block: 0;
 }
 
 .offer-product__info h3 {
