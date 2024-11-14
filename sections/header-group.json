@@ -55,10 +55,19 @@
             "offer_desc": "Subheading With Info",
             "min_total": "100"
           }
+        },
+        "product_offer_VzJFUV": {
+          "type": "product_offer",
+          "settings": {
+            "product": "anti-magic",
+            "offer_desc": "Subheading With Info",
+            "min_total": "150"
+          }
         }
       },
       "block_order": [
-        "product_offer_F4jU89"
+        "product_offer_F4jU89",
+        "product_offer_VzJFUV"
       ],
       "settings": {
         "color_scheme": "",
