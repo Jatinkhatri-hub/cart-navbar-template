@@ -47,6 +47,19 @@
     },
     "cart_drawer_new_ET8X6G": {
       "type": "cart-drawer-new",
+      "blocks": {
+        "product_offer_F4jU89": {
+          "type": "product_offer",
+          "settings": {
+            "product": "20-off-31st-october-2024-bbe-bio-quercetin-30-capsules-by-life-extension",
+            "offer_desc": "Subheading With Info",
+            "min_total": "100"
+          }
+        }
+      },
+      "block_order": [
+        "product_offer_F4jU89"
+      ],
       "settings": {
         "color_scheme": "",
         "cart_title": "SHOPPING CART",
