@@ -592,7 +592,8 @@
 .cart-shipping__progress-bar {
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, #4CAF50, #8BC34A);
+  /* background: linear-gradient(to right, #4CAF50, #8BC34A); */
+  background: #155F64;
   transition: width 0.3s ease;
   display: block !important;
 }
