@@ -261,7 +261,7 @@
 }
 
 .line-item__quantity-selector button svg path {
-  fill: white;
+  stroke: white;
 }
 
 .line-item__quantity-selector input {
