@@ -604,11 +604,11 @@
   font-size: 0.9rem;
   color: white;
   position: absolute;
-  top: 0;
+  top: 2px;
   bottom: 0;
   left: 0;
   right: 0;
-  font: 14px 'Futura PT Medium';
+  font: 17px 'Futura PT Medium';
 
 }
 
