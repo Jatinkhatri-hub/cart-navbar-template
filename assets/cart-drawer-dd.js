@@ -279,11 +279,11 @@ async function updateCartDrawer() {
     const cartResponse = await fetch('/cart.js');
     const cartData = await cartResponse.json();
     updateOfferButtons(cartData); // Update offer buttons with the latest cart data
-    updateShippingProgress();
   } catch (error) {
     console.error('Error fetching cart data:', error);
   }
-
+  
+  updateShippingProgress();
   // Reapply event listeners
   addCartDrawerListeners();
   initializeSwiper();
