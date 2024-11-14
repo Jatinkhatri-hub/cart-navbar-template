@@ -434,6 +434,7 @@ async function updateCartDrawer() {
   // Initialize listeners
   addCartDrawerListeners();
   updateSubscriptionStatus();
+  u
 
   const claimOfferButtons = document.querySelectorAll(".claim-offer__btn");
 
