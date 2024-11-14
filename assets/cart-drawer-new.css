@@ -364,7 +364,7 @@
   color: white;
   gap: 10px;
   border-radius: 40px;
-  transition: 0.3s ;
+  transition: 0.3s color ease-in-out, 0.3s background ease-in-out;
 }
 
 .cart-drawer__checkout-btn:hover {
