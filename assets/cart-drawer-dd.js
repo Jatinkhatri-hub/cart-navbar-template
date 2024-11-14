@@ -327,7 +327,7 @@ async function updateCartDrawer() {
         const isUp = button.classList.contains("line-item__quantity-selector-plus");
 
         const newQuantity = isUp ? currentQuantity + 1 : currentQuantity - 1;
-        if (newQuantity < 1) return;
+      //  if (newQuantity < 1) return;
 
         // Show spinner over the line item
         showSpinner(lineItem);
