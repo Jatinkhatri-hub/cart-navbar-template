@@ -267,7 +267,7 @@
   height: 30px;
   text-align: center;
   font: 600 12px "Inter";
-  border-inline: 1px solid gray;
+  /* border-inline: 1px solid gray; */
 }
 
 .line-item__quantity-selector input:focus {
