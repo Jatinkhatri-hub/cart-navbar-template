@@ -260,7 +260,9 @@
   width: 30px;
 }
 
-.line-item
+.line-item__quantity-selector button svg path {
+  fill: white;
+}
 
 .line-item__quantity-selector input {
   border: none;
