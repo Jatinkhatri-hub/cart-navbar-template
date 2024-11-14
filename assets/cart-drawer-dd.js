@@ -293,6 +293,8 @@ async function updateCartDrawer() {
     document.querySelector(".product-offers__wrapper").innerHTML = savedOffersContent;
   }
 
+  paymentProvider
+
   try {
     const cartResponse = await fetch('/cart.js');
     const cartData = await cartResponse.json();
