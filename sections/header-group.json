@@ -72,7 +72,8 @@
       "settings": {
         "color_scheme": "",
         "cart_title": "SHOPPING CART",
-        "user_signup": "Short Description."
+        "user_signup": "Short Description.",
+        "payment_provider": "shopify://shop_images/Group_1484580789.png"
       }
     }
   },
