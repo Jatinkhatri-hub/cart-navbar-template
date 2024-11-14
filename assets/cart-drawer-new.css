@@ -57,9 +57,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 24px;
+  padding: 20px 24px;
   position: relative;
-  gap: 7px;
+  gap: 15px;
 }
 
 .cart-header__b1 h2 {
