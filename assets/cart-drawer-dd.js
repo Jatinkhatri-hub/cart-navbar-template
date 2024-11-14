@@ -94,7 +94,9 @@ initializeSwiper();
           progressText.innerHTML = `Add <strong> $${remaining.toFixed(2)} </strong> more to get Free Shipping!`;
         } else {
           progressText.textContent = "You've got Free Shipping! 🎉";
-
+          freeShipping.innerHTML = `
+          
+          `
         }
       })
       .catch(error => console.error('Error fetching cart:', error));
