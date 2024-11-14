@@ -77,7 +77,7 @@ initializeSwiper();
     const progressText = document.querySelector('.cart-shipping__progress-text');
     const freeShipping = document.querySelector('.cart-drawer__footer-row.shipping');
     const emptyCart = document.querySelector('.cart-drawer__empty');
-    const cardDrawer = document.querySelector('.cart-drawer__items');
+    const cartDrawer = document.querySelector('.cart-drawer__items');
     
     // Get cart total from Shopify
     fetch('/cart.js')
@@ -88,7 +88,8 @@ initializeSwiper();
         const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
 
         if(cart.item_count > 0) {
-          cardDrawer.style.dis
+          cardDrawer.style.display = "flex";
+          car
         }
         
         // Update progress bar width
