@@ -17,6 +17,10 @@ function initializeSwiper() {
     // your Swiper configuration
     slidesPerView: 'auto',
     spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
     // other Swiper settings
   });
 }
