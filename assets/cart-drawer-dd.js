@@ -89,7 +89,7 @@ initializeSwiper();
         
         // Update text message
         if (remaining > 0) {
-          progressText.textContent = `Add <strong> $${remaining.toFixed(2)} </strong> more to get Free Shipping!`;
+          progressText.innerHTML = `Add <strong> $${remaining.toFixed(2)} </strong> more to get Free Shipping!`;
         } else {
           progressText.textContent = "You've got Free Shipping! 🎉";
         }
