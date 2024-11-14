@@ -279,6 +279,9 @@ async function updateCartDrawer() {
   const savedOffersContent = productOffersWrapper ? productOffersWrapper.innerHTML : '';
   const paymentProvider = document.querySelector('.cart-drawer__payment-provider-img');
   const savePaymentProvider = paymentProvider ? paymentProvider.innerHTML : '';
+
+  console.log(paymentProvider);
+  console.log('s', savePaymentProvider);
   
   const res = await fetch("/?section_id=cart-drawer-new");
   const text = await res.text();
