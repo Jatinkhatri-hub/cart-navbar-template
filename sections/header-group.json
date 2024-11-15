@@ -47,10 +47,24 @@
     },
     "cart_drawer_new_pkqwmR": {
       "type": "cart-drawer-new",
+      "blocks": {
+        "product_offer_wR3FMT": {
+          "type": "product_offer",
+          "settings": {
+            "product": "dr-dave-s-natural-deodorant",
+            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
+            "min_total": "100"
+          }
+        }
+      },
+      "block_order": [
+        "product_offer_wR3FMT"
+      ],
       "settings": {
         "color_scheme": "",
-        "cart_title": "Cart Title",
-        "user_signup": "Short Description."
+        "cart_title": "SHOPPING CART",
+        "user_signup": "Short Description.",
+        "payment_provider": "shopify://shop_images/Group_1484580789.png"
       }
     }
   },
