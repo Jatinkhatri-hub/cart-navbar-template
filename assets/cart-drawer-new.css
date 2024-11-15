@@ -529,13 +529,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 500 10px "Sofia Pro Bold";
+  font: 500 13px "Sofia Pro Bold";
   color: white;
   background-color: #155F64;
   border-radius: 2px;
   border: 2px solid #155F64;
   transition: 0.3s color ease-in-out, 0.3s background-color ease-in-out;
   cursor: pointer !important;
+  padding: 5px;
 }
 
 .claim-offer__btn:hover {
