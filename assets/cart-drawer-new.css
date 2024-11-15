@@ -500,7 +500,7 @@
   gap: 10px;
   border: 2px dashed #A2C4C5;
   box-sizing: border-box;
-  grid-template-columns: 77px 1fr ;
+  grid-template-columns: 90px 1fr ;
   border-radius: 10px;
 }
 
