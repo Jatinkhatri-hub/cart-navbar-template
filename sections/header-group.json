@@ -55,10 +55,19 @@
             "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
             "min_total": "100"
           }
+        },
+        "product_offer_Ffz6W7": {
+          "type": "product_offer",
+          "settings": {
+            "product": "grass-fed-tallow-lip-balm-3-pk",
+            "offer_desc": "Long-lasting odor control, with no parabens or synthetic fragrances.",
+            "min_total": "150"
+          }
         }
       },
       "block_order": [
-        "product_offer_wR3FMT"
+        "product_offer_wR3FMT",
+        "product_offer_Ffz6W7"
       ],
       "settings": {
         "color_scheme": "",
