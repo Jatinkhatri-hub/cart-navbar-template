@@ -544,15 +544,15 @@
 }
 
 .offer-product__img-wrapper {
-  height: 87px;
-  width: 77px;
+  height: 100px;
+  width: 90px;
   overflow: hidden;
   border-radius: 5px;
   border: 1px solid #A2C4C5;
 }
 
 .offer-product__img {
-  height: 87px;
+  height: 100px;
   width: 77px;
   object-fit: cover;
 }
