@@ -518,9 +518,10 @@
 }
 
 .offer-product__info h3 {
-  font: 500 10px "Futura PT Medium";
+  font: 500 11px "Futura PT Medium";
   margin: 0;
   color: #676666;
+  line-height: initial;
 }
 
 .claim-offer__btn {
