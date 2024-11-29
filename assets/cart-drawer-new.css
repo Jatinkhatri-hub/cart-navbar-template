@@ -149,6 +149,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
+  max-width: 480px;
   /* max-width: 375px; */
 }
 
@@ -530,7 +532,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 500 13px "Sofia Pro Bold";
+  font: 500 12px "Sofia Pro Bold";
   color: white;
   background-color: #155F64;
   border-radius: 2px;
