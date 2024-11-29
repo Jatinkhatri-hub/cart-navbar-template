@@ -197,6 +197,8 @@
   font-size: 14px;
   font-family: "Inter";
   font-weight: 600;
+  text-wrap: wrap;
+  padding-inline-end: 15px;
 }
 
 .line-item__variant {
