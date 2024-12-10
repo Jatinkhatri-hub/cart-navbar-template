@@ -16,6 +16,10 @@
           <p class="cart-shipping__progress-text">Add $80.00 more to get Free Shipping!</p>
         </div>
 
+        <div class="free-shipping__discount-code-wrapper">
+          {{ section.settings.free_shipping_text }}
+        </div>
+
       </div>
       {% comment %} <div class="cart-header__b2">
         <p>{{ section.settings.user_signup }}
@@ -254,6 +258,11 @@
         "type": "image_picker",
         "id": "payment_provider",
         "label": "Payment Provider"
+      }, 
+      {
+        "type": "text",
+        "id": "free_shipping_text",
+        "label": "Free Shipping Code"
       }
 
     ],
