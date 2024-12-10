@@ -86,6 +86,14 @@ initializeSwiper();
         const cartTotal = cart.total_price / 100; // Convert cents to dollars
         const remaining = Math.max(0, freeShippingThreshold - cartTotal);
         const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
+        const freeShipping = cart.discount_applications.find(
+            (discount) => discount.type === 'shipping'
+        );
+        if (freeShipping) {
+            console.log('Free shipping applied:', freeShipping);
+        } else {
+            console.log('No free shipping detected');
+        }
 
         if(cart.item_count > 0) {
           cartDrawer.style.display = "flex";
