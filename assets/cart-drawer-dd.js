@@ -86,20 +86,28 @@ initializeSwiper();
         const cartTotal = cart.total_price / 100; // Convert cents to dollars
         const remaining = Math.max(0, freeShippingThreshold - cartTotal);
         const progress = Math.min(100, (cartTotal / freeShippingThreshold) * 100);
-        // Ensure cart.discount_applications exists and is an array
-        if (Array.isArray(cart.discount_applications)) {
-            const freeShipping = cart.discount_applications.find(
-                (discount) => discount.type === 'shipping'
-            );
-
-            if (freeShipping) {
-                console.log('Free shipping applied:', freeShipping);
-            } else {
-                console.log('No free shipping detected');
+        cart.items.forEach((item) => {
+            if (item.line_level_discount_allocations.length > 0) {
+                console.log(
+                    `Discount applied to ${item.title}:`,
+                    item.line_level_discount_allocations
+                );
             }
-        } else {
-            console.log('No discount applications found', cart);
-        }
+        });
+        // // Ensure cart.discount_applications exists and is an array
+        // if (Array.isArray(cart.discount_applications)) {
+        //     const freeShipping = cart.discount_applications.find(
+        //         (discount) => discount.type === 'shipping'
+        //     );
+
+        //     if (freeShipping) {
+        //         console.log('Free shipping applied:', freeShipping);
+        //     } else {
+        //         console.log('No free shipping detected');
+        //     }
+        // } else {
+        //     console.log('No discount applications found', cart);
+        // }
 
         if(cart.item_count > 0) {
           cartDrawer.style.display = "flex";
