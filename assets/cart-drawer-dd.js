@@ -98,7 +98,7 @@ initializeSwiper();
                 console.log('No free shipping detected');
             }
         } else {
-            console.log('No discount applications found');
+            console.log('No discount applications found', cart);
         }
 
         if(cart.item_count > 0) {
