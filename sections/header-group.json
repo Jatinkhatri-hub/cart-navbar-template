@@ -73,7 +73,8 @@
         "color_scheme": "",
         "cart_title": "SHOPPING CART",
         "user_signup": "Short Description.",
-        "payment_provider": "shopify://shop_images/Group_1484580789.png"
+        "payment_provider": "shopify://shop_images/Group_1484580789.png",
+        "free_shipping_text": "For free shipping use code <strong>FREESHIPPING</strong> during checkout."
       }
     }
   },
