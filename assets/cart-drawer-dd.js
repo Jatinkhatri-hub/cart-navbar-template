@@ -854,70 +854,159 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  async function updateShippingProgress() {
-    try {
-      const cart = await fetch(CONSTANTS.CART_ENDPOINTS.get).then(res => res.json());
-      const cartTotal = cart.total_price / 100;
-      const remaining = Math.max(0, CONSTANTS.FREE_SHIPPING_THRESHOLD - cartTotal);
-      const progress = Math.min(100, (cartTotal / CONSTANTS.FREE_SHIPPING_THRESHOLD) * 100);
+  // async function updateShippingProgress() {
+  //   try {
+  //     const cart = await fetch(CONSTANTS.CART_ENDPOINTS.get).then(res => res.json());
+  //     const cartTotal = cart.total_price / 100;
+  //     const remaining = Math.max(0, CONSTANTS.FREE_SHIPPING_THRESHOLD - cartTotal);
+  //     const progress = Math.min(100, (cartTotal / CONSTANTS.FREE_SHIPPING_THRESHOLD) * 100);
 
-      if (cart.item_count > 0) {
-        elements.cartItems.style.display = "flex";
-        elements.emptyCart.style.display = "none";
-      } else {
-        elements.cartItems.style.display = "none";
-        elements.emptyCart.style.display = "flex";
-      }
+  //     if (cart.item_count > 0) {
+  //       elements.cartItems.style.display = "flex";
+  //       elements.emptyCart.style.display = "none";
+  //     } else {
+  //       elements.cartItems.style.display = "none";
+  //       elements.emptyCart.style.display = "flex";
+  //     }
 
-      elements.progressBar.style.width = `${progress}%`;
+  //     elements.progressBar.style.width = `${progress}%`;
 
+  //     if (remaining > 0) {
+  //       elements.progressText.innerHTML = `Add <strong>$${remaining.toFixed(2)}</strong> more to get Free Shipping!`;
+  //     } else {
+  //       elements.progressText.textContent = "You've got Free Shipping! 🎉";
+  //       elements.freeShipping.innerHTML = `
+  //         <h3>Shipping</h3>
+  //         <span>FREE</span>
+  //       `;
+  //     }
+  //   } catch (error) {
+  //     console.error('Error updating shipping progress:', error);
+  //   }
+  // }
+
+  // Replace the existing updateShippingProgress function with this:
+async function updateShippingProgress() {
+  try {
+    const cart = await fetch(CONSTANTS.CART_ENDPOINTS.get).then(res => res.json());
+    const cartTotal = cart.total_price / 100;
+    const remaining = Math.max(0, CONSTANTS.FREE_SHIPPING_THRESHOLD - cartTotal);
+    const progress = Math.min(100, (cartTotal / CONSTANTS.FREE_SHIPPING_THRESHOLD) * 100);
+
+    // Update these selectors to match your HTML structure
+    const cartItems = document.querySelector('.cart-drawer__items');
+    const emptyCart = document.querySelector('.cart-drawer__empty');
+
+    // Add console.log to debug
+    console.log('Cart item count:', cart.item_count);
+    console.log('Cart items element:', cartItems);
+    console.log('Empty cart element:', emptyCart);
+
+    if (cart.item_count > 0) {
+      if (cartItems) cartItems.style.display = "block"; // Changed from flex to block
+      if (emptyCart) emptyCart.style.display = "none";
+    } else {
+      if (cartItems) cartItems.style.display = "none";
+      if (emptyCart) emptyCart.style.display = "block"; // Changed from flex to block
+    }
+
+    if (elements.progressBar) elements.progressBar.style.width = `${progress}%`;
+
+    if (elements.progressText) {
       if (remaining > 0) {
         elements.progressText.innerHTML = `Add <strong>$${remaining.toFixed(2)}</strong> more to get Free Shipping!`;
       } else {
         elements.progressText.textContent = "You've got Free Shipping! 🎉";
-        elements.freeShipping.innerHTML = `
-          <h3>Shipping</h3>
-          <span>FREE</span>
-        `;
+        if (elements.freeShipping) {
+          elements.freeShipping.innerHTML = `
+            <h3>Shipping</h3>
+            <span>FREE</span>
+          `;
+        }
       }
-    } catch (error) {
-      console.error('Error updating shipping progress:', error);
     }
+  } catch (error) {
+    console.error('Error updating shipping progress:', error);
   }
+}
+
+  // function updateOfferButtons(cart) {
+  //   const cartTotal = cart.total_price / 100;
+  //   const offerButtons = document.querySelectorAll('.claim-offer__btn');
+  //   const offerProductIds = [...offerButtons].map(btn => btn.getAttribute('data-product-id'));
+  //   const claimedOffer = cart.items.find(item => offerProductIds.includes(item.id.toString()));
+
+  //   offerButtons.forEach(button => {
+  //     const productId = button.getAttribute('data-product-id');
+  //     const offerProductCard = button.closest('.offer__product-card');
+  //     const minTotal = parseFloat(offerProductCard.getAttribute('data-min-value'));
+
+  //     if (claimedOffer && claimedOffer.id.toString() !== productId) {
+  //       button.disabled = true;
+  //       button.classList.add('claim-offer__btn--disabled');
+  //       button.textContent = "Offer Already Claimed";
+  //     } else if (!claimedOffer) {
+  //       if (cartTotal >= minTotal) {
+  //         button.disabled = false;
+  //         button.classList.remove('claim-offer__btn--disabled');
+  //         button.textContent = "Claim Offer";
+  //       } else {
+  //         button.disabled = true;
+  //         button.classList.add('claim-offer__btn--disabled');
+  //         button.textContent = `Add $${(minTotal - cartTotal).toFixed(2)} more to claim`;
+  //       }
+  //     } else if (claimedOffer.id.toString() === productId) {
+  //       button.disabled = true;
+  //       button.classList.add('claim-offer__btn--disabled');
+  //       button.textContent = "Offer Claimed";
+  //     }
+  //   });
+  // }
 
   function updateOfferButtons(cart) {
-    const cartTotal = cart.total_price / 100;
-    const offerButtons = document.querySelectorAll('.claim-offer__btn');
-    const offerProductIds = [...offerButtons].map(btn => btn.getAttribute('data-product-id'));
-    const claimedOffer = cart.items.find(item => offerProductIds.includes(item.id.toString()));
+  const cartTotal = cart.total_price / 100;
+  const offerButtons = document.querySelectorAll('.claim-offer__btn');
+  
+  // Add debug logging
+  console.log('Cart total:', cartTotal);
+  console.log('Found offer buttons:', offerButtons.length);
 
-    offerButtons.forEach(button => {
-      const productId = button.getAttribute('data-product-id');
-      const offerProductCard = button.closest('.offer__product-card');
-      const minTotal = parseFloat(offerProductCard.getAttribute('data-min-value'));
+  offerButtons.forEach(button => {
+    const productId = button.getAttribute('data-product-id');
+    const offerProductCard = button.closest('.offer__product-card');
+    
+    if (!offerProductCard) {
+      console.log('Could not find offer product card for button:', button);
+      return;
+    }
 
-      if (claimedOffer && claimedOffer.id.toString() !== productId) {
+    const minTotal = parseFloat(offerProductCard.getAttribute('data-min-value'));
+    
+    // Add debug logging
+    console.log('Product ID:', productId);
+    console.log('Min total required:', minTotal);
+
+    // Check if this offer is already in cart
+    const claimedOffer = cart.items.find(item => item.id.toString() === productId);
+
+    if (claimedOffer) {
+      button.disabled = true;
+      button.classList.add('claim-offer__btn--disabled');
+      button.textContent = "Offer Claimed";
+    } else {
+      if (cartTotal >= minTotal) {
+        button.disabled = false;
+        button.classList.remove('claim-offer__btn--disabled');
+        button.textContent = "Claim Offer";
+      } else {
         button.disabled = true;
         button.classList.add('claim-offer__btn--disabled');
-        button.textContent = "Offer Already Claimed";
-      } else if (!claimedOffer) {
-        if (cartTotal >= minTotal) {
-          button.disabled = false;
-          button.classList.remove('claim-offer__btn--disabled');
-          button.textContent = "Claim Offer";
-        } else {
-          button.disabled = true;
-          button.classList.add('claim-offer__btn--disabled');
-          button.textContent = `Add $${(minTotal - cartTotal).toFixed(2)} more to claim`;
-        }
-      } else if (claimedOffer.id.toString() === productId) {
-        button.disabled = true;
-        button.classList.add('claim-offer__btn--disabled');
-        button.textContent = "Offer Claimed";
+        button.textContent = `Add $${(minTotal - cartTotal).toFixed(2)} more to claim`;
       }
-    });
-  }
-
+    }
+  });
+}
+  
   function updateSellingPlan() {
     document.querySelectorAll('[name="selling-plan"]').forEach(function (element) {
       element.addEventListener("change", async (event) => {
@@ -1039,34 +1128,76 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    document.querySelectorAll('.claim-offer__btn').forEach(button => {
-      button.addEventListener('click', async function (event) {
-        event.preventDefault();
-        const productId = this.getAttribute('data-product-id');
+    // document.querySelectorAll('.claim-offer__btn').forEach(button => {
+    //   button.addEventListener('click', async function (event) {
+    //     event.preventDefault();
+    //     const productId = this.getAttribute('data-product-id');
 
-        try {
-          const response = await fetch(CONSTANTS.CART_ENDPOINTS.add, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'X-Requested-With': 'XMLHttpRequest'
-            },
-            body: JSON.stringify({
-              id: productId,
-              quantity: 1
-            })
-          });
+    //     try {
+    //       const response = await fetch(CONSTANTS.CART_ENDPOINTS.add, {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //           'X-Requested-With': 'XMLHttpRequest'
+    //         },
+    //         body: JSON.stringify({
+    //           id: productId,
+    //           quantity: 1
+    //         })
+    //       });
 
-          if (!response.ok) throw new Error("Failed to add offer product to cart");
+    //       if (!response.ok) throw new Error("Failed to add offer product to cart");
 
-          this.disabled = true;
-          this.textContent = 'Offer Claimed';
-          await updateCartDrawer();
-        } catch (error) {
-          console.error('Error adding product to cart:', error);
-        }
+    //       this.disabled = true;
+    //       this.textContent = 'Offer Claimed';
+    //       await updateCartDrawer();
+    //     } catch (error) {
+    //       console.error('Error adding product to cart:', error);
+    //     }
+    //   });
+    // });
+
+    // Update the event listener for claim offer buttons
+document.querySelectorAll('.claim-offer__btn').forEach(button => {
+  button.addEventListener('click', async function(event) {
+    event.preventDefault();
+    
+    // Add debug logging
+    console.log('Claim offer button clicked');
+    
+    const productId = this.getAttribute('data-product-id');
+    console.log('Product ID to add:', productId);
+
+    try {
+      const response = await fetch(CONSTANTS.CART_ENDPOINTS.add, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: JSON.stringify({
+          items: [{
+            id: productId,
+            quantity: 1
+          }]
+        })
       });
-    });
+
+      if (!response.ok) {
+        throw new Error("Failed to add offer product to cart");
+      }
+
+      this.disabled = true;
+      this.classList.add('claim-offer__btn--disabled');
+      this.textContent = 'Offer Claimed';
+      
+      await updateCartDrawer();
+    } catch (error) {
+      console.error('Error adding product to cart:', error);
+      this.textContent = 'Failed to claim offer';
+    }
+  });
+});
 
     document.querySelectorAll('.line-item__remove').forEach(button => {
       button.addEventListener('click', async function (event) {
