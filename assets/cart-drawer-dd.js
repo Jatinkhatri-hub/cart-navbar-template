@@ -903,11 +903,11 @@ async function updateShippingProgress() {
     console.log('Empty cart element:', emptyCart);
 
     if (cart.item_count > 0) {
-      if (cartItems) cartItems.style.display = "block"; // Changed from flex to block
+      if (cartItems) cartItems.style.display = "flex"; // Changed from flex to block
       if (emptyCart) emptyCart.style.display = "none";
     } else {
       if (cartItems) cartItems.style.display = "none";
-      if (emptyCart) emptyCart.style.display = "block"; // Changed from flex to block
+      if (emptyCart) emptyCart.style.display = "flex"; // Changed from flex to block
     }
 
     if (elements.progressBar) elements.progressBar.style.width = `${progress}%`;
