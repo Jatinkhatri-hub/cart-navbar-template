@@ -1264,6 +1264,7 @@ document.querySelectorAll('.claim-offer__btn').forEach(button => {
   addCartDrawerListeners();
   updateSubscriptionStatus();
   updateShippingProgress();
+  initializeSwiper();
   
   // Initial cart fetch for offer buttons
   fetch(CONSTANTS.CART_ENDPOINTS.get)
